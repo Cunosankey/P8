@@ -1,3 +1,5 @@
 public class Test3 {
-    Tobias tobias = new horsecock();
+    public static void main(String[] args) {
+        System.out.println("fucking bitches");
+    }
 }
