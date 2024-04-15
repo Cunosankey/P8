@@ -1,4 +1,4 @@
-package PACKAGE_NAME.src.main.sample;
+package PACKAGE_NAME.src.main.project;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -11,7 +11,7 @@ import java.io.IOException;
 public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("sample.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("scenes/Home.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1080, 810);
         scene.getStylesheets().add(App.class.getResource("styles.css").toExternalForm());
         stage.setTitle("Hello Hello!");
