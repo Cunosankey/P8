@@ -8,6 +8,7 @@
 <VBox alignment="CENTER" prefHeight="810" prefWidth="1080" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PACKAGE_NAME.src.main.project.classes.HomeController">
     <children>
       <TextField fx:id="inputField" maxWidth="200.0" text="Hi" />
+        <Button onAction="#displayVariable" text="Display Variable" />
         <Label fx:id="helloLabel" text="Hej hvad hedder du?" />
         <Button onAction="#sayHello" text="Start" />
     </children>
