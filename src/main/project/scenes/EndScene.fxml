@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="810" prefWidth="1080" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PACKAGE_NAME.src.main.project.classes.HomeController">
    <children>
@@ -21,6 +23,19 @@
         </rowConstraints>
       </GridPane>
       <HBox prefHeight="100.0" prefWidth="200.0" />
-      <TextField layoutX="466.0" layoutY="258.0" text="Good job!" />
+      <TextField alignment="CENTER" layoutX="423.0" layoutY="264.0" prefHeight="77.0" prefWidth="235.0" text="Godt gået!">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font></TextField>
+      <TextField alignment="CENTER" layoutX="353.0" layoutY="358.0" prefHeight="77.0" prefWidth="375.0" text="Du har nu fuldført den første historie!">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </TextField>
+      <Button alignment="CENTER" layoutX="487.0" layoutY="455.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="107.0" text="Fortsæt" textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
