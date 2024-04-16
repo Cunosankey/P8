@@ -129,6 +129,20 @@
             </llm>
           </llm>
         </chat>
+        <chat>
+          <enhancedContext>
+            <enhancedContext>
+              <remoteRepositories>
+                <list>
+                  <remoteRepository>
+                    <codebaseName value="github.com/eberpraw/p8" />
+                  </remoteRepository>
+                </list>
+              </remoteRepositories>
+            </enhancedContext>
+          </enhancedContext>
+          <internalId value="d7955ecc-0cb7-488b-836e-1b3240cf77c5" />
+        </chat>
       </list>
     </chats>
     <defaultEnhancedContext>
