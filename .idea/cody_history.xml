@@ -87,6 +87,27 @@
             </llm>
           </llm>
         </chat>
+        <chat>
+          <enhancedContext>
+            <enhancedContext>
+              <remoteRepositories>
+                <list>
+                  <remoteRepository>
+                    <codebaseName value="github.com/eberpraw/p8" />
+                  </remoteRepository>
+                </list>
+              </remoteRepositories>
+            </enhancedContext>
+          </enhancedContext>
+          <internalId value="643e9a1f-f342-4d90-ac49-3182afa98cf4" />
+          <llm>
+            <llm>
+              <model value="anthropic/claude-3-sonnet-20240229" />
+              <provider value="Anthropic" />
+              <title value="Claude 3 Sonnet" />
+            </llm>
+          </llm>
+        </chat>
       </list>
     </chats>
     <defaultEnhancedContext>

@@ -23,16 +23,16 @@
         </rowConstraints>
       </GridPane>
       <HBox prefHeight="100.0" prefWidth="200.0" />
-      <TextField alignment="CENTER" layoutX="423.0" layoutY="264.0" prefHeight="77.0" prefWidth="235.0" style="-fx-background-color: lightgrey;" text="Godt gået!">
+      <TextField alignment="CENTER" layoutX="371.0" layoutY="255.0" prefHeight="103.0" prefWidth="339.0" style="-fx-background-color: lightgrey;" text="Godt gået!">
          <font>
-            <Font name="System Bold" size="36.0" />
+            <Font name="Arial Black" size="48.0" />
          </font></TextField>
-      <TextField alignment="CENTER" layoutX="353.0" layoutY="358.0" prefHeight="77.0" prefWidth="375.0" style="-fx-background-color: lightgrey;" text="Du har nu fuldført den første historie!">
+      <TextField alignment="CENTER" layoutX="325.0" layoutY="343.0" prefHeight="77.0" prefWidth="432.0" style="-fx-background-color: lightgrey;" text="Du har nu fuldført den første fortælling/historie">
          <font>
-            <Font name="System Bold" size="18.0" />
+            <Font name="Candara" size="18.0" />
          </font>
       </TextField>
-      <Button alignment="CENTER" layoutX="487.0" layoutY="455.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="107.0" style="-fx-background-color: black;" text="Fortsæt" textAlignment="CENTER" textFill="WHITE">
+      <Button alignment="CENTER" layoutX="487.0" layoutY="458.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="107.0" style="-fx-background-color: black;" text="Fortsæt" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
