@@ -27,6 +27,11 @@ h2 {
     color: #1b1c1e;
 }
 
+.text-field {
+    -fx-border-width: 0;
+    -fx-background-color: grey;
+}
+
 /* home styling*/
 #continueButton {
     -fx-background-color: orange;
@@ -56,3 +61,4 @@ h2 {
     -fx-font-weight: bold;
     -fx-text-fill: BLACK;
 }
+
