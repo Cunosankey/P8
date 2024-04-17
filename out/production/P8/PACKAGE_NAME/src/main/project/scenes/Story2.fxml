@@ -10,5 +10,22 @@
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="PACKAGE_NAME.src.main.project.classes.HomeController"
             prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <ImageView layoutX="365.0" layoutY="125.0" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@/sti/til/billede.jpg"/>
+            </image>
+        </ImageView>
 
+        <ImageView fitHeight="33.0" fitWidth="39.0" layoutX="532.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@/sti/til/lille_billede.jpg"/>
+            </image>
+        </ImageView>
+
+        <Label layoutX="70.0" layoutY="130.0" prefHeight="147.0" prefWidth="177.0" text="Tekst til story"/>
+
+        <Button layoutX="220.0" layoutY="351.0" mnemonicParsing="false" text="Back" />
+        <Button layoutX="290.0" layoutY="351.0" mnemonicParsing="false" text="Next" />
+    </children>
 </AnchorPane>
