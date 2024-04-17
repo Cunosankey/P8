@@ -143,6 +143,28 @@
           </enhancedContext>
           <internalId value="d7955ecc-0cb7-488b-836e-1b3240cf77c5" />
         </chat>
+        <chat>
+          <accountId value="VXNlcjoyMDI3NzE=" />
+          <enhancedContext>
+            <enhancedContext>
+              <remoteRepositories>
+                <list>
+                  <remoteRepository>
+                    <codebaseName value="github.com/eberpraw/p8" />
+                  </remoteRepository>
+                </list>
+              </remoteRepositories>
+            </enhancedContext>
+          </enhancedContext>
+          <internalId value="6bc38072-0ce3-41b8-a54a-1134f9471b71" />
+          <llm>
+            <llm>
+              <model value="anthropic/claude-3-sonnet-20240229" />
+              <provider value="Anthropic" />
+              <title value="Claude 3 Sonnet" />
+            </llm>
+          </llm>
+        </chat>
       </list>
     </chats>
     <defaultEnhancedContext>
