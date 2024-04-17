@@ -1,4 +1,8 @@
 .root {
+    -fx-background-color: red;
+}
+
+.root {
     background-color: #F5F5F5;
     font-family: "SF Pro", sans-serif;
     font-weight: lighter;
@@ -27,3 +31,34 @@ h2 {
     -fx-border-width: 0;
     -fx-background-color: grey;
 }
+
+/* home styling*/
+#continueButton {
+    -fx-background-color: orange;
+    -fx-text-fill: BLACK;
+    -fx-font-size: 14px;
+    -fx-font-family: "SF Pro", sans-serif;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-border-radius: 0;
+    -fx-padding: 30px 30px;
+    -fx-cursor: hand;
+}
+#continueButton:hover{
+    -fx-background-color: #FFA500;
+    -fx-text-fill: white;
+}
+
+#homeBackground{
+    -fx-background-color: transparent;
+    -fx-background-image: url("Welcome.png");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+}
+#welcomeText{
+    -fx-font-size: 50px;
+    -fx-font-family: "SF Pro", sans-serif;
+    -fx-font-weight: bold;
+    -fx-text-fill: BLACK;
+}
+
