@@ -11,12 +11,12 @@
    <children>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="366.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../Downloads/Vred%20mand.jpg" />
+           <!-- <Image url="@../../../../../../../../Downloads/Vred%20mand.jpg" />-->
          </image>
       </ImageView>
       <ImageView fitHeight="33.0" fitWidth="39.0" layoutX="532.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../Downloads/Ansigt%20snakker%20.jpg" />
+            <!--<Image url="@../../../../../../../../Downloads/Ansigt%20snakker%20.jpg" />-->
          </image>
       </ImageView>
       <Label layoutX="70.0" layoutY="130.0" prefHeight="147.0" prefWidth="177.0" text="Once upon a time, in a quaint village nestled between rolling hills and whispering forests, there lived a curious young girl named Lily. Lily had a heart as big as the sky and an imagination that danced with the stars." textAlignment="JUSTIFY" wrapText="true" />
