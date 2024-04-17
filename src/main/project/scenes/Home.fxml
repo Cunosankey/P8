@@ -7,6 +7,6 @@
 <AnchorPane fx:id="homeBackground" minHeight="810.0" minWidth="1080.0" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../project/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PACKAGE_NAME.src.main.project.classes.HomeController">
    <children>
       <Button fx:id="continueButton" layoutX="490.0" layoutY="660.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="43.0" prefWidth="150.0" text="Continue" />
-      <Text fx:id="welcomeText" layoutX="108.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hi and welcome!" wrappingWidth="204.88369750976562" />
+      <Text fx:id="welcomeText" layoutX="61.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hej og velkommen!" wrappingWidth="261.8836975097656" />
    </children>
 </AnchorPane>

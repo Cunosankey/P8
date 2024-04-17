@@ -34,7 +34,7 @@ h2 {
     -fx-font-size: 14px;
     -fx-font-family: "SF Pro", sans-serif;
     -fx-font-weight: bold;
-    -fx-background-radius: 0;
+    -fx-background-radius: 10;
     -fx-border-radius: 0;
     -fx-padding: 30px 30px;
     -fx-cursor: hand;
