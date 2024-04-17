@@ -28,7 +28,7 @@ h2 {
 }
 
 /* home styling*/
-#continueButton{
+#continueButton {
     -fx-background-color: orange;
     -fx-text-fill: BLACK;
     -fx-font-size: 14px;
