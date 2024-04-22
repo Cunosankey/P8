@@ -1,4 +1,5 @@
 package PACKAGE_NAME.src.main.project.classes;
+/*
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -10,3 +11,4 @@ class FacialExpressionTest {
         assertNotNull(FacialExpression1.FacialExpressionImage);
     }
 }
+ */

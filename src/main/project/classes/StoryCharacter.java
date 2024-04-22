@@ -27,7 +27,8 @@ public class StoryCharacter {
         FacialExpression newFacialExpression = new FacialExpression(facialExpressionID, facialExpressionImagePath);
         characterFacialExpression.add(newFacialExpression);
     }
-
+}
+/*
     public void setCurrentGesture(ChosenGesture){
         CurrentGesture = ChosenGesture;
     }
@@ -36,3 +37,5 @@ public class StoryCharacter {
         CurrentFacialExpression = ChosenFacialExpression;
     }
 }
+
+ */

@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PACKAGE_NAME.src.main.project.classes.LibraryController">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PACKAGE_NAME.src.main.project.classes.LibraryController">
     <children>
         <GridPane alignment="BOTTOM_CENTER" gridLinesVisible="true" layoutX="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="778.0" style="-fx-background-color: #fff0f5;" StackPane.alignment="CENTER">
             <columnConstraints>
@@ -19,38 +24,39 @@
                 <RowConstraints maxHeight="209.0" minHeight="10.0" prefHeight="193.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                     <image>
-                        <Image url="@../../images/bab.jpg" />
+                        <Image url="@../../resources/fonts/bab.jpg" />
                     </image>
                 </ImageView>
-            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2"/>
-                <Button alignment="CENTER" mnemonicParsing="false" onAction="#Spil" text="Start Spil" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                <Label alignment="CENTER" layoutX="422.0" layoutY="455.0" minWidth="-Infinity" prefHeight="187.0" prefWidth="186.0" text="Spil 1" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
+                <Label alignment="CENTER" layoutX="422.0" layoutY="455.0" minWidth="-Infinity" prefHeight="187.0" prefWidth="186.0" text="Spil 1" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                     <padding>
                         <Insets top="170.0" />
                     </padding>
                 </Label>
+                <Button alignment="CENTER" mnemonicParsing="false" onAction="#spil" text="Start Spil" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
             </children>
-         <StackPane.margin>
-            <Insets top="150.0" />
-         </StackPane.margin>
+            <StackPane.margin>
+                <Insets top="150.0" />
+            </StackPane.margin>
         </GridPane>
-      <Label text="Vælg en historie" StackPane.alignment="TOP_LEFT">
-         <StackPane.margin>
-            <Insets left="55.0" top="50.0" />
-         </StackPane.margin>
-         <font>
-            <Font size="55.0" />
-         </font>
-      </Label>
-      <Label text="Hjælp main character med at bla bla bla" StackPane.alignment="TOP_LEFT">
-         <font>
-            <Font size="43.0" />
-         </font>
-         <StackPane.margin>
-            <Insets left="55.0" top="150.0" />
-         </StackPane.margin>
-      </Label>
+        <Label text="Vælg en historie" StackPane.alignment="TOP_LEFT">
+            <StackPane.margin>
+                <Insets left="55.0" top="50.0" />
+            </StackPane.margin>
+            <font>
+                <Font size="55.0" />
+            </font>
+        </Label>
+        <Label text="Hjælp main character med at bla bla bla" StackPane.alignment="TOP_LEFT">
+            <font>
+                <Font size="43.0" />
+            </font>
+            <StackPane.margin>
+                <Insets left="55.0" top="150.0" />
+            </StackPane.margin>
+        </Label>
     </children>
 </StackPane>
+
