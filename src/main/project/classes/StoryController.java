@@ -1,8 +1,10 @@
 package PACKAGE_NAME.src.main.project.classes;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -65,6 +67,15 @@ public class StoryController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+// Nyt 22-04
+    public void handleButtonAction(ActionEvent event) throws IOException {
+        Node node = (Node) event.getSource();
+        Stage stage = (Stage) node.getScene().getWindow();
+        Scene scene = stage.getScene();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/src/main/project/scenes/Story1-1.fxml"));
+        Parent root = fxmlLoader.load();
+        scene.setRoot(root);
     }
 
     /**

@@ -9,6 +9,6 @@
       <Button contentDisplay="GRAPHIC_ONLY" layoutX="27.0" layoutY="29.0" mnemonicParsing="false" text="Button" />
       <Label fx:id="titleLabel" layoutX="27.0" layoutY="64.0" prefHeight="40.0" prefWidth="152.0" text="Title" />
       <Label fx:id="storyDescriptionLabel" layoutX="21.0" layoutY="104.0" prefHeight="238.0" prefWidth="178.0" text="Description" />
+      <Button layoutX="323.0" layoutY="317.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Continue" />
    </children>
 </AnchorPane>
-
