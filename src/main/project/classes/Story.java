@@ -5,6 +5,7 @@ import javafx.scene.image.Image;
 public class Story {
     private String title;
     private String storyDescription;
+    private String storyDescription2;
     private Image storyImage;
     private String moreInfo;
     private Image backGround;
@@ -12,9 +13,10 @@ public class Story {
     private Audio audioFile;
     private boolean completed;
 
-    public Story(String title, String storyDescription) {
+    public Story(String title, String storyDescription, String storyDescription2) {
         this.title = title;
         this.storyDescription = storyDescription;
+        this.storyDescription2 = storyDescription2;
     }
 
     public String getTitle() {
@@ -24,6 +26,11 @@ public class Story {
     public String getStoryDescription() {
         return storyDescription;
     }
+
+    public String getStoryDescription2() {
+        return storyDescription2;
+    }
+
 
     public Image getStoryImage() {
         return storyImage;

@@ -3,33 +3,31 @@ package PACKAGE_NAME.src.main.project.classes;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.ResourceBundle;
 
-public class StoryController {
+public class StoryController1 {
     @FXML
     private Label titleLabel;
     @FXML
     private Label storyDescriptionLabel;
+    @FXML
+    private Label storyDescriptionLabel2;
 
-    private int currentStory = 0;
+    private final int currentStory = 0;
 
-    private List<Story> stories = new ArrayList<>();
+    private final List<Story> stories = new ArrayList<>();
 
-    public StoryController() {
+    public StoryController1() {
         loadStoriesFromFile("src/main/project/scenes/Stories/Story.txt");
     }
 
@@ -55,9 +53,10 @@ public class StoryController {
                 // The first part is considered the title, and the second part is considered the story description.
                 String title = parts[0];
                 String storyDescription = parts[1];
+                String storyDescription2 = parts[2];
 
                 // A new Story object is created using the extracted title and story description.
-                Story story = new Story(title, storyDescription);
+                Story story = new Story(title, storyDescription, storyDescription2);
 
                 // Then add the newly created story object to the "stories" ArrayList.
                 stories.add(story);
@@ -68,12 +67,13 @@ public class StoryController {
             e.printStackTrace();
         }
     }
-// Nyt 22-04
+
+    // Nyt 22-04
     public void handleButtonAction(ActionEvent event) throws IOException {
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
         Scene scene = stage.getScene();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/src/main/project/scenes/Story1-1.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../scenes/Story1-1.fxml"));
         Parent root = fxmlLoader.load();
         scene.setRoot(root);
     }
@@ -84,8 +84,24 @@ public class StoryController {
      */
     public void initialize() {
         if (!stories.isEmpty()) {
-            titleLabel.setText(stories.get(currentStory).getTitle());
-            storyDescriptionLabel.setText(stories.get(currentStory).getStoryDescription());
+            if (titleLabel != null && storyDescriptionLabel != null) {
+                // The setText() method is used to set the text content of the labels to the title and story description of the first story in the list.
+                // The get() method is used to access the story object at the specified index (0 in this case).
+                // The getTitle() and getStoryDescription() methods are used to retrieve the title and story description of the story object.
+                titleLabel.setText(stories.get(currentStory).getTitle());
+                storyDescriptionLabel.setText(stories.get(currentStory).getStoryDescription());
+            }
         }
     }
+    protected Label getStoryDescriptionLabel2() {
+        return storyDescriptionLabel2;
+    }
+
+    protected int getCurrentStory() {
+        return currentStory;
+    }
+    protected Label getTitleLabel() {
+        return titleLabel;
+    }
 }
+
