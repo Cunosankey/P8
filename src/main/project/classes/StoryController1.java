@@ -78,6 +78,15 @@ public class StoryController1 {
         scene.setRoot(root);
     }
 
+    public void backHandle(ActionEvent event) throws IOException {
+        Node node = (Node) event.getSource();
+        Stage stage = (Stage) node.getScene().getWindow();
+        Scene scene = stage.getScene();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../scenes/Library.fxml"));
+        Parent root = fxmlLoader.load();
+        scene.setRoot(root);
+    }
+
     /**
      * if the story list is not empty, it sets the title and story description of the first story
      * in the list to the corresponding labels.
@@ -103,5 +112,6 @@ public class StoryController1 {
     protected Label getTitleLabel() {
         return titleLabel;
     }
+
 }
 
