@@ -115,3 +115,16 @@ public class StoryController1 {
 
 }
 
+
+
+// potentiel måde at skifte scene på uden alt det kode (også godt fordi det er en metode til flere af de samme handlinger)
+/*
+private void changeScene(String fxmlFile) throws IOException {
+    Node node = (Node) event.getSource();
+    Stage stage = (Stage) node.getScene().getWindow();
+    Scene scene = stage.getScene();
+    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlFile));
+    Parent root = fxmlLoader.load();
+    scene.setRoot(root);
+}  
+ */

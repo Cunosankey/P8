@@ -36,6 +36,15 @@
                     </padding>
                 </Label>
                 <Button alignment="CENTER" mnemonicParsing="false" onAction="#spil" text="Start Spil" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" minWidth="-Infinity" prefHeight="187.0" prefWidth="186.0" text="Spil 1" GridPane.columnIndex="2">
+               <padding>
+                  <Insets top="170.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#spil2" text="Start Spil" GridPane.columnIndex="2" />
             </children>
             <StackPane.margin>
                 <Insets top="150.0" />
@@ -59,4 +68,3 @@
         </Label>
     </children>
 </StackPane>
-
