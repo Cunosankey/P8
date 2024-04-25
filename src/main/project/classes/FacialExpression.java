@@ -8,10 +8,13 @@ import java.io.IOException;
 public class FacialExpression {
     public String FacialExpressionID;
     public BufferedImage FacialExpressionImage;
+    private String facialExpressionImagePath;
+    private String facialExpressionID;
 
     // Constructor for the class
     public FacialExpression(String facialExpressionID, String imagePath) {
-        this.FacialExpressionID = facialExpressionID;
+        this.facialExpressionID = facialExpressionID;
+        this.facialExpressionImagePath = imagePath;
         try {
             // Try to read the image file from the specified path. This can throw an IOException if the file can't be read for any reason.
             this.FacialExpressionImage = ImageIO.read(new File(imagePath));
@@ -23,4 +26,11 @@ public class FacialExpression {
 
     }
 
+    public String getFacialExpressionImagePath() {
+        return facialExpressionImagePath;
+    }
+
+    public String getFacialExpressionID() {
+        return facialExpressionID;
+    }
 }

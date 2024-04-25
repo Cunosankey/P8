@@ -22,12 +22,9 @@ public class App extends Application {
 
 
     public static void main(String[] args) {
-        launch();
-        StoryCharacter StoryCharacter = new StoryCharacter("Character1", "Gesture1", "src/main/images/body.png", "FacialExpression1", "src/main/images/Face.png");
 
-        //add more gestures and facial expressions
-        StoryCharacter.addGesture("Gesture2", "src/main/images/body2.png");
-        StoryCharacter.addFacialExpression("FacialExpression2", "src/main/images/Face2.png");
-        //Here, it is possible to add more facial expressions and gestures to the list in the character
+
+
+        launch();
     }
 }

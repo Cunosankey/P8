@@ -1,6 +1,4 @@
-.root {
-    -fx-background-color: red;
-}
+
 
 .root {
     background-color: #F5F5F5;
@@ -33,7 +31,7 @@ h2 {
 }
 
 /* home styling*/
-#continueButton{
+#continueButton {
     -fx-background-color: orange;
     -fx-text-fill: BLACK;
     -fx-font-size: 14px;
@@ -61,3 +59,4 @@ h2 {
     -fx-font-weight: bold;
     -fx-text-fill: BLACK;
 }
+

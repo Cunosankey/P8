@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
@@ -33,10 +34,13 @@
                   <Insets left="20.0" right="20.0" top="100.0" />
                </HBox.margin>
             </Button>
-            <ImageView fitHeight="260.0" fitWidth="375.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="characterFacialExpressionImage" fitHeight="260.0" fitWidth="375.0" onMouseClicked="#updateCharacterFacialExpression" pickOnBounds="true" preserveRatio="true">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
+               <image>
+                  <Image url="@../../images/Face.png" />
+               </image>
             </ImageView>
             <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 100;">
                <graphic>
@@ -58,10 +62,13 @@
                   <Insets left="20.0" right="20.0" top="100.0" />
                </HBox.margin>
             </Button>
-            <ImageView fitHeight="260.0" fitWidth="375.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="characterGestureImage" fitHeight="260.0" fitWidth="375.0" onMouseClicked="#updateCharacterGesture" pickOnBounds="true" preserveRatio="true">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
+               <image>
+                  <Image url="@../../images/body.png" />
+               </image>
             </ImageView>
             <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 100;">
                <graphic>
@@ -74,6 +81,14 @@
          </children>
       </HBox>
       <Button fx:id="taskTilbage" layoutX="414.0" layoutY="659.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="92.0" text="Tilbage" AnchorPane.bottomAnchor="100.0" />
-      <Button fx:id="taskAfslut" layoutX="572.0" layoutY="656.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="92.0" text="Afslut" AnchorPane.bottomAnchor="100.0" />
+      <Button fx:id="taskAfslut" layoutX="572.0" layoutY="656.0" mnemonicParsing="false" onAction="#changeSceneReflect" prefHeight="50.0" prefWidth="92.0" text="Afslut" AnchorPane.bottomAnchor="100.0" />
+      <HBox alignment="CENTER_RIGHT" prefHeight="70.0" prefWidth="200.0" spacing="15.0" AnchorPane.bottomAnchor="710.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="playAudioButton" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Lyd" />
+         </children>
+         <padding>
+            <Insets right="60.0" />
+         </padding>
+      </HBox>
    </children>
 </AnchorPane>
