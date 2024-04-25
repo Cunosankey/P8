@@ -35,7 +35,7 @@ public class TaskDescription {
         task1.setTaskTitle(taskTitle1);
         task1.setTaskDescription(taskDescription1);
         task1.setAudioFilePath("src/main/audio_files/kill_me.mp3");
-        task1.playAudio();
+//        task1.playAudio();
 
         // Task 2
         TaskDescription taskDescription2 = new TaskDescription();
@@ -50,6 +50,6 @@ public class TaskDescription {
         task2.setTaskTitle(taskTitle2);
         task2.setTaskDescription(taskDescription2);
         task2.setAudioFilePath("src/main/audio_files/kill_me.mp3");
-        task2.playAudio();
+//        task2.playAudio();
     }
 }

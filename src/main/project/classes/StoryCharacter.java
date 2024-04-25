@@ -18,7 +18,12 @@ public class StoryCharacter {
         addFacialExpression(facialExpressionID, facialExpressionImagePath);
     }
 
+    public List<Gesture> getCharacterGesture() {
+        return characterGesture;
+    }
+
     public void addGesture(String gestureID, String gestureImagePath) {
+        System.out.println("Adding gesture with image path: " + gestureImagePath); // Print the image path for debugging
         Gesture newGesture = new Gesture(gestureID, gestureImagePath);
         characterGesture.add(newGesture);
     }
@@ -29,10 +34,8 @@ public class StoryCharacter {
     }
     
     public void setCurrentGesture(ChosenGesture){
-        CurrentGesture = ChosenGesture;
-    }
 
-    public void setCurrentFacialExpression(ChosenFacialExpression){
-        CurrentFacialExpression = ChosenFacialExpression;
+    public List<FacialExpression> getCharacterFacialExpression() {
+        return characterFacialExpression;
     }
 }
