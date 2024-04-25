@@ -35,7 +35,8 @@ public class LibraryController {
             alert.setContentText("Færdiggør den første historie først!");
 
             alert.showAndWait();
-            // We return here to ensure the scene shift does not happend. It doesn't actually return a value.
+            // We return here to ensure the scene shift does not happend.
+            // (Return to exit the method early if the first condition is true) It doesn't actually return a value.
             return;
         }
         Parent newSceneParent = FXMLLoader.load(getClass().getResource("../scenes/Story2.fxml"));
