@@ -12,7 +12,7 @@ import java.io.IOException;
 public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("scenes/Home.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("scenes/Task.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1080, 810);
         scene.getStylesheets().add(App.class.getResource("styles.css").toExternalForm());
         stage.setTitle("Hello Hello!");
@@ -22,12 +22,9 @@ public class App extends Application {
 
 
     public static void main(String[] args) {
-        launch();
-        StoryCharacter StoryCharacter = new StoryCharacter("Character1", "Gesture1", "src/main/images/body.png", "FacialExpression1", "src/main/images/Face.png");
 
-        //add more gestures and facial expressions
-        StoryCharacter.addGesture("Gesture2", "src/main/images/body2.png");
-        StoryCharacter.addFacialExpression("FacialExpression2", "src/main/images/Face2.png");
-        //Here, it is possible to add more facial expressions and gestures to the list in the character
+
+
+        launch();
     }
 }

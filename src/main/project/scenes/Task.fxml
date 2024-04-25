@@ -39,7 +39,7 @@
                   <Insets />
                </HBox.margin>
                <image>
-                  <Image url="@../Welcome.png" />
+                  <Image url="@../../images/Face.png" />
                </image>
             </ImageView>
             <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 100;">
@@ -81,7 +81,7 @@
       <Button fx:id="taskAfslut" layoutX="572.0" layoutY="656.0" mnemonicParsing="false" onAction="#changeSceneReflect" prefHeight="50.0" prefWidth="92.0" text="Afslut" AnchorPane.bottomAnchor="100.0" />
       <HBox alignment="CENTER_RIGHT" prefHeight="70.0" prefWidth="200.0" spacing="15.0" AnchorPane.bottomAnchor="710.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button fx:id="playAudioButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#playAudio" prefHeight="50.0" prefWidth="50.0" text="Lyd" />
+            <Button fx:id="playAudioButton" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Lyd" />
          </children>
          <padding>
             <Insets right="60.0" />
