@@ -1,6 +1,5 @@
 package PACKAGE_NAME.src.main.project.classes;
 
-import PACKAGE_NAME.src.main.project.StoryProgress;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
