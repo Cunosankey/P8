@@ -1,11 +1,14 @@
 package PACKAGE_NAME.src.main.project.classes;
 
+import PACKAGE_NAME.src.main.project.StoryProgress;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
@@ -16,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-    public class StoryController2 {
+    public class StoryController2 extends StoryController1 {
         @FXML
         private Label titleLabel;
         @FXML
@@ -93,7 +96,16 @@ import java.util.List;
          * in the list to the corresponding labels.
          */
         public void initialize() {
-            if (!stories.isEmpty()) {
+            if (!StoryProgress.isStory1Completed()) {
+                    //
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Information Dialog");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Færdiggør den første historie først!");
+
+                    alert.showAndWait();
+                }
+            else if (!stories.isEmpty()) {
                 if (titleLabel != null && storyDescriptionLabel != null) {
                     // The setText() method is used to set the text content of the labels to the title and story description of the first story in the list.
                     // The get() method is used to access the story object at the specified index (0 in this case).

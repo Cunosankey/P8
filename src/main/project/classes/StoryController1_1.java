@@ -1,5 +1,6 @@
 package PACKAGE_NAME.src.main.project.classes;
 
+import PACKAGE_NAME.src.main.project.StoryProgress;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -19,12 +20,18 @@ public class StoryController1_1 extends StoryController1 {
         }
     }
 
+    public boolean isStory1_1(){
+        return true;
+    }
+
     public void toTask(ActionEvent event) throws IOException {
+        StoryProgress.setStory1Completed(true);
         Parent newSceneParent = FXMLLoader.load(getClass().getResource("../scenes/Task.fxml"));
         Scene newScene = new Scene(newSceneParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(newScene);
         window.show();
+
     }
 
     public void backAgain(ActionEvent event) throws IOException {

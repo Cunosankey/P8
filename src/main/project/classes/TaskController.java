@@ -7,11 +7,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
-import javafx.scene.text.Text;
-import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 
-import java.awt.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Objects;
@@ -52,6 +49,14 @@ public class TaskController {
 
         // Increment currentGestureIndex
         currentGestureIndex = (currentGestureIndex + 1) % characterGesture.size();
+    }
+    public void backStory(ActionEvent event) throws IOException {
+        Node node = (Node) event.getSource();
+        Stage stage = (Stage) node.getScene().getWindow();
+        Scene scene = stage.getScene();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../scenes/Library.fxml"));
+        Parent root = fxmlLoader.load();
+        scene.setRoot(root);
     }
 
     // Getter for the ChosenGesture (use this to get the current gesture in REFLECT)
