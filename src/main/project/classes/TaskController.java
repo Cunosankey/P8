@@ -10,7 +10,6 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import javafx.scene.image.Image;
@@ -18,7 +17,6 @@ import javafx.scene.image.Image;
 public class TaskController {
 
     private StoryCharacter storyCharacter;
-
 
     public TaskController() {
         // Create the StoryCharacter object
@@ -58,7 +56,6 @@ public class TaskController {
     public void updateCharacterGesture() {
         List<Gesture> characterGestureList = storyCharacter.getCharacterGesture();
         String imagePath = characterGestureList.get(currentGestureIndex).getGestureImagePath();
-        System.out.println("Image path: " + imagePath); // Print the image path for debugging
         Image image = new Image("file:" + imagePath);
         if (image.isError()) {
             System.out.println("Error loading image: " + image.getException()); // Print the exception if there is an error loading the image
@@ -67,13 +64,36 @@ public class TaskController {
 
         // Increment currentGestureIndex
         currentGestureIndex = (currentGestureIndex + 1) % characterGestureList.size();
-
-        System.out.println("CLICKED!!");
     }
 
     public String chosenGesture() {
         List<Gesture> characterGestureList = storyCharacter.getCharacterGesture();
         return characterGestureList.get(currentGestureIndex).getGestureID();
     }
+
+    // Method to change element in FacialExpression arraylist
+    private int currentFacialExpressionIndex = 0;
+
+    @FXML
+    private ImageView characterFacialExpressionImage;
+
+    public void updateCharacterFacialExpression() {
+        List<FacialExpression> characterFacialExpressionList = storyCharacter.getCharacterFacialExpression();
+        String imagePath = characterFacialExpressionList.get(currentFacialExpressionIndex).getFacialExpressionImagePath();
+        Image image = new Image("file:" + imagePath);
+        if (image.isError()) {
+            System.out.println("Error loading image: " + image.getException()); // Print the exception if there is an error loading the image
+        }
+        characterFacialExpressionImage.setImage(image);
+
+        // Increment currentGestureIndex
+        currentFacialExpressionIndex = (currentFacialExpressionIndex + 1) % characterFacialExpressionList.size();
+    }
+
+    public String chosenFacialExpression() {
+        List<FacialExpression> characterFacialExpressionList = storyCharacter.getCharacterFacialExpression();
+        return characterFacialExpressionList.get(currentFacialExpressionIndex).getFacialExpressionID();
+    }
+
 }
 

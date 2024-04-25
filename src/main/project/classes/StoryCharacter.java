@@ -33,6 +33,12 @@ public class StoryCharacter {
         characterFacialExpression.add(newFacialExpression);
     }
 
+    public List<FacialExpression> getCharacterFacialExpression() {
+        return characterFacialExpression;
+    }
+
+
+
     /*public void setCurrentGesture(ChosenGesture) {
         CurrentGesture = ChosenGesture;
     }
