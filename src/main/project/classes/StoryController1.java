@@ -70,12 +70,12 @@ public class StoryController1 {
 
     // Nyt 22-04
     public void handleButtonAction(ActionEvent event) throws IOException {
-        Node node = (Node) event.getSource();
-        Stage stage = (Stage) node.getScene().getWindow();
-        Scene scene = stage.getScene();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../scenes/Story1-1.fxml"));
-        Parent root = fxmlLoader.load();
-        scene.setRoot(root);
+            Node node = (Node) event.getSource();
+            Stage stage = (Stage) node.getScene().getWindow();
+            Scene scene = stage.getScene();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../scenes/Story1-1.fxml"));
+            Parent root = fxmlLoader.load();
+            scene.setRoot(root);
     }
 
     public void backHandle(ActionEvent event) throws IOException {
@@ -126,5 +126,5 @@ private void changeScene(String fxmlFile) throws IOException {
     FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlFile));
     Parent root = fxmlLoader.load();
     scene.setRoot(root);
-}  
+}
  */
