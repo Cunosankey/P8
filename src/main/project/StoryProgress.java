@@ -1,4 +1,4 @@
-package PACKAGE_NAME.src.main.project.classes;
+package PACKAGE_NAME.src.main.project;
 
 // THis class is used to keep track of the progress of the story.
 public class StoryProgress {
