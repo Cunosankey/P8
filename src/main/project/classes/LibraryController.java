@@ -28,23 +28,33 @@ public class LibraryController {
     @FXML
     private Label story2TooltipLabel;
 
+    // Method called when the JavaFX component is initialized
     @FXML
     public void initialize() {
+        // Create two tooltips with custom text
         Tooltip story1Tooltip = new Tooltip("YO AND WELCOME TO DTORY MOTHERFUCKING 1 BITCH");
         Tooltip story2Tooltip = new Tooltip("HELLO AND WELCOME TO STORY 2 CUTE PATOTTIE :)");
 
+        // Set up the tooltips for the corresponding labels
         setupTooltip(story1TooltipLabel, story1Tooltip);
         setupTooltip(story2TooltipLabel, story2Tooltip);
     }
 
+    // Private method to set up a tooltip for our "?" labels (helper method)
     private void setupTooltip(Label label, Tooltip tooltip) {
+        // Set up an event handler for when the mouse enters the label
         label.setOnMouseEntered(event -> {
+            // Get the node that triggered the event (i.e. the label)
             Node node = (Node) event.getSource();
+            // Install the tooltip on the node
             Tooltip.install(node, tooltip);
         });
 
+        // Set up an event handler for when the mouse exits the label
         label.setOnMouseExited(event -> {
+            // Get the node that triggered the event (i.e. the label)
             Node node = (Node) event.getSource();
+            // Uninstall the tooltip from the node
             Tooltip.uninstall(node, tooltip);
         });
     }
