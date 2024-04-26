@@ -3,6 +3,7 @@ package PACKAGE_NAME.src.main.project.classes;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -10,11 +11,14 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.List;
 import java.util.Objects;
+import java.util.ResourceBundle;
+
 import javafx.scene.image.Image;
 
-public class TaskController {
+public class TaskController implements Initializable {
 
     private StoryCharacter storyCharacter;
 
@@ -24,7 +28,6 @@ public class TaskController {
         // Add more gestures and facial expressions
         storyCharacter.addGesture("Gesture2", "src/main/images/bab.jpg");
         storyCharacter.addFacialExpression("FacialExpression2", "src/main/images/bab.jpg");
-
     }
 
     public void changeSceneReflect(ActionEvent event) throws IOException {
@@ -34,6 +37,13 @@ public class TaskController {
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(newScene);
         window.show();
+    }
+
+    // Load images as soon as TaskController is initialized
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        updateCharacterFacialExpression();
+        updateCharacterGesture();
     }
 
     // Check current task (to play audio)
