@@ -7,17 +7,49 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 
+import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.event.ActionEvent;
 import javafx.stage.Stage;
+import javafx.scene.control.Tooltip;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.Objects;
 
+
 public class LibraryController {
     @FXML
     private GridPane gridPane;
+
+    @FXML
+    private Label story1TooltipLabel;
+
+    @FXML
+    private Label story2TooltipLabel;
+
+    @FXML
+    public void initialize() {
+        Tooltip story1Tooltip = new Tooltip("YO AND WELCOME TO DTORY MOTHERFUCKING 1 BITCH");
+        Tooltip story2Tooltip = new Tooltip("HELLO AND WELCOME TO STORY 2 CUTE PATOTTIE :)");
+
+        setupTooltip(story1TooltipLabel, story1Tooltip);
+        setupTooltip(story2TooltipLabel, story2Tooltip);
+    }
+
+    private void setupTooltip(Label label, Tooltip tooltip) {
+        label.setOnMouseEntered(event -> {
+            Node node = (Node) event.getSource();
+            Tooltip.install(node, tooltip);
+        });
+
+        label.setOnMouseExited(event -> {
+            Node node = (Node) event.getSource();
+            Tooltip.uninstall(node, tooltip);
+        });
+    }
+
+
 
     @FXML
     public void spil(ActionEvent event) throws IOException {
