@@ -2,6 +2,7 @@ package PACKAGE_NAME.src.main.project.classes;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Bounds;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -13,7 +14,6 @@ import javafx.event.ActionEvent;
 import javafx.stage.Stage;
 import javafx.scene.control.Tooltip;
 import javafx.scene.input.MouseEvent;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 import java.io.IOException;
 import java.net.URL;
@@ -42,24 +42,41 @@ public class LibraryController {
         setupTooltip(story2TooltipLabel, story2Tooltip);
     }
 
+
+    /**
+     * Sets up a tooltip for a given label.
+     *
+     * @param label the label to which the tooltip will be attached
+     * @param tooltip the tooltip to be displayed
+     */
     // Private method to set up a tooltip for our "?" labels (helper method)
     private void setupTooltip(Label label, Tooltip tooltip) {
-        AtomicBoolean tooltipInstalled = new AtomicBoolean(false);
-        
+        // Add a mouse click event handler to the label
         label.setOnMouseClicked(event -> {
-            if (!tooltipInstalled) {
-                Tooltip.install(label, tooltip);
-                tooltipInstalled = true;
+            // Check if the tooltip is currently showing
+            if (tooltip.isShowing()) {
+                // If it is, hide it
+                tooltip.hide();
             } else {
-                Tooltip.uninstall(label, tooltip);
-                tooltipInstalled = false;
+                // Get the screen coordinates of the label
+                Bounds bounds = label.localToScreen(label.getBoundsInLocal());
+                // Show the tooltip right above the label
+                tooltip.show(label, bounds.getMinX(), bounds.getMinY() - tooltip.getHeight());
             }
         });
-        label.getScene().addEventFilter(MouseEvent.MOUSE_PRESSED, event -> {
-            Node node = (Node) event.getTarget();
-            if (node!= label && tooltipInstalled) {
-                Tooltip.uninstall(label, tooltip);
-                tooltipInstalled = false;
+        // Add a change listener to the scene property of the label
+        label.sceneProperty().addListener((observable, oldScene, newScene) -> {
+            if (newScene != null) {
+                // Add a mouse press event filter to the root of the scene
+                newScene.getRoot().addEventFilter(MouseEvent.MOUSE_PRESSED, event -> {
+                    // Get the node that was clicked
+                    Node node = (Node) event.getTarget();
+                    // Check if the node is not the label and the tooltip is showing
+                    if (node != label && tooltip.isShowing()) {
+                        // If it is, hide the tooltip
+                        tooltip.hide();
+                    }
+                });
             }
         });
     }
