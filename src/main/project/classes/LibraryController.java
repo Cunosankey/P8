@@ -34,7 +34,7 @@ public class LibraryController {
     @FXML
     public void initialize() {
         // Create two tooltips with custom text
-        Tooltip story1Tooltip = new Tooltip("YO AND WELCOME TO DTORY MOTHERFUCKING 1 BITCH");
+        Tooltip story1Tooltip = new Tooltip("YO AND WELCOME TO STORY MOTHERFUCKING 1 BITCH");
         Tooltip story2Tooltip = new Tooltip("HELLO AND WELCOME TO STORY 2 CUTE PATOTTIE :)");
 
         // Set up the tooltips for the corresponding labels
