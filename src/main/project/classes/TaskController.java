@@ -57,14 +57,6 @@ public class TaskController implements Initializable {
     // Check current task (to play audio)
     private Task currentTask;
 
-    // Method to play audio file (called in the FXML file)
-//    @FXML
-//    public void playAudio() {
-//        if (currentTask != null) {
-//            currentTask.playAudio();
-//        }
-//    }
-
     // Get the title and description of the task
     @FXML
     private Label titleLabel;
@@ -148,6 +140,15 @@ public class TaskController implements Initializable {
     // Method to go back to the previous scene
     public void backButton(ActionEvent event) throws IOException {
         Parent newSceneParent = FXMLLoader.load(getClass().getResource("../scenes/Story1-1.fxml"));
+        Scene newScene = new Scene(newSceneParent);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(newScene);
+        window.show();
+    }
+
+    // Method to go to the Reflect scene
+    public void gotoReflect(ActionEvent event) throws IOException {
+        Parent newSceneParent = FXMLLoader.load(getClass().getResource("../scenes/Reflect.fxml"));
         Scene newScene = new Scene(newSceneParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(newScene);
