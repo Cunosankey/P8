@@ -12,6 +12,8 @@ import javafx.scene.layout.GridPane;
 import javafx.event.ActionEvent;
 import javafx.stage.Stage;
 import javafx.scene.control.Tooltip;
+import javafx.scene.input.MouseEvent;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 import java.io.IOException;
 import java.net.URL;
@@ -42,20 +44,23 @@ public class LibraryController {
 
     // Private method to set up a tooltip for our "?" labels (helper method)
     private void setupTooltip(Label label, Tooltip tooltip) {
-        // Set up an event handler for when the mouse enters the label
-        label.setOnMouseEntered(event -> {
-            // Get the node that triggered the event (i.e. the label)
-            Node node = (Node) event.getSource();
-            // Install the tooltip on the node
-            Tooltip.install(node, tooltip);
+        AtomicBoolean tooltipInstalled = new AtomicBoolean(false);
+        
+        label.setOnMouseClicked(event -> {
+            if (!tooltipInstalled) {
+                Tooltip.install(label, tooltip);
+                tooltipInstalled = true;
+            } else {
+                Tooltip.uninstall(label, tooltip);
+                tooltipInstalled = false;
+            }
         });
-
-        // Set up an event handler for when the mouse exits the label
-        label.setOnMouseExited(event -> {
-            // Get the node that triggered the event (i.e. the label)
-            Node node = (Node) event.getSource();
-            // Uninstall the tooltip from the node
-            Tooltip.uninstall(node, tooltip);
+        label.getScene().addEventFilter(MouseEvent.MOUSE_PRESSED, event -> {
+            Node node = (Node) event.getTarget();
+            if (node!= label && tooltipInstalled) {
+                Tooltip.uninstall(label, tooltip);
+                tooltipInstalled = false;
+            }
         });
     }
 
