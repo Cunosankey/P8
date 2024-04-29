@@ -8,8 +8,12 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
+import javafx.scene.control.Label;
 
+import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
@@ -44,6 +48,10 @@ public class TaskController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         updateCharacterFacialExpression();
         updateCharacterGesture();
+        Task task1 = new Task();
+        TaskDescription taskDescription1 = TaskDescription.createTaskDescription1();
+        task1.setTaskDescription(taskDescription1);
+        setTask(task1);
     }
 
     // Check current task (to play audio)
@@ -56,6 +64,38 @@ public class TaskController implements Initializable {
 //            currentTask.playAudio();
 //        }
 //    }
+
+    // Get the title and description of the task
+    @FXML
+    private Label titleLabel;
+
+    @FXML
+    private TextFlow descriptionTextFlow;
+
+    // Method to set the title and description of the task
+    public void setStory(Story story) {
+        titleLabel.setText(story.getTitle());
+        // Create a Text object and set its text
+        Text descriptionText = new Text(story.getStoryDescription());
+
+        // Clear the TextFlow and add the new Text
+        descriptionTextFlow.getChildren().clear();
+        descriptionTextFlow.getChildren().add(descriptionText);
+    }
+
+    public void setTask(Task task) {
+        TaskDescription taskDescription = task.getTaskDescription();
+
+        // Set the title
+        titleLabel.setText(taskDescription.getTitle());
+
+        // Create a Text object and set its text
+        Text descriptionText = new Text(taskDescription.getDescription());
+
+        // Clear the TextFlow and add the new Text
+        descriptionTextFlow.getChildren().clear();
+        descriptionTextFlow.getChildren().add(descriptionText);
+    }
 
     // Method to change element in characterGesture arraylist
     private int currentGestureIndex = 0;
