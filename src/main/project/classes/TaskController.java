@@ -8,12 +8,12 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 import javafx.scene.control.Label;
 
-import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
@@ -25,17 +25,21 @@ import javafx.scene.image.Image;
 public class TaskController implements Initializable {
 
     private StoryCharacter storyCharacter;
+    @FXML
+    private HBox circleContainer;
+    private StoryProgress storyProgress;
 
     public TaskController() {
         // Create the StoryCharacter object
-        storyCharacter = new StoryCharacter("Character1", "Gesture1", "src/main/images/body.png", "FacialExpression1", "src/main/images/Face.png");
+        storyCharacter = new StoryCharacter("Character1", "Gesture1", "src/main/resources/images/body.png", "FacialExpression1", "src/main/resources/images/Face.png");
         // Add more gestures and facial expressions
-        storyCharacter.addGesture("Gesture2", "src/main/images/bab.jpg");
-        storyCharacter.addFacialExpression("FacialExpression2", "src/main/images/bab.jpg");
+        storyCharacter.addGesture("Gesture2", "src/main/resources/images/bab.jpg");
+        storyCharacter.addFacialExpression("FacialExpression2", "src/main/resources/images/bab.jpg");
+
     }
 
     public void changeSceneReflect(ActionEvent event) throws IOException {
-        Parent newSceneParent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("src/main/project/scenes/Reflect.fxml")));
+        Parent newSceneParent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("src/main/project/resources/scenes/Reflect.fxml")));
         Scene newScene = new Scene(newSceneParent);
         // This line gets the Stage information
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -52,6 +56,11 @@ public class TaskController implements Initializable {
         TaskDescription taskDescription1 = TaskDescription.createTaskDescription1();
         task1.setTaskDescription(taskDescription1);
         setTask(task1);
+        // Create the ProgressManager object
+        storyProgress = new StoryProgress(circleContainer, 4);
+        storyProgress.resetCircles();
+        storyProgress.createCircles();
+        storyProgress.fillCircle("Task");
     }
 
     // Check current task (to play audio)

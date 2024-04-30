@@ -86,5 +86,7 @@
             <Insets right="60.0" />
          </padding>
       </HBox>
+      <HBox fx:id="circleContainer" layoutX="405.0" layoutY="737.0" prefHeight="35.0" prefWidth="181.0" spacing="10.0">
+      </HBox>
    </children>
 </AnchorPane>

@@ -6,9 +6,11 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
 import java.io.Console;
 import java.io.IOException;
+import javafx.scene.layout.HBox;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 
 public class StoryController1_1 extends StoryController1 {
     @Override
@@ -18,6 +20,9 @@ public class StoryController1_1 extends StoryController1 {
             getTitleLabel().setText(getStories().get(getCurrentStory()).getTitle());
             getStoryDescriptionLabel2().setText(getStories().get(getCurrentStory()).getStoryDescription2());
         }
+        storyProgress.resetCircles();
+        storyProgress.fillCircle("Story1-1");
+
     }
 
     public boolean isStory1_1() {
