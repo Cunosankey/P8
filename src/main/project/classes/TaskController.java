@@ -8,6 +8,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
@@ -25,6 +26,9 @@ import javafx.scene.image.Image;
 public class TaskController implements Initializable {
 
     private StoryCharacter storyCharacter;
+    @FXML
+    private HBox circleContainer;
+    private ProgressManager progressManager;
 
     public TaskController() {
         // Create the StoryCharacter object
@@ -32,6 +36,7 @@ public class TaskController implements Initializable {
         // Add more gestures and facial expressions
         storyCharacter.addGesture("Gesture2", "src/main/images/bab.jpg");
         storyCharacter.addFacialExpression("FacialExpression2", "src/main/images/bab.jpg");
+
     }
 
     public void changeSceneReflect(ActionEvent event) throws IOException {
@@ -52,6 +57,11 @@ public class TaskController implements Initializable {
         TaskDescription taskDescription1 = TaskDescription.createTaskDescription1();
         task1.setTaskDescription(taskDescription1);
         setTask(task1);
+
+        progressManager = new ProgressManager(circleContainer, 4);
+        progressManager.resetCircles();
+        progressManager.createCircles();
+        progressManager.fillCircle("Task");
     }
 
     // Check current task (to play audio)

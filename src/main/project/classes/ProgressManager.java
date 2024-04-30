@@ -1,4 +1,5 @@
 package PACKAGE_NAME.src.main.project.classes;
+
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -21,6 +22,7 @@ public class ProgressManager {
         this.totalCircles = totalCircles;
         this.circles = new ArrayList<>(); // Initialize the list of circles
     }
+
     public void createCircles() {
         for (int i = 0; i < totalCircles; i++) {
             Circle circle = new Circle(5);
@@ -30,6 +32,7 @@ public class ProgressManager {
             circles.add(circle);
         }
     }
+
     public void fillCircle(String sceneName) {
         switch (sceneName) {
             case "Story1":
