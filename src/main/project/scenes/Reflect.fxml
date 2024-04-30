@@ -16,12 +16,12 @@
          <children>
             <ImageView fitHeight="350.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../images/Face.png" />
+                  <Image url="@../../resources/images/Face.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="350.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="NEVER">
                <image>
-                  <Image url="@../../images/body.png" />
+                  <Image url="@../../resources/images/body.png" />
                </image>
             </ImageView>
          </children>
