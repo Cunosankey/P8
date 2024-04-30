@@ -87,6 +87,24 @@ public class TaskController implements Initializable {
         currentGestureIndex = (currentGestureIndex + 1) % characterGestureList.size();
     }
 
+    // Method to reverse the character gesture
+    public void reverseCharacterGesture() {
+        List<Gesture> characterGestureList = storyCharacter.getCharacterGesture();
+        String imagePath = characterGestureList.get(currentGestureIndex).getGestureImagePath();
+        Image image = new Image("file:" + imagePath);
+        if (image.isError()) {
+            System.out.println("Error loading image: " + image.getException()); // Print the exception if there is an error loading the image
+        }
+        characterGestureImage.setImage(image);
+
+        // Decrement currentFacialExpressionIndex
+        if (currentGestureIndex == 0) {
+            currentGestureIndex = characterGestureList.size() - 1; // Wrap around to the end of the list
+        } else {
+            currentGestureIndex--;
+        }
+    }
+
 
     // Method to change element in FacialExpression arraylist
     private static int currentFacialExpressionIndex = 0;
@@ -94,6 +112,7 @@ public class TaskController implements Initializable {
     @FXML
     private ImageView characterFacialExpressionImage;
 
+    // Method to update the character's facial expression
     public void updateCharacterFacialExpression() {
         List<FacialExpression> characterFacialExpressionList = storyCharacter.getCharacterFacialExpression();
         String imagePath = characterFacialExpressionList.get(currentFacialExpressionIndex).getFacialExpressionImagePath();
@@ -106,6 +125,25 @@ public class TaskController implements Initializable {
         // Increment currentGestureIndex
         currentFacialExpressionIndex = (currentFacialExpressionIndex + 1) % characterFacialExpressionList.size();
     }
+
+    // Method to reverse the Facial Expression
+    public void reverseCharacterFacialExpression() {
+        List<FacialExpression> characterFacialExpressionList = storyCharacter.getCharacterFacialExpression();
+        String imagePath = characterFacialExpressionList.get(currentFacialExpressionIndex).getFacialExpressionImagePath();
+        Image image = new Image("file:" + imagePath);
+        if (image.isError()) {
+            System.out.println("Error loading image: " + image.getException()); // Print the exception if there is an error loading the image
+        }
+        characterFacialExpressionImage.setImage(image);
+
+        // Decrement currentFacialExpressionIndex
+        if (currentFacialExpressionIndex == 0) {
+            currentFacialExpressionIndex = characterFacialExpressionList.size() - 1; // Wrap around to the end of the list
+        } else {
+            currentFacialExpressionIndex--;
+        }
+    }
+
 
     // Method to go back to the previous scene
     public void backButton(ActionEvent event) throws IOException {
