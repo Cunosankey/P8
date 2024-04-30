@@ -1,6 +1,7 @@
 package PACKAGE_NAME.src.main.project.classes;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -55,5 +56,9 @@ public class StoryController1_1 extends StoryController1 {
     // Returns the current story object
     public Story getCurrentStoryObject() {
         return getStories().get(getCurrentStory());
+    }
+
+    @FXML
+    private void playAudio() {
     }
 }

@@ -12,12 +12,12 @@
         <Label fx:id="titleLabel" layoutX="27.0" layoutY="64.0" prefHeight="95.0" prefWidth="294.0" text="Title" />
         <Label fx:id="storyDescriptionLabel2" layoutX="30.0" layoutY="138.0" prefHeight="635.0" prefWidth="428.0" text="Description" />
         <Button layoutX="558.0" layoutY="735.0" mnemonicParsing="false" onAction="#toTask" text="Fortsæt" />
-        <ImageView fitHeight="313.0" fitWidth="288.0" layoutX="780.0" layoutY=
-                "313.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="313.0" fitWidth="288.0" layoutX="780.0" layoutY="313.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../images/bab.jpg" />
             </image>
         </ImageView>
         <Button layoutX="418.0" layoutY="733.0" mnemonicParsing="false" onAction="#backAgain" text="Tilbage" />
+      <Button fx:id="playAudioButton" contentDisplay="CENTER" layoutX="952.0" layoutY="29.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Lyd" />
     </children>
 </AnchorPane>
