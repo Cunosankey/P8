@@ -36,7 +36,7 @@
       </VBox>
                   <HBox alignment="CENTER" prefHeight="140.0" prefWidth="200.0" spacing="20.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="680.0">
                      <children>
-                        <Button minHeight="45.0" minWidth="90.0" mnemonicParsing="false" prefWidth="180.0" text="Redo">
+                        <Button minHeight="45.0" minWidth="90.0" mnemonicParsing="false" onAction="#goBackReflect" prefWidth="180.0" text="Redo">
                            <padding>
                               <Insets left="30.0" right="30.0" />
                            </padding>

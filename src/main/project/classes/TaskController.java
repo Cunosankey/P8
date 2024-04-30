@@ -12,14 +12,10 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 import javafx.scene.control.Label;
-
-import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
-import java.util.Objects;
 import java.util.ResourceBundle;
-
 import javafx.scene.image.Image;
 
 public class TaskController implements Initializable {
@@ -32,15 +28,6 @@ public class TaskController implements Initializable {
         // Add more gestures and facial expressions
         storyCharacter.addGesture("Gesture2", "src/main/images/bab.jpg");
         storyCharacter.addFacialExpression("FacialExpression2", "src/main/images/bab.jpg");
-    }
-
-    public void changeSceneReflect(ActionEvent event) throws IOException {
-        Parent newSceneParent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("src/main/project/scenes/Reflect.fxml")));
-        Scene newScene = new Scene(newSceneParent);
-        // This line gets the Stage information
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(newScene);
-        window.show();
     }
 
     // Load images as soon as TaskController is initialized
@@ -65,15 +52,6 @@ public class TaskController implements Initializable {
     private TextFlow descriptionTextFlow;
 
     // Method to set the title and description of the task
-    public void setStory(Story story) {
-        titleLabel.setText(story.getTitle());
-        // Create a Text object and set its text
-        Text descriptionText = new Text(story.getStoryDescription());
-
-        // Clear the TextFlow and add the new Text
-        descriptionTextFlow.getChildren().clear();
-        descriptionTextFlow.getChildren().add(descriptionText);
-    }
 
     public void setTask(Task task) {
         TaskDescription taskDescription = task.getTaskDescription();
@@ -90,7 +68,8 @@ public class TaskController implements Initializable {
     }
 
     // Method to change element in characterGesture arraylist
-    private int currentGestureIndex = 0;
+    // Static to keep track of current gesture index
+    private static int currentGestureIndex = 0;
 
     @FXML
     private ImageView characterGestureImage;
@@ -110,7 +89,7 @@ public class TaskController implements Initializable {
 
 
     // Method to change element in FacialExpression arraylist
-    private int currentFacialExpressionIndex = 0;
+    private static int currentFacialExpressionIndex = 0;
 
     @FXML
     private ImageView characterFacialExpressionImage;
@@ -144,7 +123,7 @@ public class TaskController implements Initializable {
             return;
         }
 
-        // Update methods before going to Reflect scene
+        // Update image methods before going to Reflect scene to ensure the images are updated
         updateCharacterFacialExpression();
         updateCharacterGesture();
 

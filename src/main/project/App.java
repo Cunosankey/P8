@@ -4,8 +4,6 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import PACKAGE_NAME.src.main.project.classes.StoryCharacter;
-
 
 import java.io.IOException;
 
