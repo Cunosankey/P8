@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 import java.io.BufferedReader;
@@ -35,6 +36,11 @@ public class StoryController2 extends StoryController1 {
     public List<Story> getStories() {
         return stories;
     }
+
+    @FXML
+    private HBox circleContainer;
+
+    public StoryProgress storyProgress;
 
     /**
      * @param filename This method reads the stories from a file and adds them to the stories list.
@@ -102,6 +108,11 @@ public class StoryController2 extends StoryController1 {
                 storyDescriptionLabel.setText(stories.get(currentStory).getStoryDescription());
             }
         }
+        // The ProgressManager class is instantiated with the circleContainer and the total number of circles (4 in this case).
+        storyProgress = new StoryProgress(circleContainer, 4);
+        storyProgress.resetCircles();
+        storyProgress.createCircles();
+        storyProgress.fillCircle("Story2");
     }
     protected Label getStoryDescriptionLabel2() {
         return storyDescriptionLabel2;

@@ -13,8 +13,21 @@
                <children>
       <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="350.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="100.0">
          <children>
+
             <ImageView fx:id="facialExpressionImage" fitHeight="350.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fx:id="gestureImage" fitHeight="350.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="NEVER" />
+
+            <ImageView fitHeight="350.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/images/Face.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="350.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="NEVER">
+               <image>
+                  <Image url="@../../resources/images/body.png" />
+               </image>
+            </ImageView>
+
          </children>
       </VBox>
       <VBox layoutX="10.0" layoutY="10.0" prefWidth="460.0" AnchorPane.leftAnchor="525.0" AnchorPane.topAnchor="200.0">
@@ -44,7 +57,7 @@
                               <Font size="16.0" />
                            </font>
                         </Button>
-                        <Button layoutX="514.0" layoutY="67.0" minHeight="45.0" mnemonicParsing="false" prefWidth="180.0" text="Complete Task" textAlignment="CENTER">
+                        <Button layoutX="514.0" layoutY="67.0" minHeight="45.0" mnemonicParsing="false" prefWidth="180.0" onAction="#done" text="Complete Task" textAlignment="CENTER">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -56,4 +69,6 @@
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="720.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0" />
                </children>
+   <HBox fx:id="circleContainer" layoutX="405.0" layoutY="737.0" prefHeight="35.0" prefWidth="181.0" spacing="10.0">
+   </HBox>
             </AnchorPane>
