@@ -113,16 +113,18 @@ public class StoryController1 {
         return titleLabel;
     }
 
+    @FXML
+    private void playAudio() {
+        // Create an instance of Audio
+        Audio audio = new Audio("audio_files/kill_me.mp3");
+
+        // Create an instance of AudioController and play the audio
+        AudioController.playAudio(audio);
+
+    }
 }
 
-@FXML
-private void playAudio() {
-    // Create an instance of Audio
-    Audio audio = new Audio("audio_files/kill_me.mp3");
 
-    // Create an instance of AudioController and play the audio
-    AudioController.playAudio(audio);
-}
 
 
 
