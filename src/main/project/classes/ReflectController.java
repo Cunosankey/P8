@@ -16,13 +16,14 @@ public class ReflectController {
     @FXML
     private HBox circleContainer;
 
-    public ProgressManager progressManager;
+    public StoryProgress storyProgress;
 
     public void initialize() {
-        progressManager = new ProgressManager(circleContainer, 4);
-        progressManager.resetCircles();
-        progressManager.createCircles();
-        progressManager.fillCircle("Reflect");
+        // Create the ProgressManager object
+        storyProgress = new StoryProgress(circleContainer, 4);
+        storyProgress.resetCircles();
+        storyProgress.createCircles();
+        storyProgress.fillCircle("Reflect");
     }
 
 

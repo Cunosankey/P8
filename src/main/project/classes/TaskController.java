@@ -28,7 +28,7 @@ public class TaskController implements Initializable {
     private StoryCharacter storyCharacter;
     @FXML
     private HBox circleContainer;
-    private ProgressManager progressManager;
+    private StoryProgress storyProgress;
 
     public TaskController() {
         // Create the StoryCharacter object
@@ -57,11 +57,11 @@ public class TaskController implements Initializable {
         TaskDescription taskDescription1 = TaskDescription.createTaskDescription1();
         task1.setTaskDescription(taskDescription1);
         setTask(task1);
-
-        progressManager = new ProgressManager(circleContainer, 4);
-        progressManager.resetCircles();
-        progressManager.createCircles();
-        progressManager.fillCircle("Task");
+        // Create the ProgressManager object
+        storyProgress = new StoryProgress(circleContainer, 4);
+        storyProgress.resetCircles();
+        storyProgress.createCircles();
+        storyProgress.fillCircle("Task");
     }
 
     // Check current task (to play audio)

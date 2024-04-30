@@ -40,7 +40,7 @@ public class StoryController2 extends StoryController1 {
     @FXML
     private HBox circleContainer;
 
-    public ProgressManager progressManager;
+    public StoryProgress storyProgress;
 
     /**
      * @param filename This method reads the stories from a file and adds them to the stories list.
@@ -109,10 +109,10 @@ public class StoryController2 extends StoryController1 {
             }
         }
         // The ProgressManager class is instantiated with the circleContainer and the total number of circles (4 in this case).
-        progressManager = new ProgressManager(circleContainer, 4);
-        progressManager.resetCircles();
-        progressManager.createCircles();
-        progressManager.fillCircle("Story1");
+        storyProgress = new StoryProgress(circleContainer, 4);
+        storyProgress.resetCircles();
+        storyProgress.createCircles();
+        storyProgress.fillCircle("Story2");
     }
     protected Label getStoryDescriptionLabel2() {
         return storyDescriptionLabel2;

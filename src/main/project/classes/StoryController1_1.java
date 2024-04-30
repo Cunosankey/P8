@@ -20,8 +20,8 @@ public class StoryController1_1 extends StoryController1 {
             getTitleLabel().setText(getStories().get(getCurrentStory()).getTitle());
             getStoryDescriptionLabel2().setText(getStories().get(getCurrentStory()).getStoryDescription2());
         }
-        progressManager.resetCircles();
-        progressManager.fillCircle("Story1-1");
+        storyProgress.resetCircles();
+        storyProgress.fillCircle("Story1-1");
 
     }
 
