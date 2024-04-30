@@ -53,7 +53,7 @@
                               <Font size="16.0" />
                            </font>
                         </Button>
-                        <Button layoutX="514.0" layoutY="67.0" minHeight="45.0" mnemonicParsing="false" prefWidth="180.0" text="Complete Task" textAlignment="CENTER">
+                        <Button layoutX="514.0" layoutY="67.0" minHeight="45.0" mnemonicParsing="false" prefWidth="180.0" onAction="#done" text="Complete Task" textAlignment="CENTER">
                            <font>
                               <Font size="16.0" />
                            </font>

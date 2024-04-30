@@ -24,23 +24,15 @@ public class StoryController1 {
     private Label storyDescriptionLabel;
     @FXML
     private Label storyDescriptionLabel2;
-    @FXML
-    public Circle circle1;
-    @FXML
-    public Circle circle2;
-    @FXML
-    public Circle circle3;
-    @FXML
-    public Circle circle4;
 
     private final int currentStory = 0;
 
     private final List<Story> stories = new ArrayList<>();
 
-    //progress circles
+    @FXML
     private HBox circleContainer;
-    private Circle[] circles;
-    private int totalScenes = 4;
+
+    public ProgressManager progressManager;
 
     public StoryController1() {
         loadStoriesFromFile("src/main/project/scenes/Stories/Story.txt");
@@ -86,6 +78,7 @@ public class StoryController1 {
 
     // Nyt 22-04
     public void handleButtonAction(ActionEvent event) throws IOException {
+
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
         Scene scene = stage.getScene();
@@ -117,7 +110,11 @@ public class StoryController1 {
                 storyDescriptionLabel.setText(stories.get(currentStory).getStoryDescription());
             }
         }
-        circle1.setFill(Color.BLACK);
+        // The ProgressManager class is instantiated with the circleContainer and the total number of circles (4 in this case).
+        progressManager = new ProgressManager(circleContainer, 4);
+        progressManager.resetCircles();
+        progressManager.createCircles();
+        progressManager.fillCircle("Story1");
     }
     protected Label getStoryDescriptionLabel2() {
         return storyDescriptionLabel2;

@@ -18,13 +18,7 @@
             <Image url="@../../images/bab.jpg" />
          </image>
       </ImageView>
-      <HBox layoutX="405.0" layoutY="737.0" prefHeight="35.0" prefWidth="181.0" spacing="10.0">
-         <children>
-            <Circle fx:id="circle1" fill="WHITE" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="circle4" fill="WHITE" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="circle3" fill="WHITE" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="circle2" fill="WHITE" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
-         </children>
+      <HBox fx:id="circleContainer" layoutX="405.0" layoutY="737.0" prefHeight="35.0" prefWidth="181.0" spacing="10.0">
       </HBox>
       <Button layoutX="503.0" layoutY="704.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Fortsæt" />
       <Button layoutX="375.0" layoutY="702.0" mnemonicParsing="false" onAction="#backHandle" prefHeight="26.0" prefWidth="68.0" text="Tilbage" />
