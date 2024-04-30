@@ -10,29 +10,16 @@
 <?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="810.0" maxWidth="1080.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1080.0" stylesheets="@../../project/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PACKAGE_NAME.src.main.project.classes.ReflectController">
-               <children>
+   <children>
       <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="350.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="100.0">
          <children>
-
             <ImageView fx:id="facialExpressionImage" fitHeight="350.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fx:id="gestureImage" fitHeight="350.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="NEVER" />
-
-            <ImageView fitHeight="350.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../resources/images/Face.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="350.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="NEVER">
-               <image>
-                  <Image url="@../../resources/images/body.png" />
-               </image>
-            </ImageView>
-
          </children>
       </VBox>
       <VBox layoutX="10.0" layoutY="10.0" prefWidth="460.0" AnchorPane.leftAnchor="525.0" AnchorPane.topAnchor="200.0">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Let's Reflect">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tid til at reflektere!">
                <font>
                   <Font name="System Bold" size="48.0" />
                </font>
@@ -47,28 +34,26 @@
             </Text>
          </children>
       </VBox>
-                  <HBox alignment="CENTER" prefHeight="140.0" prefWidth="200.0" spacing="20.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="680.0">
-                     <children>
-                        <Button minHeight="45.0" minWidth="90.0" mnemonicParsing="false" onAction="#goBackReflect" prefWidth="180.0" text="Redo">
-                           <padding>
-                              <Insets left="30.0" right="30.0" />
-                           </padding>
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                        </Button>
-                        <Button layoutX="514.0" layoutY="67.0" minHeight="45.0" mnemonicParsing="false" prefWidth="180.0" onAction="#done" text="Complete Task" textAlignment="CENTER">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                           <padding>
-                              <Insets left="30.0" right="30.0" />
-                           </padding>
-                        </Button>
-                     </children>
-                  </HBox>
-                  <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="720.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0" />
-               </children>
-   <HBox fx:id="circleContainer" layoutX="405.0" layoutY="737.0" prefHeight="35.0" prefWidth="181.0" spacing="10.0">
-   </HBox>
-            </AnchorPane>
+      <HBox alignment="CENTER" prefHeight="140.0" prefWidth="200.0" spacing="20.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="680.0">
+         <children>
+            <Button minHeight="45.0" minWidth="90.0" mnemonicParsing="false" onAction="#goBackReflect" prefWidth="180.0" text="Redo">
+               <padding>
+                  <Insets left="30.0" right="30.0" />
+               </padding>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="514.0" layoutY="67.0" minHeight="45.0" mnemonicParsing="false" prefWidth="180.0" text="Complete Task" textAlignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <padding>
+                  <Insets left="30.0" right="30.0" />
+               </padding>
+            </Button>
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="720.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0" />
+   </children>
+</AnchorPane>
