@@ -21,5 +21,6 @@
         <HBox fx:id="circleContainer" layoutX="405.0" layoutY="737.0" prefHeight="35.0" prefWidth="181.0" spacing="10.0">
         </HBox>
         <Button layoutX="475.0" layoutY="716.0" mnemonicParsing="false" onAction="#backHandle" prefHeight="26.0" prefWidth="68.0" text="Tilbage" />
+      <Button fx:id="playAudioButton" contentDisplay="CENTER" layoutX="958.0" layoutY="29.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Oplæs" />
     </children>
 </AnchorPane>

@@ -18,6 +18,9 @@
             <Image url="@../../resources/images/bab.jpg" />
          </image>
       </ImageView>
+
+      <Button layoutX="475.0" layoutY="716.0" mnemonicParsing="false" onAction="#backHandle" prefHeight="26.0" prefWidth="68.0" text="Tilbage" />
+      <Button fx:id="playAudioButton" contentDisplay="CENTER" layoutX="924.0" layoutY="29.0" mnemonicParsing="false" onAction="#playAudio" prefHeight="50.0" prefWidth="78.0" text="Oplæs" />
       <HBox fx:id="circleContainer" layoutX="405.0" layoutY="737.0" prefHeight="35.0" prefWidth="181.0" spacing="10.0">
       </HBox>
       <Button layoutX="503.0" layoutY="704.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Fortsæt" />

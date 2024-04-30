@@ -13,6 +13,7 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 import javafx.scene.control.Label;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
@@ -33,6 +34,15 @@ public class TaskController implements Initializable {
         storyCharacter.addGesture("Gesture2", "src/main/resources/images/bab.jpg");
         storyCharacter.addFacialExpression("FacialExpression2", "src/main/resources/images/bab.jpg");
 
+    }
+
+    @FXML
+    private void playAudio() {
+        // Create an instance of Audio
+        Audio audio = new Audio("src/main/audio_files/kill_me.mp3");
+
+        // Create an instance of AudioController and play the audio
+        AudioController.playAudio(audio);
     }
 
     // Load images as soon as TaskController is initialized
