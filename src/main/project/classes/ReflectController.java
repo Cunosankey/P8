@@ -60,8 +60,9 @@ public class ReflectController implements Initializable {
             e.printStackTrace();
         }
     }
+}
 
-
+/* Det her var der efter jeg merged med AudioFilesforStoriesAndTasks, ved ikke om det var der før eller ej, men det skal ikke være her
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -96,3 +97,4 @@ public class ReflectController {
     }
 
 }
+*/
