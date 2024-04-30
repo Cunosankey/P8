@@ -8,12 +8,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import javafx.scene.layout.HBox;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 
 public class StoryController1 {
     @FXML
@@ -22,13 +24,27 @@ public class StoryController1 {
     private Label storyDescriptionLabel;
     @FXML
     private Label storyDescriptionLabel2;
+    @FXML
+    public Circle circle1;
+    @FXML
+    public Circle circle2;
+    @FXML
+    public Circle circle3;
+    @FXML
+    public Circle circle4;
 
     private final int currentStory = 0;
 
     private final List<Story> stories = new ArrayList<>();
 
+    //progress circles
+    private HBox circleContainer;
+    private Circle[] circles;
+    private int totalScenes = 4;
+
     public StoryController1() {
         loadStoriesFromFile("src/main/project/scenes/Stories/Story.txt");
+
     }
 
     public List<Story> getStories() {
@@ -101,6 +117,7 @@ public class StoryController1 {
                 storyDescriptionLabel.setText(stories.get(currentStory).getStoryDescription());
             }
         }
+        circle1.setFill(Color.BLACK);
     }
     protected Label getStoryDescriptionLabel2() {
         return storyDescriptionLabel2;
