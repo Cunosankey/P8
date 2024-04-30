@@ -13,7 +13,6 @@ import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 import javafx.scene.control.Label;
 
-import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
@@ -41,6 +40,15 @@ public class TaskController implements Initializable {
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(newScene);
         window.show();
+    }
+
+    @FXML
+    private void playAudio() {
+        // Create an instance of Audio
+        Audio audio = new Audio("src/main/audio_files/kill_me.mp3");
+
+        // Create an instance of AudioController and play the audio
+        AudioController.playAudio(audio);
     }
 
     // Load images as soon as TaskController is initialized
