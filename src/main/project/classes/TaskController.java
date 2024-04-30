@@ -14,7 +14,6 @@ import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 import javafx.scene.control.Label;
 
-import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
@@ -32,15 +31,15 @@ public class TaskController implements Initializable {
 
     public TaskController() {
         // Create the StoryCharacter object
-        storyCharacter = new StoryCharacter("Character1", "Gesture1", "src/main/images/body.png", "FacialExpression1", "src/main/images/Face.png");
+        storyCharacter = new StoryCharacter("Character1", "Gesture1", "src/main/resources/images/body.png", "FacialExpression1", "src/main/resources/images/Face.png");
         // Add more gestures and facial expressions
-        storyCharacter.addGesture("Gesture2", "src/main/images/bab.jpg");
-        storyCharacter.addFacialExpression("FacialExpression2", "src/main/images/bab.jpg");
+        storyCharacter.addGesture("Gesture2", "src/main/resources/images/bab.jpg");
+        storyCharacter.addFacialExpression("FacialExpression2", "src/main/resources/images/bab.jpg");
 
     }
 
     public void changeSceneReflect(ActionEvent event) throws IOException {
-        Parent newSceneParent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("src/main/project/scenes/Reflect.fxml")));
+        Parent newSceneParent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("src/main/project/resources/scenes/Reflect.fxml")));
         Scene newScene = new Scene(newSceneParent);
         // This line gets the Stage information
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
