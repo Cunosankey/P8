@@ -17,6 +17,8 @@ public class StoryController2_1 extends StoryController2{
             getTitleLabel().setText(getStories().get(getCurrentStory()).getTitle());
             getStoryDescriptionLabel2().setText(getStories().get(getCurrentStory()).getStoryDescription2());
         }
+        storyProgress.resetCircles();
+        storyProgress.fillCircle("Story2-1");
     }
 
     public void toTask(ActionEvent event) throws IOException {
