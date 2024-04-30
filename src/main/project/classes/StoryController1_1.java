@@ -60,5 +60,10 @@ public class StoryController1_1 extends StoryController1 {
 
     @FXML
     private void playAudio() {
+        // Create an instance of Audio
+        Audio audio = new Audio("path_to_your_audio_file");
+
+        // Create an instance of AudioController and play the audio
+        AudioController.playAudio(audio);
     }
 }
