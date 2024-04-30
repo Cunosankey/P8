@@ -28,7 +28,7 @@
       </VBox>
       <HBox fx:id="chooseFace" layoutX="432.0" layoutY="100.0" prefHeight="260.0" prefWidth="622.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="100.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 100;">
+            <Button mnemonicParsing="false" onAction="#reverseCharacterFacialExpression" onContextMenuRequested="#reverseCharacterFacialExpression" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 100;">
                <graphic>
                   <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
                </graphic>
@@ -41,7 +41,7 @@
                   <Insets />
                </HBox.margin>
             </ImageView>
-            <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 100;">
+            <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#updateCharacterFacialExpression" onContextMenuRequested="#updateCharacterFacialExpression" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 100;">
                <graphic>
                   <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
                </graphic>
@@ -53,7 +53,7 @@
       </HBox>
       <HBox fx:id="chooseGesture" layoutX="424.0" layoutY="365.0" prefHeight="260.0" prefWidth="622.0" AnchorPane.rightAnchor="30.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 100;">
+            <Button mnemonicParsing="false" onAction="#reverseCharacterGesture" onContextMenuRequested="#reverseCharacterGesture" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 100;">
                <graphic>
                   <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
                </graphic>
@@ -66,7 +66,7 @@
                   <Insets />
                </HBox.margin>
             </ImageView>
-            <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 100;">
+            <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#updateCharacterGesture" onContextMenuRequested="#updateCharacterGesture" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 100;">
                <graphic>
                   <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
                </graphic>

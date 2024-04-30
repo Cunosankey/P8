@@ -13,13 +13,10 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 import javafx.scene.control.Label;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
-import java.util.Objects;
 import java.util.ResourceBundle;
-
 import javafx.scene.image.Image;
 
 public class TaskController implements Initializable {
@@ -36,15 +33,6 @@ public class TaskController implements Initializable {
         storyCharacter.addGesture("Gesture2", "src/main/resources/images/bab.jpg");
         storyCharacter.addFacialExpression("FacialExpression2", "src/main/resources/images/bab.jpg");
 
-    }
-
-    public void changeSceneReflect(ActionEvent event) throws IOException {
-        Parent newSceneParent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("src/main/project/resources/scenes/Reflect.fxml")));
-        Scene newScene = new Scene(newSceneParent);
-        // This line gets the Stage information
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(newScene);
-        window.show();
     }
 
     // Load images as soon as TaskController is initialized
@@ -74,15 +62,6 @@ public class TaskController implements Initializable {
     private TextFlow descriptionTextFlow;
 
     // Method to set the title and description of the task
-    public void setStory(Story story) {
-        titleLabel.setText(story.getTitle());
-        // Create a Text object and set its text
-        Text descriptionText = new Text(story.getStoryDescription());
-
-        // Clear the TextFlow and add the new Text
-        descriptionTextFlow.getChildren().clear();
-        descriptionTextFlow.getChildren().add(descriptionText);
-    }
 
     public void setTask(Task task) {
         TaskDescription taskDescription = task.getTaskDescription();
@@ -99,7 +78,8 @@ public class TaskController implements Initializable {
     }
 
     // Method to change element in characterGesture arraylist
-    private int currentGestureIndex = 0;
+    // Static to keep track of current gesture index
+    private static int currentGestureIndex = 0;
 
     @FXML
     private ImageView characterGestureImage;
@@ -117,17 +97,32 @@ public class TaskController implements Initializable {
         currentGestureIndex = (currentGestureIndex + 1) % characterGestureList.size();
     }
 
-    public String chosenGesture() {
+    // Method to reverse the character gesture
+    public void reverseCharacterGesture() {
         List<Gesture> characterGestureList = storyCharacter.getCharacterGesture();
-        return characterGestureList.get(currentGestureIndex).getGestureID();
+        String imagePath = characterGestureList.get(currentGestureIndex).getGestureImagePath();
+        Image image = new Image("file:" + imagePath);
+        if (image.isError()) {
+            System.out.println("Error loading image: " + image.getException()); // Print the exception if there is an error loading the image
+        }
+        characterGestureImage.setImage(image);
+
+        // Decrement currentFacialExpressionIndex
+        if (currentGestureIndex == 0) {
+            currentGestureIndex = characterGestureList.size() - 1; // Wrap around to the end of the list
+        } else {
+            currentGestureIndex--;
+        }
     }
 
+
     // Method to change element in FacialExpression arraylist
-    private int currentFacialExpressionIndex = 0;
+    private static int currentFacialExpressionIndex = 0;
 
     @FXML
     private ImageView characterFacialExpressionImage;
 
+    // Method to update the character's facial expression
     public void updateCharacterFacialExpression() {
         List<FacialExpression> characterFacialExpressionList = storyCharacter.getCharacterFacialExpression();
         String imagePath = characterFacialExpressionList.get(currentFacialExpressionIndex).getFacialExpressionImagePath();
@@ -141,10 +136,24 @@ public class TaskController implements Initializable {
         currentFacialExpressionIndex = (currentFacialExpressionIndex + 1) % characterFacialExpressionList.size();
     }
 
-    public String chosenFacialExpression() {
+    // Method to reverse the Facial Expression
+    public void reverseCharacterFacialExpression() {
         List<FacialExpression> characterFacialExpressionList = storyCharacter.getCharacterFacialExpression();
-        return characterFacialExpressionList.get(currentFacialExpressionIndex).getFacialExpressionID();
+        String imagePath = characterFacialExpressionList.get(currentFacialExpressionIndex).getFacialExpressionImagePath();
+        Image image = new Image("file:" + imagePath);
+        if (image.isError()) {
+            System.out.println("Error loading image: " + image.getException()); // Print the exception if there is an error loading the image
+        }
+        characterFacialExpressionImage.setImage(image);
+
+        // Decrement currentFacialExpressionIndex
+        if (currentFacialExpressionIndex == 0) {
+            currentFacialExpressionIndex = characterFacialExpressionList.size() - 1; // Wrap around to the end of the list
+        } else {
+            currentFacialExpressionIndex--;
+        }
     }
+
 
     // Method to go back to the previous scene
     public void backButton(ActionEvent event) throws IOException {
@@ -157,7 +166,20 @@ public class TaskController implements Initializable {
 
     // Method to go to the Reflect scene
     public void gotoReflect(ActionEvent event) throws IOException {
-        Parent newSceneParent = FXMLLoader.load(getClass().getResource("../scenes/Reflect.fxml"));
+        if (storyCharacter == null) {
+            System.out.println("storyCharacter is null");
+            return;
+        }
+
+        // Update image methods before going to Reflect scene to ensure the images are updated
+        updateCharacterFacialExpression();
+        updateCharacterGesture();
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../scenes/Reflect.fxml"));
+        // lambda function that creates a new instance of ReflectController
+        loader.setControllerFactory(c -> new ReflectController(storyCharacter, currentFacialExpressionIndex, currentGestureIndex));
+
+        Parent newSceneParent = loader.load();
         Scene newScene = new Scene(newSceneParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(newScene);

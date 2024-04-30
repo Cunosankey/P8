@@ -2,7 +2,6 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
@@ -10,10 +9,14 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="810.0" maxWidth="1080.0" minHeight="810.0" minWidth="1080.0" prefHeight="810.0" prefWidth="1080.0" stylesheets="@../../project/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PACKAGE_NAME.src.main.project.classes.ReflectController">
+<AnchorPane maxHeight="810.0" maxWidth="1080.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1080.0" stylesheets="@../../project/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PACKAGE_NAME.src.main.project.classes.ReflectController">
                <children>
       <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="350.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="100.0">
          <children>
+
+            <ImageView fx:id="facialExpressionImage" fitHeight="350.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="gestureImage" fitHeight="350.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="NEVER" />
+
             <ImageView fitHeight="350.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../resources/images/Face.png" />
@@ -24,6 +27,7 @@
                   <Image url="@../../resources/images/body.png" />
                </image>
             </ImageView>
+
          </children>
       </VBox>
       <VBox layoutX="10.0" layoutY="10.0" prefWidth="460.0" AnchorPane.leftAnchor="525.0" AnchorPane.topAnchor="200.0">
@@ -45,7 +49,7 @@
       </VBox>
                   <HBox alignment="CENTER" prefHeight="140.0" prefWidth="200.0" spacing="20.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="680.0">
                      <children>
-                        <Button minHeight="45.0" minWidth="90.0" mnemonicParsing="false" prefWidth="180.0" text="Redo">
+                        <Button minHeight="45.0" minWidth="90.0" mnemonicParsing="false" onAction="#goBackReflect" prefWidth="180.0" text="Redo">
                            <padding>
                               <Insets left="30.0" right="30.0" />
                            </padding>
