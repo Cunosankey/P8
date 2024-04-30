@@ -115,6 +115,15 @@ public class StoryController1 {
 
 }
 
+@FXML
+private void playAudio() {
+    // Create an instance of Audio
+    Audio audio = new Audio("audio_files/kill_me.mp3");
+
+    // Create an instance of AudioController and play the audio
+    AudioController.playAudio(audio);
+}
+
 
 
 // potentiel måde at skifte scene på uden alt det kode (også godt fordi det er en metode til flere af de samme handlinger)
