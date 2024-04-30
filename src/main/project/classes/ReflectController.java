@@ -10,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -29,6 +30,11 @@ public class ReflectController implements Initializable {
     private int gestureIndex;
     private StoryCharacter storyCharacter;
 
+    @FXML
+    private HBox circleContainer;
+
+    public StoryProgress storyProgress;
+
     public ReflectController(StoryCharacter storyCharacter, int facialExpressionIndex, int gestureIndex) {
         this.storyCharacter = storyCharacter;
         this.facialExpressionIndex = facialExpressionIndex;
@@ -46,6 +52,12 @@ public class ReflectController implements Initializable {
         String gestureImagePath = characterGestureList.get(gestureIndex).getGestureImagePath();
         Image currentGestureImage = new Image("file:" + gestureImagePath);
         gestureImage.setImage(currentGestureImage);
+
+        // Create the ProgressManager object
+        storyProgress = new StoryProgress(circleContainer, 4);
+        storyProgress.resetCircles();
+        storyProgress.createCircles();
+        storyProgress.fillCircle("Reflect");
     }
 
     // Go back to the previous scene
