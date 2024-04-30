@@ -13,6 +13,7 @@ public class Story {
     private Audio audioFile;
     private boolean completed;
 
+
     
     public Story(String title, String storyDescription, String storyDescription2) {
         this.title = title;
