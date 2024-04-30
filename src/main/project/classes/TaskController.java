@@ -108,10 +108,6 @@ public class TaskController implements Initializable {
         currentGestureIndex = (currentGestureIndex + 1) % characterGestureList.size();
     }
 
-    public String chosenGesture() {
-        List<Gesture> characterGestureList = storyCharacter.getCharacterGesture();
-        return characterGestureList.get(currentGestureIndex).getGestureID();
-    }
 
     // Method to change element in FacialExpression arraylist
     private int currentFacialExpressionIndex = 0;
@@ -132,11 +128,6 @@ public class TaskController implements Initializable {
         currentFacialExpressionIndex = (currentFacialExpressionIndex + 1) % characterFacialExpressionList.size();
     }
 
-    public String chosenFacialExpression() {
-        List<FacialExpression> characterFacialExpressionList = storyCharacter.getCharacterFacialExpression();
-        return characterFacialExpressionList.get(currentFacialExpressionIndex).getFacialExpressionID();
-    }
-
     // Method to go back to the previous scene
     public void backButton(ActionEvent event) throws IOException {
         Parent newSceneParent = FXMLLoader.load(getClass().getResource("../scenes/Story1-1.fxml"));
@@ -148,7 +139,20 @@ public class TaskController implements Initializable {
 
     // Method to go to the Reflect scene
     public void gotoReflect(ActionEvent event) throws IOException {
-        Parent newSceneParent = FXMLLoader.load(getClass().getResource("../scenes/Reflect.fxml"));
+        if (storyCharacter == null) {
+            System.out.println("storyCharacter is null");
+            return;
+        }
+
+        // Update methods before going to Reflect scene
+        updateCharacterFacialExpression();
+        updateCharacterGesture();
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../scenes/Reflect.fxml"));
+        // lambda function that creates a new instance of ReflectController
+        loader.setControllerFactory(c -> new ReflectController(storyCharacter, currentFacialExpressionIndex, currentGestureIndex));
+
+        Parent newSceneParent = loader.load();
         Scene newScene = new Scene(newSceneParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(newScene);
