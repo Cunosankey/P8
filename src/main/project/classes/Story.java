@@ -12,8 +12,6 @@ public class Story {
     private boolean locked;
     private Audio audioFile;
     private boolean completed;
-
-
     
     public Story(String title, String storyDescription, String storyDescription2) {
         this.title = title;
