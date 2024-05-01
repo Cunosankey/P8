@@ -14,7 +14,7 @@
    <children>
       <VBox layoutX="103.0" layoutY="100.0" prefHeight="542.0" prefWidth="278.0" AnchorPane.leftAnchor="103.0" AnchorPane.topAnchor="100.0">
          <children>
-            <Label fx:id="titleLabel" text="Title Label">
+            <Label fx:id="titleLabel" prefHeight="48.0" prefWidth="280.0" text="Title Label">
                <font>
                   <Font name="Urbane Heavy" size="36.0" />
                </font>
@@ -84,9 +84,9 @@
             <Insets right="60.0" />
          </padding>
       </HBox>
-      <HBox fx:id="circleContainer" layoutX="448.0" layoutY="740.0" prefHeight="35.0" prefWidth="181.0" spacing="10.0" stylesheets="@../styles.css">
+      <HBox fx:id="circleContainer" alignment="CENTER" layoutX="450.0" layoutY="744.0" prefHeight="35.0" prefWidth="181.0" spacing="10.0" stylesheets="@../styles.css">
       </HBox>
-      <HBox alignment="CENTER" layoutX="296.0" layoutY="661.0" prefHeight="70.0" prefWidth="600.0" spacing="20.0" AnchorPane.bottomAnchor="49.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <HBox alignment="CENTER" layoutX="2.0" layoutY="667.0" prefHeight="70.0" prefWidth="600.0" spacing="20.0" AnchorPane.bottomAnchor="73.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
             <Button fx:id="taskTilbage" mnemonicParsing="false" onAction="#backButton" prefHeight="50.0" prefWidth="92.0" text="Tilbage" />
             <Button fx:id="taskAfslut" mnemonicParsing="false" onAction="#gotoReflect" prefHeight="50.0" prefWidth="92.0" text="Afslut" />
