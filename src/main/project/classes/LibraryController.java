@@ -8,7 +8,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.event.ActionEvent;
 import javafx.stage.Stage;
@@ -16,8 +19,6 @@ import javafx.scene.control.Tooltip;
 import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.Objects;
 
 
 public class LibraryController {
@@ -30,6 +31,11 @@ public class LibraryController {
     @FXML
     private Label story2TooltipLabel;
 
+    @FXML
+    private Button story2Button;
+    @FXML
+    private ImageView storyImage;
+
     // Method called when the JavaFX component is initialized
     @FXML
     public void initialize() {
@@ -40,6 +46,17 @@ public class LibraryController {
         // Set up the tooltips for the corresponding labels
         setupTooltip(story1TooltipLabel, story1Tooltip);
         setupTooltip(story2TooltipLabel, story2Tooltip);
+
+        // Disable the spil2 button
+        story2Button.setDisable(true);
+        story2Button.setDisable(!StoryProgress.isStory1Completed());
+        Image lockedImage;
+        if (StoryProgress.isStory1Completed()) {
+            lockedImage = new Image(getClass().getResourceAsStream("/images/bab.jpg"));
+        } else {
+            lockedImage = new Image(getClass().getResourceAsStream("/images/lock.png"));
+        }
+        storyImage.setImage(lockedImage);
     }
 
 

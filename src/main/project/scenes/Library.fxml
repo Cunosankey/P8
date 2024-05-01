@@ -17,26 +17,26 @@
             <columnConstraints>
                 <ColumnConstraints />
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="471.0" minWidth="10.0" prefWidth="423.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="451.0" minWidth="10.0" prefWidth="420.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="450.0" minWidth="10.0" prefWidth="420.0" />
             </columnConstraints>
             <rowConstraints>
                 <RowConstraints maxHeight="205.0" minHeight="10.0" prefHeight="200.0" vgrow="SOMETIMES" />
                 <RowConstraints maxHeight="209.0" minHeight="10.0" prefHeight="193.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                <ImageView fx:id="storyImage" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                     <image>
-                        <Image url="@../../images/bab.jpg" />
+                        <Image url="@../../resources/images/bab.jpg" />
                     </image>
                 </ImageView>
-                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
+                <ImageView fx:id="storyImage" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                 <Label alignment="CENTER" layoutX="422.0" layoutY="455.0" minWidth="-Infinity" prefHeight="187.0" prefWidth="186.0" text="Spil 1" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                     <padding>
                         <Insets top="170.0" />
                     </padding>
                 </Label>
                 <Button alignment="CENTER" mnemonicParsing="false" onAction="#spil" text="Start Spil" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                <Label alignment="CENTER" minWidth="-Infinity" prefHeight="187.0" prefWidth="186.0" text="Spil 1" GridPane.columnIndex="2">
+                <Label alignment="CENTER" prefHeight="187.0" prefWidth="186.0" text="Spil 2" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
                     <padding>
                         <Insets top="170.0" />
                     </padding>
@@ -44,12 +44,12 @@
                         <Insets />
                     </GridPane.margin>
                 </Label>
-                <Button alignment="CENTER" mnemonicParsing="false" onAction="#spil2" text="Start Spil" GridPane.columnIndex="2" />
-            <Label fx:id="story1TooltipLabel" alignment="CENTER" prefHeight="18.0" prefWidth="16.0" text="?" GridPane.columnIndex="1">
+                <Button fx:id="story2Button" alignment="CENTER" mnemonicParsing="false" onAction="#spil2" text="Start Spil" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Label fx:id="story1TooltipLabel" alignment="CENTER" prefHeight="18.0" prefWidth="16.0" text="?" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font></Label>
-            <Label fx:id="story2TooltipLabel" alignment="TOP_RIGHT" contentDisplay="RIGHT" prefHeight="25.0" prefWidth="12.0" text="?" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Label fx:id="story2TooltipLabel" alignment="TOP_RIGHT" contentDisplay="RIGHT" prefHeight="25.0" prefWidth="12.0" text="?" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font></Label>

@@ -8,12 +8,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import javafx.scene.layout.HBox;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 
 public class StoryController1 {
     @FXML
@@ -27,8 +29,14 @@ public class StoryController1 {
 
     private final List<Story> stories = new ArrayList<>();
 
+    @FXML
+    private HBox circleContainer;
+
+    public StoryProgress storyProgress;
+
     public StoryController1() {
         loadStoriesFromFile("src/main/project/scenes/Stories/Story.txt");
+
     }
 
     public List<Story> getStories() {
@@ -70,6 +78,7 @@ public class StoryController1 {
 
     // Nyt 22-04
     public void handleButtonAction(ActionEvent event) throws IOException {
+
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
         Scene scene = stage.getScene();
@@ -101,6 +110,11 @@ public class StoryController1 {
                 storyDescriptionLabel.setText(stories.get(currentStory).getStoryDescription());
             }
         }
+        // The ProgressManager class is instantiated with the circleContainer and the total number of circles (4 in this case).
+        storyProgress = new StoryProgress(circleContainer, 4);
+        storyProgress.resetCircles();
+        storyProgress.createCircles();
+        storyProgress.fillCircle("Story1");
     }
     protected Label getStoryDescriptionLabel2() {
         return storyDescriptionLabel2;
@@ -113,7 +127,17 @@ public class StoryController1 {
         return titleLabel;
     }
 
+    @FXML
+    private void playAudio() {
+        // Create an instance of Audio
+        Audio audio = new Audio("src/main/audio_files/kill_me.mp3");
+
+        // Create an instance of AudioController and play the audio
+        AudioController.playAudio(audio);
+    }
 }
+
+
 
 
 
