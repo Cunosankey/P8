@@ -19,7 +19,7 @@
             </image>
         </ImageView>
 
-      <Button fx:id="playAudioButton" contentDisplay="CENTER" layoutX="924.0" layoutY="29.0" mnemonicParsing="false" onAction="#playAudio" prefHeight="50.0" prefWidth="81.0" text="Oplæs" />
+      <Button fx:id="playAudioButton" contentDisplay="CENTER" layoutX="924.0" layoutY="29.0" mnemonicParsing="false" onAction="#playAudio" prefHeight="50.0" prefWidth="74.0" text="Oplæs" />
       <Button layoutX="416.0" layoutY="679.0" mnemonicParsing="false" onAction="#backAgain" text="Tilbage" />
       <HBox fx:id="circleContainer" layoutX="456.0" layoutY="714.0" prefHeight="35.0" prefWidth="181.0" spacing="10.0">
       </HBox>
