@@ -76,17 +76,21 @@
             </Button>
          </children>
       </HBox>
-      <Button fx:id="taskTilbage" layoutX="414.0" layoutY="659.0" mnemonicParsing="false" onAction="#backButton" prefHeight="50.0" prefWidth="92.0" text="Tilbage" AnchorPane.bottomAnchor="100.0" />
-      <Button fx:id="taskAfslut" layoutX="572.0" layoutY="656.0" mnemonicParsing="false" onAction="#gotoReflect" prefHeight="50.0" prefWidth="92.0" text="Afslut" AnchorPane.bottomAnchor="100.0" />
       <HBox alignment="CENTER_RIGHT" prefHeight="70.0" prefWidth="200.0" spacing="15.0" AnchorPane.bottomAnchor="710.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button fx:id="playAudioButton" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="63.0" text="Oplæs" onAction="#playAudio" />
+            <Button fx:id="playAudioButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#playAudio" prefHeight="50.0" prefWidth="63.0" text="Oplæs" />
          </children>
          <padding>
             <Insets right="60.0" />
          </padding>
       </HBox>
-      <HBox fx:id="circleContainer" layoutX="405.0" layoutY="737.0" prefHeight="35.0" prefWidth="181.0" spacing="10.0">
+      <HBox fx:id="circleContainer" layoutX="448.0" layoutY="740.0" prefHeight="35.0" prefWidth="181.0" spacing="10.0" stylesheets="@../styles.css">
+      </HBox>
+      <HBox alignment="CENTER" layoutX="296.0" layoutY="661.0" prefHeight="70.0" prefWidth="600.0" spacing="20.0" AnchorPane.bottomAnchor="49.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button fx:id="taskTilbage" mnemonicParsing="false" onAction="#backButton" prefHeight="50.0" prefWidth="92.0" text="Tilbage" />
+            <Button fx:id="taskAfslut" mnemonicParsing="false" onAction="#gotoReflect" prefHeight="50.0" prefWidth="92.0" text="Afslut" />
+         </children>
       </HBox>
    </children>
 </AnchorPane>
