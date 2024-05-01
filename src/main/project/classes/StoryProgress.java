@@ -23,8 +23,8 @@ public class StoryProgress {
     public void createCircles() {
         for (int i = 0; i < totalCircles; i++) {
             Circle circle = new Circle(5);
-            circle.setFill(Color.WHITE);
-            circle.setStroke(Color.BLACK);
+            circle.setFill(Color.rgb(0xDC, 0xDC, 0xDC));
+            // circle.setStroke(Color.rgb(0xE6, 0xD8, 0xFA));
             circleContainer.getChildren().add(circle);
             circles.add(circle);
         }
@@ -33,22 +33,22 @@ public class StoryProgress {
     public void fillCircle(String sceneName) {
         switch (sceneName) {
             case "Story1":
-                circles.get(0).setFill(Color.BLACK);
+                circles.get(0).setFill(Color.rgb(0x7B, 0x68, 0xEE));
                 break;
             case "Story1-1":
-                circles.get(1).setFill(Color.BLACK);
+                circles.get(1).setFill(Color.rgb(0x7B, 0x68, 0xEE));
                 break;
             case "Story2":
-                circles.get(0).setFill(Color.BLACK);
+                circles.get(0).setFill(Color.rgb(0x7B, 0x68, 0xEE));
                 break;
             case "Story2-1":
-                circles.get(1).setFill(Color.BLACK);
+                circles.get(1).setFill(Color.rgb(0x7B, 0x68, 0xEE));
                 break;
             case "Task":
-                circles.get(2).setFill(Color.BLACK);
+                circles.get(2).setFill(Color.rgb(0x7B, 0x68, 0xEE));
                 break;
             case "Reflect":
-                circles.get(3).setFill(Color.BLACK);
+                circles.get(3).setFill(Color.rgb(0x7B, 0x68, 0xEE));
                 break;
             default:
                 break;
@@ -60,7 +60,7 @@ public class StoryProgress {
      */
     public void resetCircles() {
         for (Circle circle : circles) {
-            circle.setFill(Color.WHITE);
+            circle.setFill(Color.rgb(0xDC, 0xDC, 0xDC));
         }
     }
 
