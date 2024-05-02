@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.HBox?>
 
 <?import javafx.scene.control.TextArea?>
-<AnchorPane prefHeight="810.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PACKAGE_NAME.src.main.project.classes.StoryController1_1">
+<AnchorPane prefHeight="810.0" prefWidth="1080.0" stylesheets="@../../project/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PACKAGE_NAME.src.main.project.classes.StoryController1_1">
     <children>
         <Button contentDisplay="GRAPHIC_ONLY" layoutX="27.0" layoutY="29.0" mnemonicParsing="false" onAction="#Story1_1ToLibrary" text="Button" />
         <Label fx:id="titleLabel" layoutX="27.0" layoutY="64.0" prefHeight="95.0" prefWidth="294.0" text="Title" />

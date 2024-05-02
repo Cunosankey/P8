@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 import java.io.Console;
 import java.io.IOException;
@@ -14,6 +15,9 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
 public class StoryController1_1 extends StoryController1 {
+    @FXML
+    private TextArea storyDescriptionLabel2;
+
     @Override
     public void initialize() {
         super.initialize();

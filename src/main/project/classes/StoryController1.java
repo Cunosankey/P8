@@ -25,7 +25,7 @@ public class StoryController1 {
     @FXML
     private TextArea storyDescriptionLabel;
     @FXML
-    private Label storyDescriptionLabel2;
+    private TextArea storyDescriptionLabel2;
 
     private final int currentStory = 0;
 
@@ -127,7 +127,7 @@ public class StoryController1 {
         storyProgress.createCircles();
         storyProgress.fillCircle("Story1");
     }
-    protected Label getStoryDescriptionLabel2() {
+    protected TextArea getStoryDescriptionLabel2() {
         return storyDescriptionLabel2;
     }
 
