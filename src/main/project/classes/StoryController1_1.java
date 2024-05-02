@@ -65,10 +65,14 @@ public class StoryController1_1 extends StoryController1 {
 
     @FXML
     private void playAudio() {
+        if (!AudioController.isAudioPlaying()){
         // Create an instance of Audio
         Audio audio = new Audio("src/main/audio_files/Story1-part2.mp3");
 
         // Create an instance of AudioController and play the audio
         AudioController.playAudio(audio);
+        } else {
+            AudioController.stopAudio();
+        }
     }
 }
