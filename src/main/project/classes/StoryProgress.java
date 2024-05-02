@@ -33,22 +33,22 @@ public class StoryProgress {
     public void fillCircle(String sceneName) {
         switch (sceneName) {
             case "Story1":
-                circles.get(0).setFill(Color.rgb(0x7B, 0x68, 0xEE));
+                circles.get(0).setFill(Color.rgb(182, 137, 192));
                 break;
             case "Story1-1":
-                circles.get(1).setFill(Color.rgb(0x7B, 0x68, 0xEE));
+                circles.get(1).setFill(Color.rgb(182, 137, 192));
                 break;
             case "Story2":
-                circles.get(0).setFill(Color.rgb(0x7B, 0x68, 0xEE));
+                circles.get(0).setFill(Color.rgb(182, 137, 192));
                 break;
             case "Story2-1":
-                circles.get(1).setFill(Color.rgb(0x7B, 0x68, 0xEE));
+                circles.get(1).setFill(Color.rgb(182, 137, 192));
                 break;
             case "Task":
-                circles.get(2).setFill(Color.rgb(0x7B, 0x68, 0xEE));
+                circles.get(2).setFill(Color.rgb(182, 137, 192));
                 break;
             case "Reflect":
-                circles.get(3).setFill(Color.rgb(0x7B, 0x68, 0xEE));
+                circles.get(3).setFill(Color.rgb(182, 137, 192));
                 break;
             default:
                 break;
