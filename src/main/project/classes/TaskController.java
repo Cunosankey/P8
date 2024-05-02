@@ -29,9 +29,9 @@ public class TaskController implements Initializable {
 
     public TaskController() {
         // Create the StoryCharacter object
-        storyCharacter = new StoryCharacter("Character1", "Gesture1", "src/main/resources/images/body.png", "FacialExpression1", "src/main/resources/images/Face.png");
+        storyCharacter = new StoryCharacter("Character1", "Gesture1", "src/main/resources/images/body.png", "FacialExpression1", "src/main/resources/images/0.png");
         // Add more gestures and facial expressions
-        storyCharacter.addGesture("Gesture2", "src/main/resources/images/bab.jpg");
+        storyCharacter.addGesture("Gesture2", "src/main/resources/images/0_0.png");
         storyCharacter.addFacialExpression("FacialExpression2", "src/main/resources/images/bab.jpg");
 
     }
