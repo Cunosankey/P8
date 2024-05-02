@@ -7,6 +7,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -21,7 +23,7 @@ public class StoryController1 {
     @FXML
     private Label titleLabel;
     @FXML
-    private Label storyDescriptionLabel;
+    private TextArea storyDescriptionLabel;
     @FXML
     private Label storyDescriptionLabel2;
 

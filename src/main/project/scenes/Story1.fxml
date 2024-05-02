@@ -7,17 +7,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 
+<?import javafx.scene.control.TextArea?>
 <AnchorPane prefHeight="810.0" prefWidth="1080.0" stylesheets="@../../project/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PACKAGE_NAME.src.main.project.classes.StoryController1">
    <children>
       <Button contentDisplay="GRAPHIC_ONLY" layoutX="27.0" layoutY="29.0" mnemonicParsing="false" onAction="#Story1ToLibrary" text="Button" />
       <Label fx:id="titleLabel" layoutX="27.0" layoutY="64.0" prefHeight="94.0" prefWidth="309.0" text="Title" />
-      <Label fx:id="storyDescriptionLabel" layoutX="30.0" layoutY="138.0" prefHeight="654.0" prefWidth="362.0" text="Description" />
-      <ImageView fx:id="StoryImages" fitHeight="205.0" fitWidth="320.0" layoutX="686.0" layoutY="431.0" pickOnBounds="true" preserveRatio="true">
+      <TextArea fx:id="storyDescriptionLabel" styleClass="storyDescriptionTextArea" wrapText="true" editable="false" layoutX="30.0" layoutY="138.0" prefHeight="654.0" prefWidth="362.0" text="Description" />
+      <ImageView fx:id="storyImage1" fitHeight="205.0" fitWidth="320.0" layoutX="686.0" layoutY="431.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../resources/images/Story1billede2.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="StoryImages" fitHeight="208.0" fitWidth="296.0" layoutX="683.0" layoutY="206.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="storyImage2" fitHeight="208.0" fitWidth="296.0" layoutX="683.0" layoutY="206.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../resources/images/Story1billede1.jpg" />
          </image>

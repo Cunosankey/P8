@@ -63,5 +63,15 @@ h2 {
     -fx-text-fill: BLACK;
 }
 
+.storyDescriptionTextArea {
+    -fx-background-color: transparent; /* Make the background transparent */
+    -fx-border-color: transparent; /* Make the border transparent */
+    -fx-highlight-fill: transparent; /* Make the highlight transparent */
+    -fx-highlight-text-fill: black; /* Set the highlight text color to black */
+}
+
+.storyDescriptionTextArea .content {
+    -fx-background-color: transparent; /* Make the content background transparent */
+}
 
 
