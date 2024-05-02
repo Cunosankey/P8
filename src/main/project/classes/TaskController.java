@@ -38,11 +38,15 @@ public class TaskController implements Initializable {
 
     @FXML
     private void playAudio() {
-        // Create an instance of Audio
-        Audio audio = new Audio("src/main/audio_files/kill_me.mp3");
+        if(!AudioController.isAudioPlaying()) {
+            // Create an instance of Audio
+            Audio audio = new Audio("src/main/audio_files/kill_me.mp3");
 
-        // Create an instance of AudioController and play the audio
-        AudioController.playAudio(audio);
+            // Create an instance of AudioController and play the audio
+            AudioController.playAudio(audio);
+        } else {
+            AudioController.stopAudio();
+        }
     }
 
     // Load images as soon as TaskController is initialized
