@@ -7,6 +7,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -21,9 +23,9 @@ public class StoryController1 {
     @FXML
     private Label titleLabel;
     @FXML
-    private Label storyDescriptionLabel;
+    private TextArea storyDescriptionLabel;
     @FXML
-    private Label storyDescriptionLabel2;
+    private TextArea storyDescriptionLabel2;
 
     private final int currentStory = 0;
 
@@ -96,6 +98,15 @@ public class StoryController1 {
         scene.setRoot(root);
     }
 
+    public void Story1ToLibrary(ActionEvent event) throws IOException {
+        Node node = (Node) event.getSource(); // Get the source of the event (the button)
+        Stage stage = (Stage) node.getScene().getWindow(); // Get the stage from the button
+        Scene scene = stage.getScene(); // Get the scene from the stage
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../scenes/Library.fxml")); // Load the FXML file
+        Parent root = fxmlLoader.load(); // Load the FXML file into a Parent object
+        scene.setRoot(root); // Set the scene root to the new FXML file
+    }
+
     /**
      * if the story list is not empty, it sets the title and story description of the first story
      * in the list to the corresponding labels.
@@ -116,7 +127,7 @@ public class StoryController1 {
         storyProgress.createCircles();
         storyProgress.fillCircle("Story1");
     }
-    protected Label getStoryDescriptionLabel2() {
+    protected TextArea getStoryDescriptionLabel2() {
         return storyDescriptionLabel2;
     }
 
@@ -129,11 +140,15 @@ public class StoryController1 {
 
     @FXML
     private void playAudio() {
-        // Create an instance of Audio
-        Audio audio = new Audio("src/main/audio_files/Story1-part1.mp3");
+        if (!AudioController.isAudioPlaying()) {
+            // Create an instance of Audio
+            Audio audio = new Audio("src/main/audio_files/Story1-part1.mp3");
 
-        // Create an instance of AudioController and play the audio
-        AudioController.playAudio(audio);
+            // Create an instance of AudioController and play the audio
+            AudioController.playAudio(audio);
+        } else {
+            AudioController.stopAudio();
+        }
     }
 }
 

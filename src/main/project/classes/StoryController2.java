@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
@@ -21,9 +22,9 @@ public class StoryController2 extends StoryController1 {
     @FXML
     private Label titleLabel;
     @FXML
-    private Label storyDescriptionLabel;
+    private TextArea storyDescriptionLabel;
     @FXML
-    private Label storyDescriptionLabel2;
+    private TextArea storyDescriptionLabel2;
 
     private final int currentStory = 0;
 
@@ -114,7 +115,7 @@ public class StoryController2 extends StoryController1 {
         storyProgress.createCircles();
         storyProgress.fillCircle("Story2");
     }
-    protected Label getStoryDescriptionLabel2() {
+    protected TextArea getStoryDescriptionLabel2() {
         return storyDescriptionLabel2;
     }
 
