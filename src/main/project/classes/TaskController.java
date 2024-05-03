@@ -54,7 +54,7 @@ public class TaskController implements Initializable {
     private void playAudio() {
         if(!AudioController.isAudioPlaying()) {
             // Create an instance of Audio
-            Audio audio = new Audio("src/main/audio_files/kill_me.mp3");
+            Audio audio = new Audio("src/main/audio_files/Task1.mp3");
 
             // Create an instance of AudioController and play the audio
             AudioController.playAudio(audio);
@@ -190,6 +190,16 @@ public class TaskController implements Initializable {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(newScene);
         window.show();
+    }
+
+    // Method to go to the Library scene
+    public void TaskToLibrary(ActionEvent event) throws IOException {
+        Node node = (Node) event.getSource(); // Get the source of the event (the button)
+        Stage stage = (Stage) node.getScene().getWindow(); // Get the stage from the button
+        Scene scene = stage.getScene(); // Get the scene from the stage
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../scenes/Library.fxml")); // Load the FXML file
+        Parent root = fxmlLoader.load(); // Load the FXML file into a Parent object
+        scene.setRoot(root); // Set the scene root to the new FXML file
     }
 
     // Method to go to the Reflect scene

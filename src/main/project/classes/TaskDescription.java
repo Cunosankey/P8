@@ -24,7 +24,7 @@ public class TaskDescription {
     public static TaskDescription createTaskDescription1() {
         TaskDescription taskDescription1 = new TaskDescription();
         taskDescription1.setTitle("Hvordan har\nJeppe det?");
-        taskDescription1.setDescription("Mikkel er ikke glad, men han ved at X ikke gjorde det med vilje.\n\nPrøv at skifte Mikkels ansigtsudtryk og kropssprog efter hvordan DU tror han har det.");
+        taskDescription1.setDescription("Hvordan tror du, at Jeppe har det efter hans ven overtog spillet for ham?\n\nEns følelser kan skinne igennem udefra, så nu skal du prøve at vise hvordan Jeppe har det ved at vælge hans ansigtsudtryk og kropsudtryk.");
         return taskDescription1;
     }
 
