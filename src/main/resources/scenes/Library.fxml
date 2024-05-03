@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane fx:id="story1Tooltip" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1080.0" stylesheets="@../../resources/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.project.classes.LibraryController">
+<StackPane fx:id="story1Tooltip" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1080.0" stylesheets="@/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.project.classes.LibraryController">
     <children>
         <GridPane alignment="BOTTOM_CENTER" hgap="50.0" layoutX="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="202.0" prefWidth="1000.0" style="-fx-background-color: #fff0f5;" styleClass="grid-pane" StackPane.alignment="CENTER">
             <columnConstraints>
@@ -24,7 +24,7 @@
             <children>
                 <ImageView fx:id="storyImage" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#spil" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                     <image>
-                        <Image url="@../../resources/images/Story1Library.jpg" />
+                        <Image url="@../images/Story1Library.jpg" />
                     </image>
                 </ImageView>
                 <ImageView fx:id="storyImage" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />

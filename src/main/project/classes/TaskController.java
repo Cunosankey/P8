@@ -185,7 +185,7 @@ public class TaskController implements Initializable {
 
     // Method to go back to the previous scene
     public void backButton(ActionEvent event) throws IOException {
-        Parent newSceneParent = FXMLLoader.load(getClass().getResource("../scenes/Story1-1.fxml"));
+        Parent newSceneParent = FXMLLoader.load(getClass().getResource("/scenes/Story1-1.fxml"));
         Scene newScene = new Scene(newSceneParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(newScene);
@@ -203,7 +203,7 @@ public class TaskController implements Initializable {
         updateCharacterFacialExpression();
         updateCharacterGesture();
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../scenes/Reflect.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/scenes/Reflect.fxml"));
         // lambda function that creates a new instance of ReflectController
         loader.setControllerFactory(c -> new ReflectController(storyCharacter, currentFacialExpressionIndex, currentGestureIndex));
 
