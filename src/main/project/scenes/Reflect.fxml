@@ -2,6 +2,8 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
@@ -11,33 +13,39 @@
 
 <AnchorPane maxHeight="810.0" maxWidth="1080.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1080.0" stylesheets="@../../project/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PACKAGE_NAME.src.main.project.classes.ReflectController">
    <children>
-      <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="350.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="100.0">
+      <VBox layoutX="10.0" layoutY="10.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="100.0">
          <children>
-            <ImageView fx:id="facialExpressionImage" fitHeight="350.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="gestureImage" fitHeight="350.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="NEVER" />
+            <ImageView fx:id="facialExpressionImage" fitHeight="500.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true" translateY="-40.0">
+               <image>
+                  <Image url="@../../resources/images/9.png" />
+               </image></ImageView>
+            <ImageView fx:id="gestureImage" fitHeight="560.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true" translateY="-40.0" VBox.vgrow="NEVER">
+               <image>
+                  <Image url="@../../resources/images/1_1.png" />
+               </image></ImageView>
          </children>
       </VBox>
-      <VBox layoutX="10.0" layoutY="10.0" prefWidth="460.0" AnchorPane.leftAnchor="525.0" AnchorPane.topAnchor="200.0">
+      <VBox layoutX="609.0" layoutY="10.0" prefHeight="401.0" prefWidth="406.0" AnchorPane.leftAnchor="609.0" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="200.0">
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tid til at reflektere!">
                <font>
                   <Font name="System Bold" size="48.0" />
                </font>
             </Text>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Time for reflection with your teacher.&#10;&#10;• Explain how you think Mikkel feels&#10;&#10;• Why did you choose the facial expression?&#10;&#10;• Why did you choose Mikkels  body language&#10;to be like this? Could you do anything different?&#10;">
-               <VBox.margin>
-                  <Insets top="50.0" />
-               </VBox.margin>
+            <Label text="Her skal der stå en masse omkring&#10;hvordan bla blasa bla.&#10;&#10;bla bla bla&#10;&#10;bla bla">
                <font>
-                  <Font size="24.0" />
+                  <Font name="SF Pro" size="18.0" />
                </font>
-            </Text>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
          </children>
       </VBox>
 
-      <HBox alignment="CENTER" prefHeight="140.0" prefWidth="200.0" spacing="20.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="680.0">
+      <HBox alignment="CENTER" prefHeight="140.0" prefWidth="200.0" spacing="20.0" AnchorPane.bottomAnchor="73.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="667.0">
          <children>
-            <Button minHeight="45.0" minWidth="90.0" mnemonicParsing="false" onAction="#goBackReflect" prefWidth="180.0" text="Redo">
+            <Button minHeight="45.0" minWidth="90.0" mnemonicParsing="false" onAction="#goBackReflect" prefWidth="180.0" text="Prøv igen">
                <padding>
                   <Insets left="30.0" right="30.0" />
                </padding>
@@ -45,7 +53,7 @@
                   <Font size="16.0" />
                </font>
             </Button>
-            <Button layoutX="514.0" layoutY="67.0" minHeight="45.0" mnemonicParsing="false" onAction="#switchToEndScene" prefWidth="180.0" text="Complete Task" textAlignment="CENTER">
+            <Button layoutX="514.0" layoutY="67.0" minHeight="45.0" mnemonicParsing="false" onAction="#switchToEndScene" prefWidth="180.0" text="Fuldfør opgave" textAlignment="CENTER">
                <font>
                   <Font size="16.0" />
                </font>
@@ -56,7 +64,6 @@
          </children>
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="720.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0" />
-      <HBox fx:id="circleContainer" layoutX="456.0" layoutY="714.0" prefHeight="35.0" prefWidth="181.0" spacing="10.0">
-      </HBox>
+      <HBox fx:id="circleContainer" alignment="CENTER" layoutX="450.0" layoutY="744.0" prefHeight="35.0" prefWidth="181.0" spacing="10.0" stylesheets="@../styles.css" />
    </children>
 </AnchorPane>

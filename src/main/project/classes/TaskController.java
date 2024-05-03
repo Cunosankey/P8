@@ -29,10 +29,24 @@ public class TaskController implements Initializable {
 
     public TaskController() {
         // Create the StoryCharacter object
-        storyCharacter = new StoryCharacter("Character1", "Gesture1", "src/main/resources/images/body.png", "FacialExpression1", "src/main/resources/images/0.png");
+        storyCharacter = new StoryCharacter("Character1", "Gesture1", "src/main/resources/images/0_0.png", "FacialExpression1", "src/main/resources/images/10.png");
         // Add more gestures and facial expressions
-        storyCharacter.addGesture("Gesture2", "src/main/resources/images/0_0.png");
-        storyCharacter.addFacialExpression("FacialExpression2", "src/main/resources/images/bab.jpg");
+        storyCharacter.addGesture("Gesture2", "src/main/resources/images/1_1.png");
+        storyCharacter.addGesture("Gesture3", "src/main/resources/images/2_2.png");
+        storyCharacter.addGesture("Gesture4", "src/main/resources/images/3_3.png");
+        storyCharacter.addGesture("Gesture5", "src/main/resources/images/4_4.png");
+        storyCharacter.addGesture("Gesture6", "src/main/resources/images/5_5.png");
+
+        storyCharacter.addFacialExpression("FacialExpression2", "src/main/resources/images/1.png");
+        storyCharacter.addFacialExpression("FacialExpression3", "src/main/resources/images/0.png");
+        storyCharacter.addFacialExpression("FacialExpression4", "src/main/resources/images/2.png");
+        storyCharacter.addFacialExpression("FacialExpression5", "src/main/resources/images/3.png");
+        storyCharacter.addFacialExpression("FacialExpression6", "src/main/resources/images/4.png");
+        storyCharacter.addFacialExpression("FacialExpression7", "src/main/resources/images/5.png");
+        storyCharacter.addFacialExpression("FacialExpression8", "src/main/resources/images/6.png");
+        storyCharacter.addFacialExpression("FacialExpression9", "src/main/resources/images/7.png");
+        storyCharacter.addFacialExpression("FacialExpression10", "src/main/resources/images/8.png");
+        storyCharacter.addFacialExpression("FacialExpression11", "src/main/resources/images/9.png");
 
     }
 
