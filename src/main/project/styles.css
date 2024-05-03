@@ -74,4 +74,16 @@ h2 {
     -fx-background-color: transparent; /* Make the content background transparent */
 }
 
+#playAudioButton{
+    -fx-min-height: 50;
+    -fx-min-width: 50;
+    -fx-pref-height: 70;
+    -fx-pref-width: 70;
+}
 
+#ToLibraryButton {
+    -fx-min-height: 50;
+    -fx-min-width: 50;
+    -fx-pref-height: 70;
+    -fx-pref-width: 70;
+}
