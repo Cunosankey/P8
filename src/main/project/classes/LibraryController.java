@@ -40,8 +40,8 @@ public class LibraryController {
     @FXML
     public void initialize() {
         // Create two tooltips with custom text
-        Tooltip story1Tooltip = new Tooltip("YO AND WELCOME TO STORY MOTHERFUCKING 1 BITCH");
-        Tooltip story2Tooltip = new Tooltip("HELLO AND WELCOME TO STORY 2 CUTE PATOTTIE :)");
+        Tooltip story1Tooltip = new Tooltip("Jeppe spiller Roblox med en ven. Tryk på 'start historie' for at starte historien.");
+        Tooltip story2Tooltip = new Tooltip("Historie 2 er ikke færdiggjort endnu. Færdiggør historie 1 for at låse op.");
 
         // Set up the tooltips for the corresponding labels
         setupTooltip(story1TooltipLabel, story1Tooltip);

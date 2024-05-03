@@ -11,32 +11,30 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane fx:id="story1Tooltip" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PACKAGE_NAME.src.main.project.classes.LibraryController">
+<StackPane fx:id="story1Tooltip" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1080.0" stylesheets="@../../project/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PACKAGE_NAME.src.main.project.classes.LibraryController">
     <children>
-        <GridPane alignment="BOTTOM_CENTER" gridLinesVisible="true" layoutX="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="778.0" style="-fx-background-color: #fff0f5;" StackPane.alignment="CENTER">
+        <GridPane alignment="BOTTOM_CENTER" hgap="50.0" layoutX="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="202.0" prefWidth="1000.0" style="-fx-background-color: #fff0f5;" styleClass="grid-pane" StackPane.alignment="CENTER">
             <columnConstraints>
-                <ColumnConstraints />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="471.0" minWidth="10.0" prefWidth="423.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="450.0" minWidth="10.0" prefWidth="420.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="450.0" minWidth="10.0" prefWidth="400.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="450.0" minWidth="10.0" prefWidth="400.0" />
             </columnConstraints>
             <rowConstraints>
                 <RowConstraints maxHeight="205.0" minHeight="10.0" prefHeight="200.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="209.0" minHeight="10.0" prefHeight="193.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <ImageView fx:id="storyImage" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                <ImageView fx:id="storyImage" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#spil" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                     <image>
-                        <Image url="@../../resources/images/bab.jpg" />
+                        <Image url="@../../resources/images/Story1Library.jpg" />
                     </image>
                 </ImageView>
-                <ImageView fx:id="storyImage" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                <Label alignment="CENTER" layoutX="422.0" layoutY="455.0" minWidth="-Infinity" prefHeight="187.0" prefWidth="186.0" text="Spil 1" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                    <padding>
-                        <Insets top="170.0" />
-                    </padding>
+                <ImageView fx:id="storyImage" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                <Label alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="340.0" styleClass="cell" text="Jeppe spiller Roblox" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <padding>
+                  <Insets top="170.0" />
+               </padding>
                 </Label>
-                <Button alignment="CENTER" mnemonicParsing="false" onAction="#spil" text="Start Spil" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                <Label alignment="CENTER" prefHeight="187.0" prefWidth="186.0" text="Spil 2" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+                <Button id="spilButton" alignment="CENTER" mnemonicParsing="false" onAction="#spil" text="Start historie" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                <Label alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="340.0" styleClass="cell" text="Historie 2" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                     <padding>
                         <Insets top="170.0" />
                     </padding>
@@ -44,18 +42,27 @@
                         <Insets />
                     </GridPane.margin>
                 </Label>
-                <Button fx:id="story2Button" alignment="CENTER" mnemonicParsing="false" onAction="#spil2" text="Start Spil" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-            <Label fx:id="story1TooltipLabel" alignment="CENTER" prefHeight="18.0" prefWidth="16.0" text="?" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                <Button id="spilButton" fx:id="story2Button" alignment="CENTER" mnemonicParsing="false" onAction="#spil2" text="Start historie" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Label fx:id="story1TooltipLabel" alignment="CENTER" prefHeight="18.0" prefWidth="16.0" text="?" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
                <font>
                   <Font name="System Bold" size="20.0" />
-               </font></Label>
-            <Label fx:id="story2TooltipLabel" alignment="TOP_RIGHT" contentDisplay="RIGHT" prefHeight="25.0" prefWidth="12.0" text="?" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <padding>
+                  <Insets right="80.0" top="2.0" />
+               </padding></Label>
+            <Label fx:id="story2TooltipLabel" alignment="TOP_RIGHT" contentDisplay="RIGHT" prefHeight="25.0" prefWidth="12.0" text="?" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
                <font>
                   <Font name="System Bold" size="20.0" />
-               </font></Label>
+               </font>
+               <padding>
+                  <Insets right="80.0" top="2.0" />
+               </padding></Label>
             </children>
             <StackPane.margin>
-                <Insets top="150.0" />
+                <Insets top="100.0" />
             </StackPane.margin>
         </GridPane>
         <Label text="Vælg en historie" StackPane.alignment="TOP_LEFT">
@@ -63,10 +70,10 @@
                 <Insets left="55.0" top="50.0" />
             </StackPane.margin>
             <font>
-                <Font size="55.0" />
+                <Font name="System Bold" size="55.0" />
             </font>
         </Label>
-        <Label text="Hjælp main character med at bla bla bla" StackPane.alignment="TOP_LEFT">
+        <Label text="Hjælp Jeppe med at forstå hans følelser" StackPane.alignment="TOP_LEFT">
             <font>
                 <Font size="43.0" />
             </font>
