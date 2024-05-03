@@ -16,14 +16,14 @@
             <Image url="@../../resources/images/Welcome.png" />
          </image>
       </ImageView>
-      <Button fx:id="continueButton" alignment="CENTER" layoutX="413.0" layoutY="408.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="43.0" prefWidth="150.0" text="Fortsæt" />
-      <Text fx:id="welcomeText" fill="#222222" layoutX="61.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hej og velkommen!" wrappingWidth="261.8836975097656">
+      <Button fx:id="continueButton" alignment="CENTER" layoutX="440.0" layoutY="714.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="43.0" prefWidth="150.0" text="Fortsæt" />
+      <Text fx:id="welcomeText" fill="#222222" layoutX="61.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hej og velkommen!" wrappingWidth="297.8836975097656">
          <font>
             <Font name="Urbana Bold" size="56.0" />
          </font></Text>
       <TextFlow fx:id="myTeXtFlow" layoutX="61.0" layoutY="218.0" prefHeight="200.0" prefWidth="200.0" textAlignment="CENTER">
          <children>
-            <Label prefHeight="167.0" prefWidth="222.0" text="Jeg hedder Jeppe! Jeg vil følge dig gennem app’en, hvor du kan gå på opdagelse i en række historier og sjove opgaver." textFill="#212121" wrapText="true">
+            <Label prefHeight="331.0" prefWidth="183.0" text="Jeg hedder Jeppe! Jeg vil følge dig gennem app’en, hvor du kan gå på opdagelse i en række historier og sjove opgaver." textFill="#212121" wrapText="true">
                <font>
                   <Font size="20.0" />
                </font></Label>
