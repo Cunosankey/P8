@@ -33,6 +33,7 @@ public class LibraryController {
 
     @FXML
     private Button story2Button;
+
     @FXML
     private ImageView storyImage;
 
@@ -40,8 +41,8 @@ public class LibraryController {
     @FXML
     public void initialize() {
         // Create two tooltips with custom text
-        Tooltip story1Tooltip = new Tooltip("Jeppe spiller Roblox med en ven. Tryk på 'start historie' for at starte historien.");
-        Tooltip story2Tooltip = new Tooltip("Historie 2 er ikke færdiggjort endnu. Færdiggør historie 1 for at låse op.");
+        Tooltip story1Tooltip = new Tooltip("Jeppe spiller Roblox med en ven. Tryk på Play-knappen for at starte historien.");
+        Tooltip story2Tooltip = new Tooltip("Historie 2 er endnu ikke tilgængelig. Færdiggør historie 1 for at låse op.");
 
         // Set up the tooltips for the corresponding labels
         setupTooltip(story1TooltipLabel, story1Tooltip);
@@ -52,9 +53,9 @@ public class LibraryController {
         story2Button.setDisable(!StoryProgress.isStory1Completed());
         Image lockedImage;
         if (StoryProgress.isStory1Completed()) {
-            lockedImage = new Image(getClass().getResourceAsStream("/images/bab.jpg"));
+            lockedImage = new Image(getClass().getResourceAsStream("/images/Story1billede2.png"));
         } else {
-            lockedImage = new Image(getClass().getResourceAsStream("/images/lock.png"));
+            lockedImage = new Image(getClass().getResourceAsStream("/images/Story2lock.png"));
         }
         storyImage.setImage(lockedImage);
     }
