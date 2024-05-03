@@ -9,9 +9,9 @@
 
 <AnchorPane prefHeight="810" prefWidth="1080" stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PACKAGE_NAME.src.main.project.classes.EndSceneController">
    <children>
-      <ImageView fitHeight="556.0" fitWidth="565.0" layoutX="541.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: lightgrey;">
+      <ImageView fitHeight="810.0" fitWidth="930.0" layoutX="540.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: lightgrey;">
          <image>
-            <Image url="@../../images/DrengThumbsUp.png" />
+            <Image url="@../../resources/images/well_done.png" />
          </image></ImageView>
       <Label alignment="CENTER" layoutX="396.0" layoutY="343.0" prefHeight="77.0" prefWidth="288.0" text="Du har nu fuldført den første historie">
          <font>
