@@ -1,4 +1,4 @@
-package PACKAGE_NAME.src.main.project.classes;
+package main.project.classes;
 
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;

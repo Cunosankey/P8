@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="810" prefWidth="1080" stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PACKAGE_NAME.src.main.project.classes.EndSceneController">
+<AnchorPane prefHeight="810" prefWidth="1080" stylesheets="@../../resources/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.project.classes.EndSceneController">
    <children>
       <ImageView fitHeight="810.0" fitWidth="930.0" layoutX="540.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: lightgrey;">
          <image>
@@ -23,7 +23,7 @@
             <Font size="15.0" />
          </font>
       </Button>
-      <Label alignment="CENTER" layoutX="400.0" layoutY="256.0" prefHeight="103.0" prefWidth="281.0" stylesheets="@../styles.css" text="Godt gået!" textFill="#222222">
+      <Label alignment="CENTER" layoutX="400.0" layoutY="256.0" prefHeight="103.0" prefWidth="281.0" stylesheets="@../../resources/styles.css" text="Godt gået!" textFill="#222222">
          <font>
             <Font name="Arial Black" size="48.0" />
          </font></Label>
