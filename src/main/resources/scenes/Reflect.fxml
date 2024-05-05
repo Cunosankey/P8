@@ -17,7 +17,7 @@
          <children>
             <ImageView fx:id="facialExpressionImage" fitHeight="500.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true" translateY="-40.0">
                <image>
-                  <Image url="@../../resources/images/9.png" />
+                  <Image url="@../resources/images/9.png" />
                </image></ImageView>
             <ImageView fx:id="gestureImage" fitHeight="560.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true" translateY="-40.0" VBox.vgrow="NEVER">
                <image>
@@ -64,6 +64,6 @@
          </children>
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="720.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0" />
-      <HBox fx:id="circleContainer" alignment="CENTER" layoutX="450.0" layoutY="744.0" prefHeight="35.0" prefWidth="181.0" spacing="10.0" stylesheets="@../../resources/styles.css" />
+      <HBox fx:id="circleContainer" alignment="CENTER" layoutX="450.0" layoutY="744.0" prefHeight="35.0" prefWidth="181.0" spacing="10.0" stylesheets="@/styles.css" />
    </children>
 </AnchorPane>

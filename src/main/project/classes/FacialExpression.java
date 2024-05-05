@@ -17,8 +17,7 @@ public class FacialExpression {
         this.facialExpressionImagePath = imagePath;
         try {
             // Try to read the image file from the specified path. This can throw an IOException if the file can't be read for any reason.
-            this.FacialExpressionImage = ImageIO.read(new File(imagePath));
-        } catch (IOException e) {
+            this.FacialExpressionImage = ImageIO.read(getClass().getResourceAsStream(imagePath));        } catch (IOException e) {
             // If an IOException is thrown, print the stack trace to help with debugging.
             e.printStackTrace();
             this.FacialExpressionImage = null; // Set GestureImage to null to indicate that the image couldn't be loaded if the image file cannot be read

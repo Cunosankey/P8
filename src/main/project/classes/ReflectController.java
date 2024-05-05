@@ -46,12 +46,12 @@ public class ReflectController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         List<FacialExpression> characterFacialExpressionList = storyCharacter.getCharacterFacialExpression();
         String imagePath = characterFacialExpressionList.get(facialExpressionIndex).getFacialExpressionImagePath();
-        Image image = new Image("file:" + imagePath);
+        Image image = new Image(getClass().getResourceAsStream(imagePath));
         facialExpressionImage.setImage(image);
 
         List<Gesture> characterGestureList = storyCharacter.getCharacterGesture();
         String gestureImagePath = characterGestureList.get(gestureIndex).getGestureImagePath();
-        Image currentGestureImage = new Image("file:" + gestureImagePath);
+        Image currentGestureImage = new Image(getClass().getResourceAsStream(gestureImagePath));
         gestureImage.setImage(currentGestureImage);
 
         // Create the ProgressManager object

@@ -17,7 +17,7 @@ public class Gesture {
         this.gestureImagePath = imagePath;
         try {
             // Try to read the image file from the specified path. This can throw an IOException if the file can't be read for any reason.
-            this.GestureImage = ImageIO.read(new File(imagePath));
+            this.GestureImage = ImageIO.read(getClass().getResourceAsStream(imagePath));
         } catch (IOException e) {
             // If an IOException is thrown, print the stack trace to help with debugging.
             e.printStackTrace();
