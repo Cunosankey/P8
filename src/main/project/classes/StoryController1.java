@@ -94,7 +94,7 @@ public class StoryController1 {
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
         Scene scene = stage.getScene();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../scenes/Library.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/scenes/Library.fxml"));
         Parent root = fxmlLoader.load();
         scene.setRoot(root);
     }
