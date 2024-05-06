@@ -38,3 +38,4 @@ public class StoryCharacter {
         return characterFacialExpression;
     }
 }
+

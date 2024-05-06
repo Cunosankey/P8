@@ -113,33 +113,35 @@ public class TaskController implements Initializable {
 
     public void updateCharacterGesture() {
         List<Gesture> characterGestureList = storyCharacter.getCharacterGesture();
+
+        // Increment currentGestureIndex
+        currentGestureIndex = (currentGestureIndex + 1) % characterGestureList.size();
+
         String imagePath = characterGestureList.get(currentGestureIndex).getGestureImagePath();
         Image image = new Image(getClass().getResourceAsStream(imagePath));
         if (image.isError()) {
             System.out.println("Error loading image: " + image.getException()); // Print the exception if there is an error loading the image
         }
         characterGestureImage.setImage(image);
-
-        // Increment currentGestureIndex
-        currentGestureIndex = (currentGestureIndex + 1) % characterGestureList.size();
     }
 
     // Method to reverse the character gesture
     public void reverseCharacterGesture() {
         List<Gesture> characterGestureList = storyCharacter.getCharacterGesture();
+
+        // Decrement currentGestureIndex
+        if (currentGestureIndex == 0) {
+            currentGestureIndex = characterGestureList.size() - 1; // Wrap around to the end of the list
+        } else {
+            currentGestureIndex--;
+        }
+
         String imagePath = characterGestureList.get(currentGestureIndex).getGestureImagePath();
         Image image = new Image(getClass().getResourceAsStream(imagePath));
         if (image.isError()) {
             System.out.println("Error loading image: " + image.getException()); // Print the exception if there is an error loading the image
         }
         characterGestureImage.setImage(image);
-
-        // Decrement currentFacialExpressionIndex
-        if (currentGestureIndex == 0) {
-            currentGestureIndex = characterGestureList.size() - 1; // Wrap around to the end of the list
-        } else {
-            currentGestureIndex--;
-        }
     }
 
 
@@ -152,33 +154,35 @@ public class TaskController implements Initializable {
     // Method to update the character's facial expression
     public void updateCharacterFacialExpression() {
         List<FacialExpression> characterFacialExpressionList = storyCharacter.getCharacterFacialExpression();
+
+        // Increment currentFacialExpressionIndex
+        currentFacialExpressionIndex = (currentFacialExpressionIndex + 1) % characterFacialExpressionList.size();
+
         String imagePath = characterFacialExpressionList.get(currentFacialExpressionIndex).getFacialExpressionImagePath();
         Image image = new Image(getClass().getResourceAsStream(imagePath));
         if (image.isError()) {
             System.out.println("Error loading image: " + image.getException()); // Print the exception if there is an error loading the image
         }
         characterFacialExpressionImage.setImage(image);
-
-        // Increment currentGestureIndex
-        currentFacialExpressionIndex = (currentFacialExpressionIndex + 1) % characterFacialExpressionList.size();
     }
 
     // Method to reverse the Facial Expression
     public void reverseCharacterFacialExpression() {
         List<FacialExpression> characterFacialExpressionList = storyCharacter.getCharacterFacialExpression();
+
+        // Decrement currentGestureIndex
+        if (currentFacialExpressionIndex == 0) {
+            currentFacialExpressionIndex = characterFacialExpressionList.size() - 1; // Wrap around to the end of the list
+        } else {
+            currentFacialExpressionIndex--;
+        }
+
         String imagePath = characterFacialExpressionList.get(currentFacialExpressionIndex).getFacialExpressionImagePath();
         Image image = new Image(getClass().getResourceAsStream(imagePath));
         if (image.isError()) {
             System.out.println("Error loading image: " + image.getException()); // Print the exception if there is an error loading the image
         }
         characterFacialExpressionImage.setImage(image);
-
-        // Decrement currentFacialExpressionIndex
-        if (currentFacialExpressionIndex == 0) {
-            currentFacialExpressionIndex = characterFacialExpressionList.size() - 1; // Wrap around to the end of the list
-        } else {
-            currentFacialExpressionIndex--;
-        }
     }
 
 
@@ -208,10 +212,6 @@ public class TaskController implements Initializable {
             System.out.println("storyCharacter is null");
             return;
         }
-
-        // Update image methods before going to Reflect scene to ensure the images are updated
-        updateCharacterFacialExpression();
-        updateCharacterGesture();
 
         AudioController.stopAudio();
 
