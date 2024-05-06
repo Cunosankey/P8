@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="810.0" prefWidth="1080.0" stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PACKAGE_NAME.src.main.project.classes.StoryController1">
+   <children>
+      <Label fx:id="titleLabel" layoutX="32.0" layoutY="113.0" prefHeight="94.0" prefWidth="490.0" text="Title" AnchorPane.leftAnchor="60.0">
+         <font>
+            <Font name="Urbane Heavy" size="43.0" />
+         </font></Label>
+      <TextArea fx:id="storyDescriptionLabel" editable="false" layoutX="30.0" layoutY="217.0" prefHeight="430.0" prefWidth="566.0" styleClass="storyDescriptionTextArea" text="Description" wrapText="true" AnchorPane.bottomAnchor="184.0" AnchorPane.leftAnchor="45.0">
+         <font>
+            <Font size="22.0" />
+         </font></TextArea>
+      <ImageView fx:id="storyImage1" fitHeight="240.0" fitWidth="249.0" layoutX="644.0" layoutY="421.0" pickOnBounds="true" preserveRatio="true" rotate="1.0" AnchorPane.bottomAnchor="172.3203125" AnchorPane.rightAnchor="170.0">
+         <image>
+            <Image url="@../../resources/images/Story1billede2.png" />
+         </image>
+         <clip>
+            <Rectangle arcHeight="20.0" arcWidth="20.0" height="240.0" width="249.0" />
+         </clip>
+      </ImageView>
+      <ImageView fx:id="storyImage2" fitHeight="249.0" fitWidth="249.0" layoutX="711.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true" rotate="1.0" AnchorPane.rightAnchor="120.0">
+         <image>
+            <Image url="@../../resources/images/Story1billede1.jpg" />
+         </image>
+         <clip>
+            <Rectangle arcHeight="20.0" arcWidth="20.0" height="240.0" width="249.0" />
+         </clip>
+      </ImageView>
+      <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="845.0" AnchorPane.bottomAnchor="710.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="ToLibraryButton" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#Story1ToLibrary" styleClass="buttonSpeak" text="Button">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/images/quit_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="playAudioButton" contentDisplay="CENTER" minWidth="119.0" mnemonicParsing="false" onAction="#playAudio" prefHeight="50.0" prefWidth="63.0" styleClass="buttonSpeak">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/images/Speak_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <padding>
+            <Insets right="60.0" />
+         </padding>
+      </HBox>
+      <HBox fx:id="circleContainer" alignment="CENTER" layoutX="450.0" layoutY="744.0" prefHeight="35.0" prefWidth="181.0" spacing="10.0" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="451.0" AnchorPane.rightAnchor="449.0">
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="70.0" prefWidth="600.0" spacing="20.0" AnchorPane.bottomAnchor="73.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="667.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#backHandle" prefHeight="26.0" prefWidth="68.0" text="Tilbage" />
+            <Button mnemonicParsing="false" onAction="#handleButtonAction" text="Fortsæt" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

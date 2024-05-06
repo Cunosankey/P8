@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="810.0" prefWidth="1080.0" stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PACKAGE_NAME.src.main.project.classes.StoryController1_1">
+    <children>
+      <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="845.0" AnchorPane.bottomAnchor="710.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+              <Button fx:id="ToLibraryButton" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#Story1_1ToLibrary" styleClass="buttonSpeak" text="Button">
+                  <graphic>
+                      <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                              <Image url="@../../resources/images/quit_icon.png" />
+                          </image>
+                      </ImageView>
+                  </graphic>
+            </Button>
+              <Button fx:id="playAudioButton" contentDisplay="CENTER" minWidth="119.0" mnemonicParsing="false" onAction="#playAudio" prefHeight="86.0" prefWidth="119.0" styleClass="buttonSpeak">
+                  <graphic>
+                      <ImageView fitHeight="94.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                              <Image url="@../../resources/images/Speak_icon.png" />
+                          </image>
+                      </ImageView>
+                  </graphic>
+              </Button>
+         </children>
+         <padding>
+            <Insets right="60.0" />
+         </padding>
+      </HBox>
+
+        <Label fx:id="titleLabel" layoutX="-333.0" layoutY="-115.0" prefHeight="94.0" prefWidth="490.0" text="Title" AnchorPane.leftAnchor="-333.0" />
+        <TextArea fx:id="storyDescriptionLabel2" editable="false" layoutX="30.0" layoutY="217.0" prefHeight="425.0" prefWidth="524.0" styleClass="storyDescriptionTextArea" text="Description" wrapText="true" AnchorPane.bottomAnchor="189.0" AnchorPane.leftAnchor="45.0">
+         <font>
+            <Font size="22.0" />
+         </font></TextArea>
+        <ImageView fitHeight="304.0" fitWidth="425.0" layoutX="601.0" layoutY="243.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="54.0">
+            <image>
+                <Image url="@../../resources/images/story1_2.jpg" />
+            </image>
+            <clip>
+                <Rectangle arcHeight="20.0" arcWidth="20.0" height="250.0" width="400.0" />
+            </clip>
+        </ImageView>
+        <HBox fx:id="circleContainer" alignment="CENTER" layoutX="460.0" layoutY="732.0" prefHeight="35.0" prefWidth="180.0" spacing="10.0" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="451.0" AnchorPane.rightAnchor="449.0">
+        </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0" AnchorPane.bottomAnchor="73.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="667.0">
+         <children>
+              <Button mnemonicParsing="false" onAction="#backAgain" prefHeight="26.0" prefWidth="68.0" text="Tilbage" />
+              <Button mnemonicParsing="false" onAction="#toTask" text="Fortsæt" />
+         </children>
+      </HBox>
+    </children>
+</AnchorPane>

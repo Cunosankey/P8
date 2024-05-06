@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane prefHeight="810.0" prefWidth="1080.0" stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PACKAGE_NAME.src.main.project.classes.TaskController">
+   <children>
+      <VBox layoutX="103.0" layoutY="100.0" prefHeight="480.0" prefWidth="278.0" AnchorPane.bottomAnchor="170.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="720.0" AnchorPane.topAnchor="180.0">
+         <children>
+            <Label fx:id="titleLabel" graphicTextGap="0.0" prefHeight="119.0" prefWidth="321.0" text="Hvordan har&#10;Jeppe det?">
+               <font>
+                  <Font name="Urbane Heavy" size="43.0" />
+               </font>
+            </Label>
+            <TextFlow fx:id="descriptionTextFlow" prefHeight="335.0" prefWidth="300.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </TextFlow>
+         </children>
+      </VBox>
+      <HBox fx:id="chooseFace" layoutX="432.0" layoutY="100.0" prefHeight="260.0" prefWidth="622.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="75.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#reverseCharacterFacialExpression" onContextMenuRequested="#reverseCharacterFacialExpression" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 100;" styleClass="buttonTask" translateX="20.0">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/images/arrow.png" />
+                     </image></ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" top="100.0" />
+               </HBox.margin>
+            </Button>
+            <ImageView fx:id="characterFacialExpressionImage" fitHeight="440.0" fitWidth="490.0" onContextMenuRequested="#updateCharacterFacialExpression" onMouseClicked="#updateCharacterFacialExpression" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <image>
+                  <Image url="@../../resources/images/7.png" />
+               </image>
+            </ImageView>
+            <Button mnemonicParsing="false" onAction="#updateCharacterFacialExpression" onContextMenuRequested="#updateCharacterFacialExpression" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 100;" styleClass="buttonTask" translateX="-20.0">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                     <image>
+                        <Image url="@../../resources/images/arrow.png" />
+                     </image></ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" top="100.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <HBox fx:id="chooseGesture" layoutX="424.0" layoutY="365.0" prefHeight="526.0" prefWidth="579.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="10.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#reverseCharacterGesture" onContextMenuRequested="#reverseCharacterGesture" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 100;" styleClass="buttonTask" translateX="20.0">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/images/arrow.png" />
+                     </image></ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" top="100.0" />
+               </HBox.margin>
+            </Button>
+            <ImageView fx:id="characterGestureImage" fitHeight="560.0" fitWidth="490.0" onContextMenuRequested="#updateCharacterGesture" onMouseClicked="#updateCharacterGesture" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <image>
+                  <Image url="@../../resources/images/3_3.png" />
+               </image>
+            </ImageView>
+            <Button mnemonicParsing="false" onAction="#updateCharacterGesture" onContextMenuRequested="#updateCharacterGesture" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 100;" styleClass="buttonTask" translateX="-20.0">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" top="100.0" />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                     <image>
+                        <Image url="@../../resources/images/arrow.png" />
+                     </image></ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT" prefHeight="70.0" prefWidth="200.0" spacing="845.0" AnchorPane.bottomAnchor="710.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="ToLibraryButton" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#TaskToLibrary" styleClass="buttonSpeak" text="Button">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/images/quit_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="playAudioButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#playAudio" prefHeight="50.0" prefWidth="63.0" styleClass="buttonSpeak">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/images/Speak_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+         </children>
+         <padding>
+            <Insets right="60.0" />
+         </padding>
+      </HBox>
+      <HBox fx:id="circleContainer" alignment="CENTER" layoutX="450.0" layoutY="744.0" prefHeight="35.0" prefWidth="181.0" spacing="10.0" stylesheets="@../styles.css">
+      </HBox>
+      <HBox alignment="CENTER" layoutX="2.0" layoutY="667.0" prefHeight="70.0" prefWidth="600.0" spacing="20.0" AnchorPane.bottomAnchor="73.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="667.0">
+         <children>
+            <Button fx:id="taskTilbage" mnemonicParsing="false" onAction="#backButton" prefHeight="50.0" prefWidth="92.0" text="Tilbage" />
+            <Button fx:id="taskAfslut" mnemonicParsing="false" onAction="#gotoReflect" prefHeight="50.0" prefWidth="92.0" text="Videre" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
