@@ -1,4 +1,4 @@
-package PACKAGE_NAME.src.main.project.classes;
+package main.project.classes;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -8,16 +8,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
-import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 import javafx.scene.layout.HBox;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
 
 public class StoryController1 {
     @FXML
@@ -37,7 +35,7 @@ public class StoryController1 {
     public StoryProgress storyProgress;
 
     public StoryController1() {
-        loadStoriesFromFile("src/main/project/scenes/Stories/Story.txt");
+        loadStoriesFromFile("/Stories/Story.txt");
 
     }
 
@@ -51,9 +49,8 @@ public class StoryController1 {
      */
     // This method reads the stories from a file and adds them to the stories ArrayList.
     private void loadStoriesFromFile(String filename) {
-
         // The method uses a try-with-resources statement to ensure that the BufferedReader is closed after it's no longer needed. This is a good practice to avoid resource leaks.
-        try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream(filename)))) {
             String line;
             // While loop to read the file line by line
             while ((line = reader.readLine()) != null) {
@@ -84,7 +81,7 @@ public class StoryController1 {
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
         Scene scene = stage.getScene();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../scenes/Story1-1.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/scenes/Story1-1.fxml"));
         Parent root = fxmlLoader.load();
         scene.setRoot(root);
     }
@@ -93,7 +90,7 @@ public class StoryController1 {
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
         Scene scene = stage.getScene();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../scenes/Library.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/scenes/Library.fxml"));
         Parent root = fxmlLoader.load();
         scene.setRoot(root);
     }
@@ -102,7 +99,7 @@ public class StoryController1 {
         Node node = (Node) event.getSource(); // Get the source of the event (the button)
         Stage stage = (Stage) node.getScene().getWindow(); // Get the stage from the button
         Scene scene = stage.getScene(); // Get the scene from the stage
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../scenes/Library.fxml")); // Load the FXML file
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/scenes/Library.fxml")); // Load the FXML file
         Parent root = fxmlLoader.load(); // Load the FXML file into a Parent object
         scene.setRoot(root); // Set the scene root to the new FXML file
     }
@@ -142,7 +139,7 @@ public class StoryController1 {
     private void playAudio() {
         if (!AudioController.isAudioPlaying()) {
             // Create an instance of Audio
-            Audio audio = new Audio("src/main/audio_files/Story1-part1.mp3");
+            Audio audio = new Audio("audio_files/Story1-part1.mp3");
 
             // Create an instance of AudioController and play the audio
             AudioController.playAudio(audio);

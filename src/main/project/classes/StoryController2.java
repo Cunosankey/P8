@@ -1,4 +1,4 @@
-package PACKAGE_NAME.src.main.project.classes;
+package main.project.classes;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,7 +32,7 @@ public class StoryController2 extends StoryController1 {
     private final List<Story> stories = new ArrayList<>();
 
     public StoryController2() {
-        loadStoriesFromFile("src/main/project/scenes/Stories/Story2.txt");
+        loadStoriesFromFile("/Stories/Story2.txt");
     }
 
     public List<Story> getStories() {
@@ -51,7 +52,7 @@ public class StoryController2 extends StoryController1 {
     private void loadStoriesFromFile(String filename) {
 
         // The method uses a try-with-resources statement to ensure that the BufferedReader is closed after it's no longer needed. This is a good practice to avoid resource leaks.
-        try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream(filename)))) {
             String line;
             // While loop to read the file line by line
             while ((line = reader.readLine()) != null) {
