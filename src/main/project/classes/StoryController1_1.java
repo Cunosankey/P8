@@ -32,6 +32,7 @@ public class StoryController1_1 extends StoryController1 {
     }
 
     public void toTask(ActionEvent event) throws IOException {
+        AudioController.stopAudio();
         StoryProgress.setStory1Completed(true);
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/scenes/Task.fxml"));
         Parent newSceneParent = loader.load();
@@ -52,6 +53,7 @@ public class StoryController1_1 extends StoryController1 {
     }
 
     public void backAgain(ActionEvent event) throws IOException {
+        AudioController.stopAudio();
         Parent newSceneParent = FXMLLoader.load(getClass().getResource("/scenes/Story1.fxml"));
         Scene newScene = new Scene(newSceneParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -60,6 +62,7 @@ public class StoryController1_1 extends StoryController1 {
     }
 
     public void Story1_1ToLibrary(ActionEvent event) throws IOException {
+        AudioController.stopAudio();
         Node node = (Node) event.getSource(); // Get the source of the event (the button)
         Stage stage = (Stage) node.getScene().getWindow(); // Get the stage from the button
         Scene scene = stage.getScene(); // Get the scene from the stage

@@ -78,6 +78,7 @@ public class StoryController2 extends StoryController1 {
 
     // Nyt 22-04
     public void handleButtonAction(ActionEvent event) throws IOException {
+        AudioController.stopAudio();
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
         Scene scene = stage.getScene();
@@ -87,6 +88,7 @@ public class StoryController2 extends StoryController1 {
     }
 
     public void backHandle(ActionEvent event) throws IOException {
+        AudioController.stopAudio();
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
         Scene scene = stage.getScene();

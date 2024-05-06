@@ -82,6 +82,7 @@ public class StoryController1 {
     // Nyt 22-04
     public void handleButtonAction(ActionEvent event) throws IOException {
 
+        AudioController.stopAudio();
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
         Scene scene = stage.getScene();
@@ -91,6 +92,7 @@ public class StoryController1 {
     }
 
     public void backHandle(ActionEvent event) throws IOException {
+        AudioController.stopAudio();
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
         Scene scene = stage.getScene();
@@ -100,6 +102,7 @@ public class StoryController1 {
     }
 
     public void Story1ToLibrary(ActionEvent event) throws IOException {
+        AudioController.stopAudio();
         Node node = (Node) event.getSource(); // Get the source of the event (the button)
         Stage stage = (Stage) node.getScene().getWindow(); // Get the stage from the button
         Scene scene = stage.getScene(); // Get the scene from the stage
