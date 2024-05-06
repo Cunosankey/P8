@@ -29,32 +29,31 @@ public class TaskController implements Initializable {
 
     public TaskController() {
         // Create the StoryCharacter object
-        storyCharacter = new StoryCharacter("Character1", "Gesture1", "images/0_0.png", "FacialExpression1", "images/10.png");
+        storyCharacter = new StoryCharacter("Character1", "Gesture1", "/images/0_0.png", "FacialExpression1", "/images/10.png");
         // Add more gestures and facial expressions
-        storyCharacter.addGesture("Gesture2", "images/1_1.png");
-        storyCharacter.addGesture("Gesture3", "images/2_2.png");
-        storyCharacter.addGesture("Gesture4", "images/3_3.png");
-        storyCharacter.addGesture("Gesture5", "images/4_4.png");
-        storyCharacter.addGesture("Gesture6", "images/5_5.png");
+        storyCharacter.addGesture("Gesture2", "/images/1_1.png");
+        storyCharacter.addGesture("Gesture3", "/images/2_2.png");
+        storyCharacter.addGesture("Gesture4", "/images/3_3.png");
+        storyCharacter.addGesture("Gesture5", "/images/4_4.png");
+        storyCharacter.addGesture("Gesture6", "/images/5_5.png");
 
-        storyCharacter.addFacialExpression("FacialExpression2", "images/1.png");
-        storyCharacter.addFacialExpression("FacialExpression3", "images/0.png");
-        storyCharacter.addFacialExpression("FacialExpression4", "images/2.png");
-        storyCharacter.addFacialExpression("FacialExpression5", "images/3.png");
-        storyCharacter.addFacialExpression("FacialExpression6", "images/4.png");
-        storyCharacter.addFacialExpression("FacialExpression7", "images/5.png");
-        storyCharacter.addFacialExpression("FacialExpression8", "images/6.png");
-        storyCharacter.addFacialExpression("FacialExpression9", "images/7.png");
-        storyCharacter.addFacialExpression("FacialExpression10", "images/8.png");
-        storyCharacter.addFacialExpression("FacialExpression11", "images/9.png");
-
+        storyCharacter.addFacialExpression("FacialExpression2", "/images/1.png");
+        storyCharacter.addFacialExpression("FacialExpression3", "/images/0.png");
+        storyCharacter.addFacialExpression("FacialExpression4", "/images/2.png");
+        storyCharacter.addFacialExpression("FacialExpression5", "/images/3.png");
+        storyCharacter.addFacialExpression("FacialExpression6", "/images/4.png");
+        storyCharacter.addFacialExpression("FacialExpression7", "/images/5.png");
+        storyCharacter.addFacialExpression("FacialExpression8", "/images/6.png");
+        storyCharacter.addFacialExpression("FacialExpression9", "/images/7.png");
+        storyCharacter.addFacialExpression("FacialExpression10", "/images/8.png");
+        storyCharacter.addFacialExpression("FacialExpression11", "/images/9.png");
     }
 
     @FXML
     private void playAudio() {
         if(!AudioController.isAudioPlaying()) {
             // Create an instance of Audio
-            Audio audio = new Audio("audio_files/Task1.mp3");
+            Audio audio = new Audio("src/main/audio_files/Task1.mp3");
 
             // Create an instance of AudioController and play the audio
             AudioController.playAudio(audio);
@@ -115,7 +114,7 @@ public class TaskController implements Initializable {
     public void updateCharacterGesture() {
         List<Gesture> characterGestureList = storyCharacter.getCharacterGesture();
         String imagePath = characterGestureList.get(currentGestureIndex).getGestureImagePath();
-        Image image = new Image("file:" + imagePath);
+        Image image = new Image(getClass().getResourceAsStream(imagePath));
         if (image.isError()) {
             System.out.println("Error loading image: " + image.getException()); // Print the exception if there is an error loading the image
         }
@@ -129,7 +128,7 @@ public class TaskController implements Initializable {
     public void reverseCharacterGesture() {
         List<Gesture> characterGestureList = storyCharacter.getCharacterGesture();
         String imagePath = characterGestureList.get(currentGestureIndex).getGestureImagePath();
-        Image image = new Image("file:" + imagePath);
+        Image image = new Image(getClass().getResourceAsStream(imagePath));
         if (image.isError()) {
             System.out.println("Error loading image: " + image.getException()); // Print the exception if there is an error loading the image
         }
@@ -154,7 +153,7 @@ public class TaskController implements Initializable {
     public void updateCharacterFacialExpression() {
         List<FacialExpression> characterFacialExpressionList = storyCharacter.getCharacterFacialExpression();
         String imagePath = characterFacialExpressionList.get(currentFacialExpressionIndex).getFacialExpressionImagePath();
-        Image image = new Image("file:" + imagePath);
+        Image image = new Image(getClass().getResourceAsStream(imagePath));
         if (image.isError()) {
             System.out.println("Error loading image: " + image.getException()); // Print the exception if there is an error loading the image
         }
@@ -168,7 +167,7 @@ public class TaskController implements Initializable {
     public void reverseCharacterFacialExpression() {
         List<FacialExpression> characterFacialExpressionList = storyCharacter.getCharacterFacialExpression();
         String imagePath = characterFacialExpressionList.get(currentFacialExpressionIndex).getFacialExpressionImagePath();
-        Image image = new Image("file:" + imagePath);
+        Image image = new Image(getClass().getResourceAsStream(imagePath));
         if (image.isError()) {
             System.out.println("Error loading image: " + image.getException()); // Print the exception if there is an error loading the image
         }
@@ -198,7 +197,7 @@ public class TaskController implements Initializable {
         Node node = (Node) event.getSource(); // Get the source of the event (the button)
         Stage stage = (Stage) node.getScene().getWindow(); // Get the stage from the button
         Scene scene = stage.getScene(); // Get the scene from the stage
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/scenes/Library.fxml")); // Load the FXML file
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../scenes/Library.fxml")); // Load the FXML file
         Parent root = fxmlLoader.load(); // Load the FXML file into a Parent object
         scene.setRoot(root); // Set the scene root to the new FXML file
     }
