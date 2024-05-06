@@ -47,9 +47,6 @@
                <HBox.margin>
                   <Insets />
                </HBox.margin>
-               <image>
-                  <Image url="@../../resources/images/7.png" />
-               </image>
             </ImageView>
             <Button mnemonicParsing="false" onAction="#updateCharacterFacialExpression" onContextMenuRequested="#updateCharacterFacialExpression" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 100;" styleClass="buttonTask" translateX="-20.0">
                <graphic>
@@ -81,9 +78,6 @@
                <HBox.margin>
                   <Insets />
                </HBox.margin>
-               <image>
-                  <Image url="@../../resources/images/3_3.png" />
-               </image>
             </ImageView>
             <Button mnemonicParsing="false" onAction="#updateCharacterGesture" onContextMenuRequested="#updateCharacterGesture" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 100;" styleClass="buttonTask" translateX="-20.0">
                <HBox.margin>

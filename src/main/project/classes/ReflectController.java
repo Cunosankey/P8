@@ -54,6 +54,9 @@ public class ReflectController implements Initializable {
         Image currentGestureImage = new Image("file:" + gestureImagePath);
         gestureImage.setImage(currentGestureImage);
 
+        System.out.println("Gesture image path (reflect controller: " + gestureImagePath);
+        System.out.println("Gesture index (reflect controller): " + gestureIndex);
+
         // Create the ProgressManager object
         storyProgress = new StoryProgress(circleContainer, 4);
         storyProgress.resetCircles();
