@@ -1,4 +1,4 @@
-package PACKAGE_NAME.src.main.project.classes;
+package main.project.classes;
 
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;

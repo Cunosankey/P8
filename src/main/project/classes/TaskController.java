@@ -1,4 +1,4 @@
-package PACKAGE_NAME.src.main.project.classes;
+package main.project.classes;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -54,7 +54,7 @@ public class TaskController implements Initializable {
     private void playAudio() {
         if(!AudioController.isAudioPlaying()) {
             // Create an instance of Audio
-            Audio audio = new Audio("src/main/audio_files/Task1.mp3");
+            Audio audio = new Audio("audio_files/Task1.mp3");
 
             // Create an instance of AudioController and play the audio
             AudioController.playAudio(audio);
@@ -185,7 +185,7 @@ public class TaskController implements Initializable {
 
     // Method to go back to the previous scene
     public void backButton(ActionEvent event) throws IOException {
-        Parent newSceneParent = FXMLLoader.load(getClass().getResource("../scenes/Story1-1.fxml"));
+        Parent newSceneParent = FXMLLoader.load(getClass().getResource("/scenes/Story1-1.fxml"));
         Scene newScene = new Scene(newSceneParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(newScene);
@@ -198,7 +198,7 @@ public class TaskController implements Initializable {
         Node node = (Node) event.getSource(); // Get the source of the event (the button)
         Stage stage = (Stage) node.getScene().getWindow(); // Get the stage from the button
         Scene scene = stage.getScene(); // Get the scene from the stage
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../scenes/Library.fxml")); // Load the FXML file
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/scenes/Library.fxml")); // Load the FXML file
         Parent root = fxmlLoader.load(); // Load the FXML file into a Parent object
         scene.setRoot(root); // Set the scene root to the new FXML file
     }
@@ -216,7 +216,7 @@ public class TaskController implements Initializable {
 
         AudioController.stopAudio();
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../scenes/Reflect.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/scenes/Reflect.fxml"));
         // lambda function that creates a new instance of ReflectController
         loader.setControllerFactory(c -> new ReflectController(storyCharacter, currentFacialExpressionIndex, currentGestureIndex));
 

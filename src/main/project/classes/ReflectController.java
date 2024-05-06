@@ -1,4 +1,4 @@
-package PACKAGE_NAME.src.main.project.classes;
+package main.project.classes;
 
 import javafx.event.ActionEvent;
 
@@ -64,7 +64,7 @@ public class ReflectController implements Initializable {
     // Go back to the previous scene
     public void goBackReflect(ActionEvent event) {
         try {
-            Parent previousSceneParent = FXMLLoader.load(getClass().getResource("../scenes/Task.fxml")); // replace with your previous scene file
+            Parent previousSceneParent = FXMLLoader.load(getClass().getResource("/scenes/Task.fxml")); // replace with your previous scene file
             Scene previousScene = new Scene(previousSceneParent);
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.setScene(previousScene);
@@ -79,7 +79,7 @@ public class ReflectController implements Initializable {
         Node node = (Node) event.getSource(); // Get the source of the event (the button)
         Stage stage = (Stage) node.getScene().getWindow(); // Get the stage from the button
         Scene scene = stage.getScene(); // Get the scene from the stage
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../scenes/Library.fxml")); // Load the FXML file
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/scenes/Library.fxml")); // Load the FXML file
         Parent root = fxmlLoader.load(); // Load the FXML file into a Parent object
         scene.setRoot(root); // Set the scene root to the new FXML file
     }
@@ -89,7 +89,7 @@ public class ReflectController implements Initializable {
         Node node = (Node) event.getSource(); // Get the source of the event (the button)
         Stage stage = (Stage) node.getScene().getWindow(); // Get the stage from the button
         Scene scene = stage.getScene(); // Get the scene from the stage
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../scenes/EndScene.fxml")); // Load the FXML file
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/scenes/EndScene.fxml")); // Load the FXML file
         Parent root = fxmlLoader.load(); // Load the FXML file into a Parent object
         scene.setRoot(root); // Set the scene root to the new FXML file
     }

@@ -1,4 +1,4 @@
-package PACKAGE_NAME.src.main.project.classes;
+package main.project.classes;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -24,7 +24,7 @@ public class HomeController {
 
     @FXML
     public void changeScene(ActionEvent event) throws IOException {
-        Parent newSceneParent = FXMLLoader.load(getClass().getResource("../scenes/Library.fxml"));
+        Parent newSceneParent = FXMLLoader.load(getClass().getResource("/scenes/Library.fxml"));
         Scene newScene = new Scene(newSceneParent);
         // This line gets the Stage information
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();

@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="810.0" prefWidth="1080.0" stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PACKAGE_NAME.src.main.project.classes.StoryController1">
+<AnchorPane prefHeight="810.0" prefWidth="1080.0" stylesheets="@/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.project.classes.StoryController1">
    <children>
       <Label fx:id="titleLabel" layoutX="32.0" layoutY="113.0" prefHeight="94.0" prefWidth="490.0" text="Title" AnchorPane.leftAnchor="60.0">
          <font>
@@ -23,7 +23,7 @@
          </font></TextArea>
       <ImageView fx:id="storyImage1" fitHeight="240.0" fitWidth="249.0" layoutX="644.0" layoutY="421.0" pickOnBounds="true" preserveRatio="true" rotate="1.0" AnchorPane.bottomAnchor="172.3203125" AnchorPane.rightAnchor="170.0">
          <image>
-            <Image url="@../../resources/images/Story1billede2.png" />
+            <Image url="@../images/Story1billede2.png" />
          </image>
          <clip>
             <Rectangle arcHeight="20.0" arcWidth="20.0" height="240.0" width="249.0" />
@@ -31,7 +31,7 @@
       </ImageView>
       <ImageView fx:id="storyImage2" fitHeight="249.0" fitWidth="249.0" layoutX="711.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true" rotate="1.0" AnchorPane.rightAnchor="120.0">
          <image>
-            <Image url="@../../resources/images/Story1billede1.jpg" />
+            <Image url="@../images/Story1billede1.jpg" />
          </image>
          <clip>
             <Rectangle arcHeight="20.0" arcWidth="20.0" height="240.0" width="249.0" />
@@ -43,7 +43,7 @@
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../resources/images/quit_icon.png" />
+                        <Image url="@../images/quit_icon.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -52,7 +52,7 @@
                <graphic>
                   <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../resources/images/Speak_icon.png" />
+                        <Image url="@../images/Speak_icon.png" />
                      </image>
                   </ImageView>
                </graphic>

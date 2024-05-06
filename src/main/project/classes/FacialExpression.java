@@ -1,5 +1,4 @@
-package PACKAGE_NAME.src.main.project.classes;
-
+package main.project.classes;
 import java.awt.image.BufferedImage;
 import javax.imageio.ImageIO;
 import java.io.File;

@@ -3,7 +3,6 @@
     <output-path>$PROJECT_DIR$/out/artifacts/P8_jar</output-path>
     <root id="archive" name="P8.jar">
       <element id="module-output" name="P8" />
-      <element id="dir-copy" path="$PROJECT_DIR$/../../../../../Program Files/BellSoft/LibericaJDK-21-Full/bin" />
     </root>
   </artifact>
 </component>

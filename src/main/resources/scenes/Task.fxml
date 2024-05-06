@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane prefHeight="810.0" prefWidth="1080.0" stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PACKAGE_NAME.src.main.project.classes.TaskController">
+<AnchorPane prefHeight="810.0" prefWidth="1080.0" stylesheets="@/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.project.classes.TaskController">
    <children>
       <VBox layoutX="103.0" layoutY="100.0" prefHeight="480.0" prefWidth="278.0" AnchorPane.bottomAnchor="170.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="720.0" AnchorPane.topAnchor="180.0">
          <children>
@@ -36,7 +36,7 @@
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../resources/images/arrow.png" />
+                        <Image url="@../images/arrow.png" />
                      </image></ImageView>
                </graphic>
                <HBox.margin>
@@ -48,14 +48,14 @@
                   <Insets />
                </HBox.margin>
                <image>
-                  <Image url="@../../resources/images/7.png" />
+                  <Image url="@../images/7.png" />
                </image>
             </ImageView>
             <Button mnemonicParsing="false" onAction="#updateCharacterFacialExpression" onContextMenuRequested="#updateCharacterFacialExpression" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 100;" styleClass="buttonTask" translateX="-20.0">
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
                      <image>
-                        <Image url="@../../resources/images/arrow.png" />
+                        <Image url="@../images/arrow.png" />
                      </image></ImageView>
                </graphic>
                <HBox.margin>
@@ -70,7 +70,7 @@
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../resources/images/arrow.png" />
+                        <Image url="@../images/arrow.png" />
                      </image></ImageView>
                </graphic>
                <HBox.margin>
@@ -82,7 +82,7 @@
                   <Insets />
                </HBox.margin>
                <image>
-                  <Image url="@../../resources/images/3_3.png" />
+                  <Image url="@../images/3_3.png" />
                </image>
             </ImageView>
             <Button mnemonicParsing="false" onAction="#updateCharacterGesture" onContextMenuRequested="#updateCharacterGesture" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 100;" styleClass="buttonTask" translateX="-20.0">
@@ -92,7 +92,7 @@
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
                      <image>
-                        <Image url="@../../resources/images/arrow.png" />
+                        <Image url="@../images/arrow.png" />
                      </image></ImageView>
                </graphic>
             </Button>
@@ -104,7 +104,7 @@
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../resources/images/quit_icon.png" />
+                        <Image url="@../images/quit_icon.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -113,7 +113,7 @@
                <graphic>
                   <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../resources/images/Speak_icon.png" />
+                        <Image url="@../images/Speak_icon.png" />
                      </image>
                   </ImageView>
                </graphic></Button>
@@ -122,7 +122,7 @@
             <Insets right="60.0" />
          </padding>
       </HBox>
-      <HBox fx:id="circleContainer" alignment="CENTER" layoutX="450.0" layoutY="744.0" prefHeight="35.0" prefWidth="181.0" spacing="10.0" stylesheets="@../styles.css">
+      <HBox fx:id="circleContainer" alignment="CENTER" layoutX="450.0" layoutY="744.0" prefHeight="35.0" prefWidth="181.0" spacing="10.0" stylesheets="@/styles.css">
       </HBox>
       <HBox alignment="CENTER" layoutX="2.0" layoutY="667.0" prefHeight="70.0" prefWidth="600.0" spacing="20.0" AnchorPane.bottomAnchor="73.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="667.0">
          <children>

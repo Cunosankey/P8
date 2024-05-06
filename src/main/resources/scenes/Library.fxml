@@ -12,7 +12,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<StackPane fx:id="story1Tooltip" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1080.0" styleClass="grid-pane" stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PACKAGE_NAME.src.main.project.classes.LibraryController">
+<StackPane fx:id="story1Tooltip" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1080.0" styleClass="grid-pane" stylesheets="@/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.project.classes.LibraryController">
     <children>
         <GridPane alignment="CENTER" layoutX="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="332.0" prefWidth="776.0" StackPane.alignment="CENTER">
             <columnConstraints>
@@ -28,7 +28,7 @@
                         <Rectangle arcHeight="20.0" arcWidth="20.0" height="320.0" width="340.0" />
                     </clip>
                     <image>
-                        <Image url="@../../resources/images/Story1Library.png" />
+                        <Image url="@../images/Story1Library.png" />
                     </image>
                 </ImageView>
                 <ImageView fx:id="storyImage" fitHeight="340.0" fitWidth="340.0" pickOnBounds="true" preserveRatio="true" styleClass="storyImage" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
@@ -36,7 +36,7 @@
                         <Rectangle arcHeight="20.0" arcWidth="20.0" height="320.0" width="340.0" />
                     </clip>
                     <image>
-                  <Image url="@../../resources/images/Story1billede2.png" />
+                  <Image url="@../images/Story1billede2.png" />
                </image></ImageView>
                 <Label alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="341.0" styleClass="cell" text="Jeppe spiller Roblox" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                <padding>
@@ -50,7 +50,7 @@
                <graphic>
                   <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../resources/images/play_icon.png" />
+                        <Image url="@../images/play_icon.png" />
                      </image>
                   </ImageView>
                </graphic></Button>
@@ -69,7 +69,7 @@
                <graphic>
                   <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../resources/images/play_icon.png" />
+                        <Image url="@../images/play_icon.png" />
                      </image>
                   </ImageView>
                </graphic></Button>
