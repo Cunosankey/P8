@@ -44,22 +44,22 @@ public class ReflectController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        List<FacialExpression> characterFacialExpressionList = storyCharacter.getCharacterFacialExpression();
-        String imagePath = characterFacialExpressionList.get(facialExpressionIndex).getFacialExpressionImagePath();
-        Image image = new Image("file:" + imagePath);
-        facialExpressionImage.setImage(image);
+    List<FacialExpression> characterFacialExpressionList = storyCharacter.getCharacterFacialExpression();
+    String imagePath = characterFacialExpressionList.get(facialExpressionIndex).getFacialExpressionImagePath();
+    Image image = new Image(getClass().getResource(imagePath).toString());
+    facialExpressionImage.setImage(image);
 
-        List<Gesture> characterGestureList = storyCharacter.getCharacterGesture();
-        String gestureImagePath = characterGestureList.get(gestureIndex).getGestureImagePath();
-        Image currentGestureImage = new Image("file:" + gestureImagePath);
-        gestureImage.setImage(currentGestureImage);
+    List<Gesture> characterGestureList = storyCharacter.getCharacterGesture();
+    String gestureImagePath = characterGestureList.get(gestureIndex).getGestureImagePath();
+    Image currentGestureImage = new Image(getClass().getResource(gestureImagePath).toString());
+    gestureImage.setImage(currentGestureImage);
 
-        // Create the ProgressManager object
-        storyProgress = new StoryProgress(circleContainer, 4);
-        storyProgress.resetCircles();
-        storyProgress.createCircles();
-        storyProgress.fillCircle("Reflect");
-    }
+    // Create the ProgressManager object
+    storyProgress = new StoryProgress(circleContainer, 4);
+    storyProgress.resetCircles();
+    storyProgress.createCircles();
+    storyProgress.fillCircle("Reflect");
+}
 
     // Go back to the previous scene
     public void goBackReflect(ActionEvent event) {
