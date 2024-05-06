@@ -27,14 +27,14 @@
       </VBox>
       <VBox layoutX="609.0" layoutY="10.0" prefHeight="401.0" prefWidth="406.0" AnchorPane.leftAnchor="609.0" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="200.0">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tid til at reflektere!">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tid til at &#10;reflektere!">
                <font>
-                  <Font name="System Bold" size="48.0" />
+                  <Font name="Urbane Heavy" size="43.0" />
                </font>
             </Text>
-            <Label text="Her skal der stå en masse omkring&#10;hvordan bla blasa bla.&#10;&#10;bla bla bla&#10;&#10;bla bla">
+            <Label prefHeight="239.0" prefWidth="406.0" text="Sammen med en voksen skal du nu du &#10;beskrive, hvorfor du valgte netop det her&#10;ansigt- og kropsudtryk til Jeppe. &#10;&#10;Hvad tror du, de fortæller om hans følelser?&#10;&#10;Du kan altid lave om I Jeppes udtryk &#10;ved at trykke 'Prøv igen'.">
                <font>
-                  <Font name="SF Pro" size="18.0" />
+                  <Font size="22.0" />
                </font>
                <VBox.margin>
                   <Insets top="10.0" />
@@ -63,7 +63,21 @@
             </Button>
          </children>
       </HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="720.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0" />
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="710.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="ToLibraryButton" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#ReflectToLibrary" styleClass="buttonSpeak" text="Button">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/images/quit_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="30.0" />
+         </padding></HBox>
       <HBox fx:id="circleContainer" alignment="CENTER" layoutX="450.0" layoutY="744.0" prefHeight="35.0" prefWidth="181.0" spacing="10.0" stylesheets="@../styles.css" />
    </children>
 </AnchorPane>

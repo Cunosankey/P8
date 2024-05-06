@@ -30,7 +30,7 @@
             </TextFlow>
          </children>
       </VBox>
-      <HBox fx:id="chooseFace" layoutX="432.0" layoutY="100.0" prefHeight="260.0" prefWidth="622.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="74.0">
+      <HBox fx:id="chooseFace" layoutX="432.0" layoutY="100.0" prefHeight="260.0" prefWidth="622.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="75.0">
          <children>
             <Button mnemonicParsing="false" onAction="#reverseCharacterFacialExpression" onContextMenuRequested="#reverseCharacterFacialExpression" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 100;" styleClass="buttonTask" translateX="20.0">
                <graphic>
@@ -98,8 +98,17 @@
             </Button>
          </children>
       </HBox>
-      <HBox alignment="CENTER_RIGHT" prefHeight="70.0" prefWidth="200.0" spacing="15.0" AnchorPane.bottomAnchor="710.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <HBox alignment="CENTER_RIGHT" prefHeight="70.0" prefWidth="200.0" spacing="845.0" AnchorPane.bottomAnchor="710.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
+            <Button fx:id="ToLibraryButton" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#TaskToLibrary" styleClass="buttonSpeak" text="Button">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/images/quit_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
             <Button fx:id="playAudioButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#playAudio" prefHeight="50.0" prefWidth="63.0" styleClass="buttonSpeak">
                <graphic>
                   <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
@@ -115,7 +124,7 @@
       </HBox>
       <HBox fx:id="circleContainer" alignment="CENTER" layoutX="450.0" layoutY="744.0" prefHeight="35.0" prefWidth="181.0" spacing="10.0" stylesheets="@../styles.css">
       </HBox>
-      <HBox alignment="CENTER" layoutX="2.0" layoutY="667.0" prefHeight="70.0" prefWidth="600.0" spacing="20.0" AnchorPane.bottomAnchor="73.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <HBox alignment="CENTER" layoutX="2.0" layoutY="667.0" prefHeight="70.0" prefWidth="600.0" spacing="20.0" AnchorPane.bottomAnchor="73.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="667.0">
          <children>
             <Button fx:id="taskTilbage" mnemonicParsing="false" onAction="#backButton" prefHeight="50.0" prefWidth="92.0" text="Tilbage" />
             <Button fx:id="taskAfslut" mnemonicParsing="false" onAction="#gotoReflect" prefHeight="50.0" prefWidth="92.0" text="Videre" />
