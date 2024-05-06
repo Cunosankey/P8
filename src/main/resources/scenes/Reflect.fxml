@@ -26,7 +26,7 @@
                   <Font name="Urbane Heavy" size="43.0" />
                </font>
             </Text>
-            <Label prefHeight="239.0" prefWidth="406.0" text="Sammen med en voksen skal du nu du &#10;beskrive, hvorfor du valgte netop det her&#10;ansigt- og kropsudtryk til Jeppe. &#10;&#10;Hvad tror du, de fortæller om hans følelser?&#10;&#10;Du kan altid lave om I Jeppes udtryk &#10;ved at trykke 'Prøv igen'.">
+            <Label prefHeight="239.0" prefWidth="406.0" text="Sammen med en voksen skal du nu &#10;beskrive, hvorfor du valgte netop det her&#10;ansigt- og kropsudtryk til Jeppe. &#10;&#10;Hvad tror du, de fortæller om hans følelser?&#10;&#10;Du kan altid lave om I Jeppes udtryk &#10;ved at trykke 'Prøv igen'.">
                <font>
                   <Font size="22.0" />
                </font>
