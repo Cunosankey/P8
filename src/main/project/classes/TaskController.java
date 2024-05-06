@@ -1,4 +1,4 @@
-package PACKAGE_NAME.src.main.project.classes;
+package main.project.classes;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -29,24 +29,24 @@ public class TaskController implements Initializable {
 
     public TaskController() {
         // Create the StoryCharacter object
-        storyCharacter = new StoryCharacter("Character1", "Gesture1", "src/main/resources/images/0_0.png", "FacialExpression1", "src/main/resources/images/10.png");
+        storyCharacter = new StoryCharacter("Character1", "Gesture1", "/images/0_0.png", "FacialExpression1", "/images/10.png");
         // Add more gestures and facial expressions
-        storyCharacter.addGesture("Gesture2", "src/main/resources/images/1_1.png");
-        storyCharacter.addGesture("Gesture3", "src/main/resources/images/2_2.png");
-        storyCharacter.addGesture("Gesture4", "src/main/resources/images/3_3.png");
-        storyCharacter.addGesture("Gesture5", "src/main/resources/images/4_4.png");
-        storyCharacter.addGesture("Gesture6", "src/main/resources/images/5_5.png");
+        storyCharacter.addGesture("Gesture2", "/images/1_1.png");
+        storyCharacter.addGesture("Gesture3", "/images/2_2.png");
+        storyCharacter.addGesture("Gesture4", "/images/3_3.png");
+        storyCharacter.addGesture("Gesture5", "/images/4_4.png");
+        storyCharacter.addGesture("Gesture6", "/images/5_5.png");
 
-        storyCharacter.addFacialExpression("FacialExpression2", "src/main/resources/images/1.png");
-        storyCharacter.addFacialExpression("FacialExpression3", "src/main/resources/images/0.png");
-        storyCharacter.addFacialExpression("FacialExpression4", "src/main/resources/images/2.png");
-        storyCharacter.addFacialExpression("FacialExpression5", "src/main/resources/images/3.png");
-        storyCharacter.addFacialExpression("FacialExpression6", "src/main/resources/images/4.png");
-        storyCharacter.addFacialExpression("FacialExpression7", "src/main/resources/images/5.png");
-        storyCharacter.addFacialExpression("FacialExpression8", "src/main/resources/images/6.png");
-        storyCharacter.addFacialExpression("FacialExpression9", "src/main/resources/images/7.png");
-        storyCharacter.addFacialExpression("FacialExpression10", "src/main/resources/images/8.png");
-        storyCharacter.addFacialExpression("FacialExpression11", "src/main/resources/images/9.png");
+        storyCharacter.addFacialExpression("FacialExpression2", "/images/1.png");
+        storyCharacter.addFacialExpression("FacialExpression3", "/images/0.png");
+        storyCharacter.addFacialExpression("FacialExpression4", "/images/2.png");
+        storyCharacter.addFacialExpression("FacialExpression5", "/images/3.png");
+        storyCharacter.addFacialExpression("FacialExpression6", "/images/4.png");
+        storyCharacter.addFacialExpression("FacialExpression7", "/images/5.png");
+        storyCharacter.addFacialExpression("FacialExpression8", "/images/6.png");
+        storyCharacter.addFacialExpression("FacialExpression9", "/images/7.png");
+        storyCharacter.addFacialExpression("FacialExpression10", "/images/8.png");
+        storyCharacter.addFacialExpression("FacialExpression11", "/images/9.png");
     }
 
     @FXML
@@ -118,7 +118,7 @@ public class TaskController implements Initializable {
         currentGestureIndex = (currentGestureIndex + 1) % characterGestureList.size();
 
         String imagePath = characterGestureList.get(currentGestureIndex).getGestureImagePath();
-        Image image = new Image("file:" + imagePath);
+        Image image = new Image(getClass().getResourceAsStream(imagePath));
         if (image.isError()) {
             System.out.println("Error loading image: " + image.getException()); // Print the exception if there is an error loading the image
         }
@@ -137,7 +137,7 @@ public class TaskController implements Initializable {
         }
 
         String imagePath = characterGestureList.get(currentGestureIndex).getGestureImagePath();
-        Image image = new Image("file:" + imagePath);
+        Image image = new Image(getClass().getResourceAsStream(imagePath));
         if (image.isError()) {
             System.out.println("Error loading image: " + image.getException()); // Print the exception if there is an error loading the image
         }
@@ -159,7 +159,7 @@ public class TaskController implements Initializable {
         currentFacialExpressionIndex = (currentFacialExpressionIndex + 1) % characterFacialExpressionList.size();
 
         String imagePath = characterFacialExpressionList.get(currentFacialExpressionIndex).getFacialExpressionImagePath();
-        Image image = new Image("file:" + imagePath);
+        Image image = new Image(getClass().getResourceAsStream(imagePath));
         if (image.isError()) {
             System.out.println("Error loading image: " + image.getException()); // Print the exception if there is an error loading the image
         }
@@ -178,7 +178,7 @@ public class TaskController implements Initializable {
         }
 
         String imagePath = characterFacialExpressionList.get(currentFacialExpressionIndex).getFacialExpressionImagePath();
-        Image image = new Image("file:" + imagePath);
+        Image image = new Image(getClass().getResourceAsStream(imagePath));
         if (image.isError()) {
             System.out.println("Error loading image: " + image.getException()); // Print the exception if there is an error loading the image
         }
@@ -188,7 +188,7 @@ public class TaskController implements Initializable {
 
     // Method to go back to the previous scene
     public void backButton(ActionEvent event) throws IOException {
-        Parent newSceneParent = FXMLLoader.load(getClass().getResource("../scenes/Story1-1.fxml"));
+        Parent newSceneParent = FXMLLoader.load(getClass().getResource("/scenes/Story1-1.fxml"));
         Scene newScene = new Scene(newSceneParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(newScene);
@@ -215,7 +215,7 @@ public class TaskController implements Initializable {
 
         AudioController.stopAudio();
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../scenes/Reflect.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/scenes/Reflect.fxml"));
         // lambda function that creates a new instance of ReflectController
         loader.setControllerFactory(c -> new ReflectController(storyCharacter, currentFacialExpressionIndex, currentGestureIndex));
 

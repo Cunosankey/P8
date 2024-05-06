@@ -1,4 +1,4 @@
-package PACKAGE_NAME.src.main.project.classes;
+package main.project.classes;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -8,11 +8,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
-import java.io.Console;
+
 import java.io.IOException;
-import javafx.scene.layout.HBox;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
 
 public class StoryController1_1 extends StoryController1 {
     @FXML
@@ -36,7 +33,7 @@ public class StoryController1_1 extends StoryController1 {
 
     public void toTask(ActionEvent event) throws IOException {
         StoryProgress.setStory1Completed(true);
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../scenes/Task.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/scenes/Task.fxml"));
         Parent newSceneParent = loader.load();
         TaskController controller = loader.getController();
 
@@ -55,7 +52,7 @@ public class StoryController1_1 extends StoryController1 {
     }
 
     public void backAgain(ActionEvent event) throws IOException {
-        Parent newSceneParent = FXMLLoader.load(getClass().getResource("../scenes/Story1.fxml"));
+        Parent newSceneParent = FXMLLoader.load(getClass().getResource("/scenes/Story1.fxml"));
         Scene newScene = new Scene(newSceneParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(newScene);
@@ -66,7 +63,7 @@ public class StoryController1_1 extends StoryController1 {
         Node node = (Node) event.getSource(); // Get the source of the event (the button)
         Stage stage = (Stage) node.getScene().getWindow(); // Get the stage from the button
         Scene scene = stage.getScene(); // Get the scene from the stage
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../scenes/Library.fxml")); // Load the FXML file
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/scenes/Library.fxml")); // Load the FXML file
         Parent root = fxmlLoader.load(); // Load the FXML file into a Parent object
         scene.setRoot(root); // Set the scene root to the new FXML file
     }
@@ -80,7 +77,7 @@ public class StoryController1_1 extends StoryController1 {
     private void playAudio() {
         if (!AudioController.isAudioPlaying()){
         // Create an instance of Audio
-        Audio audio = new Audio("src/main/audio_files/Story1-part2.mp3");
+        Audio audio = new Audio("audio_files/Story1-part2.mp3");
 
         // Create an instance of AudioController and play the audio
         AudioController.playAudio(audio);

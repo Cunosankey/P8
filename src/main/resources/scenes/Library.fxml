@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="story1Tooltip" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1080.0" styleClass="grid-pane" stylesheets="@/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.project.classes.LibraryController">
+    <children>
+        <GridPane alignment="CENTER" layoutX="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="332.0" prefWidth="776.0" StackPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="450.0" minWidth="10.0" prefWidth="400.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="450.0" minWidth="10.0" prefWidth="400.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="205.0" minHeight="10.0" prefHeight="200.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <ImageView fx:id="storyImage" fitHeight="340.0" fitWidth="340.0" onMouseClicked="#spil" pickOnBounds="true" preserveRatio="true" styleClass="storyImage" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                    <clip>
+                        <Rectangle arcHeight="20.0" arcWidth="20.0" height="320.0" width="340.0" />
+                    </clip>
+                    <image>
+                        <Image url="@../images/Story1Library.png" />
+                    </image>
+                </ImageView>
+                <ImageView fx:id="storyImage" fitHeight="340.0" fitWidth="340.0" pickOnBounds="true" preserveRatio="true" styleClass="storyImage" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                    <clip>
+                        <Rectangle arcHeight="20.0" arcWidth="20.0" height="320.0" width="340.0" />
+                    </clip>
+                    <image>
+                  <Image url="@../images/Story1billede2.png" />
+               </image></ImageView>
+                <Label alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="341.0" styleClass="cell" text="Jeppe spiller Roblox" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <padding>
+                  <Insets top="410.0" />
+               </padding>
+               <font>
+                  <Font name="Urbane Heavy" size="26.0" />
+               </font>
+                </Label>
+                <Button id="spilButton" alignment="CENTER" mnemonicParsing="false" onAction="#spil" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/play_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+                <Label alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="340.0" styleClass="cell" text="Historie 2" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                    <padding>
+                        <Insets top="410.0" />
+                    </padding>
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin>
+               <font>
+                  <Font name="Urbane Heavy" size="26.0" />
+               </font>
+                </Label>
+                <Button id="spilButton" fx:id="story2Button" alignment="CENTER" mnemonicParsing="false" onAction="#spil2" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/play_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Label fx:id="story1TooltipLabel" alignment="CENTER" prefHeight="18.0" prefWidth="16.0" text="?" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+               <font>
+                  <Font name="Urbane Heavy" size="30.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <padding>
+                  <Insets right="40.0" top="-88.0" />
+               </padding></Label>
+            <Label fx:id="story2TooltipLabel" alignment="TOP_RIGHT" contentDisplay="RIGHT" prefHeight="25.0" prefWidth="12.0" text="?" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+               <font>
+                  <Font name="Urbane Heavy" size="30.0" />
+               </font>
+               <padding>
+                  <Insets right="40.0" top="-55.0" />
+               </padding></Label>
+            </children>
+            <StackPane.margin>
+                <Insets top="100.0" />
+            </StackPane.margin>
+        </GridPane>
+        <Label text="Vælg en historie og hjælp Jeppe med at forstå hans følelser" StackPane.alignment="TOP_LEFT">
+            <font>
+                <Font size="25.0" />
+            </font>
+            <StackPane.margin>
+                <Insets left="60.0" top="180.0" />
+            </StackPane.margin>
+        </Label>
+        <Label text="Vælg en historie" StackPane.alignment="TOP_LEFT">
+            <StackPane.margin>
+                <Insets left="60.0" top="100.0" />
+            </StackPane.margin>
+            <font>
+                <Font name="Urbane Heavy" size="55.0" />
+            </font>
+        </Label>
+    </children>
+</StackPane>

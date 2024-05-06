@@ -1,4 +1,4 @@
-package PACKAGE_NAME.src.main.project.classes;
+package main.project.classes;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -103,7 +103,7 @@ public class LibraryController {
 
     @FXML
     public void spil(ActionEvent event) throws IOException {
-        Parent newSceneParent = FXMLLoader.load(getClass().getResource("../scenes/Story1.fxml"));
+        Parent newSceneParent = FXMLLoader.load(getClass().getResource("/scenes/Story1.fxml"));
         Scene newScene = new Scene(newSceneParent);
         // This line gets the Stage information
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -122,7 +122,7 @@ public class LibraryController {
             // (Return to exit the method early if the first condition is true) It doesn't actually return a value.
             return;
         }
-        Parent newSceneParent = FXMLLoader.load(getClass().getResource("../scenes/Story2.fxml"));
+        Parent newSceneParent = FXMLLoader.load(getClass().getResource("/scenes/Story2.fxml"));
         Scene newScene = new Scene(newSceneParent);
         // This line gets the Stage information
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();

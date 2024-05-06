@@ -1,4 +1,4 @@
-package PACKAGE_NAME.src.main.project.classes;
+package main.project.classes;
 
 import java.io.File;
 
@@ -12,7 +12,6 @@ public class Audio {
 
     // Getter method for the file path
     public String getFilePath() {
-        File file = new File(filePath);
-        return file.toURI().toString();
+        return filePath;
     }
 }

@@ -1,5 +1,4 @@
-package PACKAGE_NAME.src.main.project.classes;
-
+package main.project.classes;
 import java.awt.image.BufferedImage;
 import javax.imageio.ImageIO;
 import java.io.File;
@@ -17,7 +16,7 @@ public class FacialExpression {
         this.facialExpressionImagePath = imagePath;
         try {
             // Try to read the image file from the specified path. This can throw an IOException if the file can't be read for any reason.
-            this.FacialExpressionImage = ImageIO.read(new File(imagePath));
+            this.FacialExpressionImage = ImageIO.read(getClass().getResource(imagePath));
         } catch (IOException e) {
             // If an IOException is thrown, print the stack trace to help with debugging.
             e.printStackTrace();
