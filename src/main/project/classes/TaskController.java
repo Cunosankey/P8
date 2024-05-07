@@ -1,5 +1,4 @@
 package main.project.classes;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,7 +12,6 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 import javafx.scene.control.Label;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
@@ -23,20 +21,28 @@ import javafx.scene.image.Image;
 public class TaskController implements Initializable {
 
     private StoryCharacter storyCharacter;
+
     @FXML
     private HBox circleContainer;
+
+    @FXML
+    private Label titleLabel;
+
+    @FXML
+    private TextFlow descriptionTextFlow;
+
     private StoryProgress storyProgress;
 
     public TaskController() {
         // Create the StoryCharacter object
         storyCharacter = new StoryCharacter("Character1", "Gesture1", "/images/0_0.png", "FacialExpression1", "/images/10.png");
+
         // Add more gestures and facial expressions
         storyCharacter.addGesture("Gesture2", "/images/1_1.png");
         storyCharacter.addGesture("Gesture3", "/images/2_2.png");
         storyCharacter.addGesture("Gesture4", "/images/3_3.png");
         storyCharacter.addGesture("Gesture5", "/images/4_4.png");
         storyCharacter.addGesture("Gesture6", "/images/5_5.png");
-
         storyCharacter.addFacialExpression("FacialExpression2", "/images/1.png");
         storyCharacter.addFacialExpression("FacialExpression3", "/images/0.png");
         storyCharacter.addFacialExpression("FacialExpression4", "/images/2.png");
@@ -62,15 +68,17 @@ public class TaskController implements Initializable {
         }
     }
 
-    // Load images as soon as TaskController is initialized
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        // Load images as soon as TaskController is initialized
         updateCharacterFacialExpression();
         updateCharacterGesture();
+
         Task task1 = new Task();
         TaskDescription taskDescription1 = TaskDescription.createTaskDescription1();
         task1.setTaskDescription(taskDescription1);
         setTask(task1);
+
         // Create the ProgressManager object
         storyProgress = new StoryProgress(circleContainer, 4);
         storyProgress.resetCircles();
@@ -78,18 +86,7 @@ public class TaskController implements Initializable {
         storyProgress.fillCircle("Task");
     }
 
-    // Check current task (to play audio)
-    private Task currentTask;
-
-    // Get the title and description of the task
-    @FXML
-    private Label titleLabel;
-
-    @FXML
-    private TextFlow descriptionTextFlow;
-
     // Method to set the title and description of the task
-
     public void setTask(Task task) {
         TaskDescription taskDescription = task.getTaskDescription();
 
@@ -143,7 +140,6 @@ public class TaskController implements Initializable {
         }
         characterGestureImage.setImage(image);
     }
-
 
     // Method to change element in FacialExpression arraylist
     private static int currentFacialExpressionIndex = 0;
@@ -216,6 +212,7 @@ public class TaskController implements Initializable {
         AudioController.stopAudio();
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/scenes/Reflect.fxml"));
+
         // lambda function that creates a new instance of ReflectController
         loader.setControllerFactory(c -> new ReflectController(storyCharacter, currentFacialExpressionIndex, currentGestureIndex));
 
