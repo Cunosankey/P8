@@ -5,7 +5,6 @@ import java.io.File;
 import java.io.IOException;
 
 public class FacialExpression {
-    public String FacialExpressionID;
     public BufferedImage FacialExpressionImage;
     private String facialExpressionImagePath;
     private String facialExpressionID;
