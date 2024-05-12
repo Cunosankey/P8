@@ -9,9 +9,13 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -27,12 +31,22 @@ public class ReflectController implements Initializable {
     @FXML
     private ImageView gestureImage;
 
+    @FXML
+    private Text titleText;
+    Font urbaneBold;
+
     private int facialExpressionIndex;
     private int gestureIndex;
     private StoryCharacter storyCharacter;
 
     @FXML
     private HBox circleContainer;
+
+    @FXML
+    private Button completeTask;
+
+    @FXML
+    private Button tryAgain;
 
     public StoryProgress storyProgress;
 
@@ -44,6 +58,12 @@ public class ReflectController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
+        urbaneBold = Font.loadFont(getClass().getResource("/fonts/Urbane-Bold.ttf").toExternalForm(), 43);
+        titleText.setFont(urbaneBold);
+        titleText.setText("Tid til at\nreflektere!");
+        titleText.setFill(Color.web("#222222"));
+
     List<FacialExpression> characterFacialExpressionList = storyCharacter.getCharacterFacialExpression();
     String imagePath = characterFacialExpressionList.get(facialExpressionIndex).getFacialExpressionImagePath();
     Image image = new Image(getClass().getResource(imagePath).toString());
@@ -59,6 +79,10 @@ public class ReflectController implements Initializable {
     storyProgress.resetCircles();
     storyProgress.createCircles();
     storyProgress.fillCircle("Reflect");
+
+    Animations.buttonAnimation(completeTask);
+    Animations.buttonAnimation(tryAgain);
+
 }
 
     // Go back to the previous scene

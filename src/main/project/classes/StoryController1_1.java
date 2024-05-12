@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
@@ -15,6 +16,15 @@ public class StoryController1_1 extends StoryController1 {
     @FXML
     private TextArea storyDescriptionLabel2;
 
+    @FXML
+    private Button playAudioButton;
+
+    @FXML
+    private Button backStory1_1;
+
+    @FXML
+    private Button toTask;
+
     @Override
     public void initialize() {
         super.initialize();
@@ -22,9 +32,17 @@ public class StoryController1_1 extends StoryController1 {
             getTitleLabel().setText(getStories().get(getCurrentStory()).getTitle());
             getStoryDescriptionLabel2().setText(getStories().get(getCurrentStory()).getStoryDescription2());
         }
+
+        Animations.buttonAnimation(backStory1_1);
+        Animations.buttonAnimation(toTask);
+        Animations.buttonAnimation(playAudioButton);
         storyProgress.resetCircles();
         storyProgress.fillCircle("Story1-1");
 
+    }
+
+    public void loadingIndicator() {
+        toTask.setText("Loading...");
     }
 
     public boolean isStory1_1() {
@@ -32,6 +50,7 @@ public class StoryController1_1 extends StoryController1 {
     }
 
     public void toTask(ActionEvent event) throws IOException {
+        loadingIndicator();
         AudioController.stopAudio();
         StoryProgress.setStory1Completed(true);
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/scenes/Task.fxml"));

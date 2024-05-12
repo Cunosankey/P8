@@ -17,7 +17,7 @@
             <Image url="@../images/Welcome.png" />
          </image>
       </ImageView>
-      <Text fill="#222222" layoutX="63.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hej og velkommen!" wrappingWidth="352.9560241699219" AnchorPane.leftAnchor="60.0">
+      <Text fx:id="titleText" fill="#222222" layoutX="63.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hej og velkommen!" wrappingWidth="352.9560241699219" AnchorPane.leftAnchor="60.0">
          <font>
             <Font name="Urbane Heavy" size="50.0" />
          </font></Text>

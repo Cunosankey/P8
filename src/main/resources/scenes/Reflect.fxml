@@ -15,13 +15,13 @@
    <children>
       <VBox layoutX="10.0" layoutY="10.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="100.0">
          <children>
-            <ImageView fx:id="facialExpressionImage" fitHeight="500.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true" translateY="-40.0" />
+            <ImageView fx:id="facialExpressionImage" fitHeight="500.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true" translateY="-39.0" />
             <ImageView fx:id="gestureImage" fitHeight="560.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true" translateY="-40.0" VBox.vgrow="NEVER" />
          </children>
       </VBox>
       <VBox layoutX="609.0" layoutY="10.0" prefHeight="401.0" prefWidth="406.0" AnchorPane.leftAnchor="609.0" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="200.0">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tid til at &#10;reflektere!">
+            <Text fx:id="titleText" strokeType="OUTSIDE" strokeWidth="0.0" text="Tid til at &#10;reflektere!">
                <font>
                   <Font name="Urbane Heavy" size="43.0" />
                </font>
@@ -39,7 +39,7 @@
 
       <HBox alignment="CENTER" prefHeight="140.0" prefWidth="200.0" spacing="20.0" AnchorPane.bottomAnchor="73.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="667.0">
          <children>
-            <Button minHeight="45.0" minWidth="90.0" mnemonicParsing="false" onAction="#goBackReflect" prefWidth="180.0" text="Prøv igen">
+            <Button fx:id="tryAgain" minHeight="45.0" minWidth="90.0" mnemonicParsing="false" onAction="#goBackReflect" prefWidth="180.0" text="Prøv igen">
                <padding>
                   <Insets left="30.0" right="30.0" />
                </padding>
@@ -47,7 +47,7 @@
                   <Font size="16.0" />
                </font>
             </Button>
-            <Button layoutX="514.0" layoutY="67.0" minHeight="45.0" mnemonicParsing="false" onAction="#switchToEndScene" prefWidth="180.0" text="Fuldfør opgave" textAlignment="CENTER">
+            <Button fx:id="completeTask" layoutX="514.0" layoutY="67.0" minHeight="45.0" mnemonicParsing="false" onAction="#switchToEndScene" prefWidth="180.0" text="Fuldfør opgave" textAlignment="CENTER">
                <font>
                   <Font size="16.0" />
                </font>

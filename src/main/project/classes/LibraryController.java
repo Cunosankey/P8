@@ -14,6 +14,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.event.ActionEvent;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.scene.control.Tooltip;
 import javafx.scene.input.MouseEvent;
@@ -35,11 +37,38 @@ public class LibraryController {
     private Button story2Button;
 
     @FXML
+    private Button startSpil1;
+
+    @FXML
     private ImageView storyImage;
+
+    @FXML
+    private Label mainTitle;
+
+    @FXML
+    Label title1;
+
+    @FXML
+    Label title2;
+
 
     // Method called when the JavaFX component is initialized
     @FXML
     public void initialize() {
+        // Load font
+        Font urbaneBoldSize50 = Font.loadFont(getClass().getResource("/fonts/Urbane-Bold.ttf").toExternalForm(), 50);
+        mainTitle.setFont(urbaneBoldSize50);
+        mainTitle.setTextFill(Color.web("#222222"));
+
+        Font urbaneBoldSize26 = Font.loadFont(getClass().getResource("/fonts/Urbane-Bold.ttf").toExternalForm(), 26);
+        title1.setFont(urbaneBoldSize26);
+        title1.setTextFill(Color.web("#222222"));
+        title2.setFont(urbaneBoldSize26);
+        title2.setTextFill(Color.web("#222222"));
+
+        Animations.buttonAnimation(story2Button);
+        Animations.buttonAnimation(startSpil1);
+
         // Create two tooltips with custom text
         Tooltip story1Tooltip = new Tooltip("Jeppe spiller Roblox med en ven. Tryk på Play-knappen for at starte historien.");
         Tooltip story2Tooltip = new Tooltip("Historie 2 er endnu ikke tilgængelig. Færdiggør historie 1 for at låse op.");

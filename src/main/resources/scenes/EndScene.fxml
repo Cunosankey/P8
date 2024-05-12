@@ -5,27 +5,33 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="810" prefWidth="1080" stylesheets="@/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.project.classes.EndSceneController">
+<AnchorPane maxHeight="810.0" maxWidth="1080.0" minHeight="810.0" minWidth="1080.0" prefHeight="810.0" prefWidth="1080" stylesheets="@/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.project.classes.EndSceneController">
    <children>
       <ImageView fitHeight="810.0" fitWidth="930.0" layoutX="540.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: lightgrey;">
          <image>
             <Image url="@../images/well_done.png" />
          </image></ImageView>
-      <Label alignment="CENTER" layoutX="396.0" layoutY="343.0" prefHeight="77.0" prefWidth="288.0" text="Du har nu fuldført den første historie">
-         <font>
-            <Font name="Candara" size="18.0" />
-         </font>
-      </Label>
-      <Button alignment="CENTER" layoutX="440.0" layoutY="420.0" mnemonicParsing="false" onAction="#switchToLibrary" prefHeight="35.0" prefWidth="107.0" text="Fortsæt" textAlignment="CENTER" textFill="WHITE">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Button>
-      <Label alignment="CENTER" layoutX="400.0" layoutY="256.0" prefHeight="103.0" prefWidth="281.0" stylesheets="/styles.css" text="Godt gået!" textFill="#222222">
-         <font>
-            <Font name="Arial Black" size="48.0" />
-         </font></Label>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="endSceneTitle" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" prefHeight="80.0" prefWidth="376.0" stylesheets="/styles.css" text="Godt gået!" textFill="#222222">
+               <font>
+                  <Font name="Arial Black" size="50.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="80.0" prefWidth="388.0" text="Du har nu fuldført den første historie" translateY="-10.0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Button fx:id="endButton" alignment="CENTER" mnemonicParsing="false" onAction="#switchToLibrary" prefHeight="35.0" prefWidth="107.0" text="Fortsæt" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>

@@ -6,8 +6,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.scene.text.Font;
 import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 import java.io.BufferedReader;
@@ -28,12 +30,23 @@ public class StoryController1 {
     @FXML
     private TextArea storyDescriptionLabel2;
 
+    Font urbaneBold;
+
     private final int currentStory = 0;
 
     private final List<Story> stories = new ArrayList<>();
 
     @FXML
     private HBox circleContainer;
+
+    @FXML
+    private Button playAudiostory1;
+
+    @FXML
+    private Button story1ContinueButton;
+
+    @FXML
+    private Button story1Back;
 
     public StoryProgress storyProgress;
 
@@ -81,7 +94,7 @@ public class StoryController1 {
 
     // Nyt 22-04
     public void handleButtonAction(ActionEvent event) throws IOException {
-
+        Animations.buttonAnimation(story1ContinueButton);
         AudioController.stopAudio();
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
@@ -92,6 +105,8 @@ public class StoryController1 {
     }
 
     public void backHandle(ActionEvent event) throws IOException {
+        Animations.buttonAnimation(story1Back);
+
         AudioController.stopAudio();
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
@@ -116,6 +131,10 @@ public class StoryController1 {
      * in the list to the corresponding labels.
      */
     public void initialize() {
+        urbaneBold = Font.loadFont(getClass().getResource("/fonts/Urbane-Bold.ttf").toExternalForm(), 43);
+        titleLabel.setFont(urbaneBold);
+        titleLabel.setTextFill(Color.web("#222222"));
+
         if (!stories.isEmpty()) {
             if (titleLabel != null && storyDescriptionLabel != null) {
                 // The setText() method is used to set the text content of the labels to the title and story description of the first story in the list.
@@ -130,6 +149,7 @@ public class StoryController1 {
         storyProgress.resetCircles();
         storyProgress.createCircles();
         storyProgress.fillCircle("Story1");
+
     }
     protected TextArea getStoryDescriptionLabel2() {
         return storyDescriptionLabel2;
@@ -144,6 +164,8 @@ public class StoryController1 {
 
     @FXML
     private void playAudio() {
+        // Load Animation Class
+        Animations.buttonAnimation(playAudiostory1);
         if (!AudioController.isAudioPlaying()) {
             // Create an instance of Audio
             Audio audio = new Audio("audio_files/Story1-part1.mp3");

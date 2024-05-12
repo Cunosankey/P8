@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
@@ -30,6 +31,28 @@ public class TaskController implements Initializable {
 
     @FXML
     private TextFlow descriptionTextFlow;
+
+    @FXML
+    private Button FacialExpressionReverse;
+
+    @FXML
+    private Button FacialExpressionUpdate;
+
+    @FXML
+    private Button GestureReverse;
+
+    @FXML
+    private Button GestureUpdate;
+
+    @FXML
+    private Button taskAfslut;
+
+    @FXML
+    private Button taskTilbage;
+
+    @FXML
+    private Button playAudioButton;
+
 
     private StoryProgress storyProgress;
 
@@ -79,6 +102,15 @@ public class TaskController implements Initializable {
         storyProgress.resetCircles();
         storyProgress.createCircles();
         storyProgress.fillCircle("Task");
+
+        // Load Animations Class
+        Animations.buttonAnimation(FacialExpressionReverse);
+        Animations.buttonAnimation(FacialExpressionUpdate);
+        Animations.buttonAnimation(GestureReverse);
+        Animations.buttonAnimation(GestureUpdate);
+        Animations.buttonAnimation(taskAfslut);
+        Animations.buttonAnimation(taskTilbage);
+        Animations.buttonAnimation(playAudioButton);
     }
 
     // Method to set the title and description of the task
