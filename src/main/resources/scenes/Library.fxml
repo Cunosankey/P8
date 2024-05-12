@@ -46,7 +46,7 @@
                   <Font name="Urbane Heavy" size="26.0" />
                </font>
                 </Label>
-                <Button id="spilButton" alignment="CENTER" mnemonicParsing="false" onAction="#spil" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                <Button id="spilButton" fx:id="startSpil1" alignment="CENTER" mnemonicParsing="false" onAction="#spil" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                <graphic>
                   <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>

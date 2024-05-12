@@ -9,6 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
@@ -41,6 +42,12 @@ public class ReflectController implements Initializable {
     @FXML
     private HBox circleContainer;
 
+    @FXML
+    private Button completeTask;
+
+    @FXML
+    private Button tryAgain;
+
     public StoryProgress storyProgress;
 
     public ReflectController(StoryCharacter storyCharacter, int facialExpressionIndex, int gestureIndex) {
@@ -72,6 +79,10 @@ public class ReflectController implements Initializable {
     storyProgress.resetCircles();
     storyProgress.createCircles();
     storyProgress.fillCircle("Reflect");
+
+    Animations.buttonAnimation(completeTask);
+    Animations.buttonAnimation(tryAgain);
+
 }
 
     // Go back to the previous scene

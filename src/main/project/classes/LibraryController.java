@@ -37,6 +37,9 @@ public class LibraryController {
     private Button story2Button;
 
     @FXML
+    private Button startSpil1;
+
+    @FXML
     private ImageView storyImage;
 
     @FXML
@@ -62,6 +65,9 @@ public class LibraryController {
         title1.setTextFill(Color.web("#222222"));
         title2.setFont(urbaneBoldSize26);
         title2.setTextFill(Color.web("#222222"));
+
+        Animations.buttonAnimation(story2Button);
+        Animations.buttonAnimation(startSpil1);
 
         // Create two tooltips with custom text
         Tooltip story1Tooltip = new Tooltip("Jeppe spiller Roblox med en ven. Tryk på Play-knappen for at starte historien.");

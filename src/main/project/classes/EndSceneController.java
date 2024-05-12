@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
@@ -18,11 +19,17 @@ public class EndSceneController {
     @FXML
     Label endSceneTitle;
 
+    @FXML
+    private Button endButton;
+
     public void initialize() {
         // Load Font
         Font urbaneBold = Font.loadFont(getClass().getResource("/fonts/Urbane-Bold.ttf").toExternalForm(), 50);
         endSceneTitle.setFont(urbaneBold);
         endSceneTitle.setTextFill(Color.web("#222222"));
+
+        // Load Animation class
+        Animations.buttonAnimation(endButton);
     }
 
     // Method called when the JavaFX component is initialized

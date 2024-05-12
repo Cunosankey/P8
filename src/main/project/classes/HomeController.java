@@ -6,10 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
-import javafx.scene.control.TextInputDialog;
+import javafx.scene.control.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
@@ -19,6 +16,9 @@ import java.io.IOException;
 import java.util.Optional;
 
 public class HomeController {
+
+    @FXML
+    private Button continueButton;
 
     @FXML
     private Text titleText;
@@ -31,6 +31,8 @@ public class HomeController {
         titleText.setFont(urbaneBold);
         titleText.setText("Hej og\nvelkommen!");
         titleText.setFill(Color.web("#222222"));
+
+        Animations.buttonAnimation(continueButton);
     }
 
     @FXML

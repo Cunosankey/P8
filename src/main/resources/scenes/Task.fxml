@@ -32,7 +32,7 @@
       </VBox>
       <HBox fx:id="chooseFace" layoutX="432.0" layoutY="100.0" prefHeight="260.0" prefWidth="622.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="75.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#reverseCharacterFacialExpression" onContextMenuRequested="#reverseCharacterFacialExpression" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 100;" styleClass="buttonTask" translateX="20.0">
+            <Button fx:id="FacialExpressionReverse" mnemonicParsing="false" onAction="#reverseCharacterFacialExpression" onContextMenuRequested="#reverseCharacterFacialExpression" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 100;" styleClass="buttonTask" translateX="20.0">
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -48,7 +48,7 @@
                   <Insets />
                </HBox.margin>
             </ImageView>
-            <Button mnemonicParsing="false" onAction="#updateCharacterFacialExpression" onContextMenuRequested="#updateCharacterFacialExpression" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 100;" styleClass="buttonTask" translateX="-20.0">
+            <Button fx:id="FacialExpressionUpdate" mnemonicParsing="false" onAction="#updateCharacterFacialExpression" onContextMenuRequested="#updateCharacterFacialExpression" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 100;" styleClass="buttonTask" translateX="-20.0">
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
                      <image>
@@ -63,7 +63,7 @@
       </HBox>
       <HBox fx:id="chooseGesture" layoutX="424.0" layoutY="365.0" prefHeight="526.0" prefWidth="579.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="10.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#reverseCharacterGesture" onContextMenuRequested="#reverseCharacterGesture" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 100;" styleClass="buttonTask" translateX="20.0">
+            <Button fx:id="GestureReverse" mnemonicParsing="false" onAction="#reverseCharacterGesture" onContextMenuRequested="#reverseCharacterGesture" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 100;" styleClass="buttonTask" translateX="20.0">
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -79,7 +79,7 @@
                   <Insets />
                </HBox.margin>
             </ImageView>
-            <Button mnemonicParsing="false" onAction="#updateCharacterGesture" onContextMenuRequested="#updateCharacterGesture" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 100;" styleClass="buttonTask" translateX="-20.0">
+            <Button fx:id="GestureUpdate" mnemonicParsing="false" onAction="#updateCharacterGesture" onContextMenuRequested="#updateCharacterGesture" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 100;" styleClass="buttonTask" translateX="-20.0">
                <HBox.margin>
                   <Insets left="20.0" right="20.0" top="100.0" />
                </HBox.margin>

@@ -39,7 +39,7 @@
 
       <HBox alignment="CENTER" prefHeight="140.0" prefWidth="200.0" spacing="20.0" AnchorPane.bottomAnchor="73.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="667.0">
          <children>
-            <Button minHeight="45.0" minWidth="90.0" mnemonicParsing="false" onAction="#goBackReflect" prefWidth="180.0" text="Prøv igen">
+            <Button fx:id="tryAgain" minHeight="45.0" minWidth="90.0" mnemonicParsing="false" onAction="#goBackReflect" prefWidth="180.0" text="Prøv igen">
                <padding>
                   <Insets left="30.0" right="30.0" />
                </padding>
@@ -47,7 +47,7 @@
                   <Font size="16.0" />
                </font>
             </Button>
-            <Button layoutX="514.0" layoutY="67.0" minHeight="45.0" mnemonicParsing="false" onAction="#switchToEndScene" prefWidth="180.0" text="Fuldfør opgave" textAlignment="CENTER">
+            <Button fx:id="completeTask" layoutX="514.0" layoutY="67.0" minHeight="45.0" mnemonicParsing="false" onAction="#switchToEndScene" prefWidth="180.0" text="Fuldfør opgave" textAlignment="CENTER">
                <font>
                   <Font size="16.0" />
                </font>

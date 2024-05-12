@@ -48,7 +48,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="playAudioButton" contentDisplay="CENTER" minWidth="119.0" mnemonicParsing="false" onAction="#playAudio" prefHeight="50.0" prefWidth="63.0" styleClass="buttonSpeak">
+            <Button fx:id="playAudiostory1" contentDisplay="CENTER" minWidth="119.0" mnemonicParsing="false" onAction="#playAudio" prefHeight="50.0" prefWidth="63.0" styleClass="buttonSpeak">
                <graphic>
                   <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -66,8 +66,8 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="70.0" prefWidth="600.0" spacing="20.0" AnchorPane.bottomAnchor="73.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="667.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#backHandle" prefHeight="26.0" prefWidth="68.0" text="Tilbage" />
-            <Button mnemonicParsing="false" onAction="#handleButtonAction" text="Fortsæt" />
+            <Button fx:id="story1Back" mnemonicParsing="false" onAction="#backHandle" prefHeight="26.0" prefWidth="68.0" text="Tilbage" />
+            <Button fx:id="story1ContinueButton" mnemonicParsing="false" onAction="#handleButtonAction" text="Fortsæt" />
          </children>
       </HBox>
    </children>

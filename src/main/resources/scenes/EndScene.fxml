@@ -26,7 +26,7 @@
                   <Font size="22.0" />
                </font>
             </Label>
-            <Button alignment="CENTER" mnemonicParsing="false" onAction="#switchToLibrary" prefHeight="35.0" prefWidth="107.0" text="Fortsæt" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="endButton" alignment="CENTER" mnemonicParsing="false" onAction="#switchToLibrary" prefHeight="35.0" prefWidth="107.0" text="Fortsæt" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>

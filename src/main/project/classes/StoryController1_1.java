@@ -16,6 +16,15 @@ public class StoryController1_1 extends StoryController1 {
     @FXML
     private TextArea storyDescriptionLabel2;
 
+    @FXML
+    private Button playAudioButton;
+
+    @FXML
+    private Button backStory1_1;
+
+    @FXML
+    private Button toTask;
+
     @Override
     public void initialize() {
         super.initialize();
@@ -23,13 +32,14 @@ public class StoryController1_1 extends StoryController1 {
             getTitleLabel().setText(getStories().get(getCurrentStory()).getTitle());
             getStoryDescriptionLabel2().setText(getStories().get(getCurrentStory()).getStoryDescription2());
         }
+
+        Animations.buttonAnimation(backStory1_1);
+        Animations.buttonAnimation(toTask);
+        Animations.buttonAnimation(playAudioButton);
         storyProgress.resetCircles();
         storyProgress.fillCircle("Story1-1");
 
     }
-
-    @FXML
-    private Button toTask;
 
     public void loadingIndicator() {
         toTask.setText("Loading...");
