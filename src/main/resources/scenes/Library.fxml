@@ -38,7 +38,7 @@
                     <image>
                   <Image url="@../images/Story1billede2.png" />
                </image></ImageView>
-                <Label alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="341.0" styleClass="cell" text="Jeppe spiller Roblox" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                <Label fx:id="title1" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="341.0" styleClass="cell" text="Jeppe spiller Roblox" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                <padding>
                   <Insets top="410.0" />
                </padding>
@@ -54,7 +54,7 @@
                      </image>
                   </ImageView>
                </graphic></Button>
-                <Label alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="340.0" styleClass="cell" text="Historie 2" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                <Label fx:id="title2" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="340.0" styleClass="cell" text="Historie 2" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                     <padding>
                         <Insets top="410.0" />
                     </padding>
@@ -103,12 +103,12 @@
                 <Insets left="60.0" top="180.0" />
             </StackPane.margin>
         </Label>
-        <Label text="Vælg en historie" StackPane.alignment="TOP_LEFT">
+        <Label fx:id="mainTitle" text="Vælg en historie" StackPane.alignment="TOP_LEFT">
             <StackPane.margin>
                 <Insets left="60.0" top="100.0" />
             </StackPane.margin>
             <font>
-                <Font name="Urbane Heavy" size="55.0" />
+                <Font name="Urbane Heavy" size="50.0" />
             </font>
         </Label>
     </children>

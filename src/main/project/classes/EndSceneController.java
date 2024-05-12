@@ -1,15 +1,30 @@
 package main.project.classes;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class EndSceneController {
+
+    @FXML
+    Label endSceneTitle;
+
+    public void initialize() {
+        // Load Font
+        Font urbaneBold = Font.loadFont(getClass().getResource("/fonts/Urbane-Bold.ttf").toExternalForm(), 50);
+        endSceneTitle.setFont(urbaneBold);
+        endSceneTitle.setTextFill(Color.web("#222222"));
+    }
+
     // Method called when the JavaFX component is initialized
     public void switchToLibrary(ActionEvent event) throws IOException {
         Node node = (Node) event.getSource(); // Get the source of the event (the button)

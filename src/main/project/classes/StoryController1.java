@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.scene.text.Font;
 import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 import java.io.BufferedReader;
@@ -27,6 +28,8 @@ public class StoryController1 {
     private TextArea storyDescriptionLabel;
     @FXML
     private TextArea storyDescriptionLabel2;
+
+    Font urbaneBold;
 
     private final int currentStory = 0;
 
@@ -116,6 +119,10 @@ public class StoryController1 {
      * in the list to the corresponding labels.
      */
     public void initialize() {
+        urbaneBold = Font.loadFont(getClass().getResource("/fonts/Urbane-Bold.ttf").toExternalForm(), 43);
+        titleLabel.setFont(urbaneBold);
+        titleLabel.setTextFill(Color.web("#222222"));
+
         if (!stories.isEmpty()) {
             if (titleLabel != null && storyDescriptionLabel != null) {
                 // The setText() method is used to set the text content of the labels to the title and story description of the first story in the list.

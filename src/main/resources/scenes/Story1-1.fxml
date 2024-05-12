@@ -57,7 +57,7 @@
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0" AnchorPane.bottomAnchor="73.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="667.0">
          <children>
               <Button mnemonicParsing="false" onAction="#backAgain" prefHeight="26.0" prefWidth="68.0" text="Tilbage" />
-              <Button mnemonicParsing="false" onAction="#toTask" text="Fortsæt" />
+              <Button mnemonicParsing="false" onAction="#toTask" fx:id="toTask" text="Fortsæt" />
          </children>
       </HBox>
     </children>

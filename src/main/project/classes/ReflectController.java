@@ -12,6 +12,9 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -26,6 +29,10 @@ public class ReflectController implements Initializable {
 
     @FXML
     private ImageView gestureImage;
+
+    @FXML
+    private Text titleText;
+    Font urbaneBold;
 
     private int facialExpressionIndex;
     private int gestureIndex;
@@ -44,6 +51,12 @@ public class ReflectController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
+        urbaneBold = Font.loadFont(getClass().getResource("/fonts/Urbane-Bold.ttf").toExternalForm(), 43);
+        titleText.setFont(urbaneBold);
+        titleText.setText("Tid til at\nreflektere!");
+        titleText.setFill(Color.web("#222222"));
+
     List<FacialExpression> characterFacialExpressionList = storyCharacter.getCharacterFacialExpression();
     String imagePath = characterFacialExpressionList.get(facialExpressionIndex).getFacialExpressionImagePath();
     Image image = new Image(getClass().getResource(imagePath).toString());

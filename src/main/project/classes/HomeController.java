@@ -10,17 +10,28 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TextInputDialog;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.Optional;
 
 public class HomeController {
-    @FXML
-    private Label helloLabel;
 
     @FXML
-    private Label welcomeLabel;
+    private Text titleText;
+
+    Font urbaneBold;
+
+    @FXML
+    public void initialize() {
+        urbaneBold = Font.loadFont(getClass().getResource("/fonts/Urbane-Bold.ttf").toExternalForm(), 50);
+        titleText.setFont(urbaneBold);
+        titleText.setText("Hej og\nvelkommen!");
+        titleText.setFill(Color.web("#222222"));
+    }
 
     @FXML
     public void changeScene(ActionEvent event) throws IOException {
