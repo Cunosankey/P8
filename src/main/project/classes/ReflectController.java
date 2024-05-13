@@ -88,10 +88,6 @@ public class ReflectController implements Initializable {
     // Go back to the previous scene
     public void goBackReflect(ActionEvent event) {
         try {
-            Task task1 = new Task();
-            TaskDescription taskDescription1 = TaskDescription.createTaskDescription1();
-            task1.setTaskDescription(taskDescription1);
-
             Parent previousSceneParent = FXMLLoader.load(getClass().getResource("/scenes/Task.fxml")); // replace with your previous scene file
             Scene previousScene = new Scene(previousSceneParent);
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
