@@ -101,6 +101,12 @@ public class TaskController implements Initializable {
         updateCharacterFacialExpression();
         updateCharacterGesture();
 
+        Task task1 = new Task();
+        TaskDescription taskDescription1 = TaskDescription.createTaskDescription1();
+        task1.setTaskDescription(taskDescription1);
+        setTask(task1);
+
+
         // Create the ProgressManager object
         storyProgress = new StoryProgress(circleContainer, 4);
         storyProgress.resetCircles();
