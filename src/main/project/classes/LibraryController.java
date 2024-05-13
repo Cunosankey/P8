@@ -82,7 +82,7 @@ public class LibraryController {
         setupTooltip(story2TooltipLabel, story2Tooltip);
 
         // Disable the spil2 button
-        story2Button.setDisable(true);
+        
         story2Button.setDisable(!StoryProgress.isStory1Completed());
         Image lockedImage;
         if (StoryProgress.isStory1Completed()) {
