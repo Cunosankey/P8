@@ -73,7 +73,7 @@
                      </image>
                   </ImageView>
                </graphic></Button>
-            <Label fx:id="story1TooltipLabel" alignment="CENTER" prefHeight="18.0" prefWidth="16.0" text="?" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+            <Label styleClass="textShadow" fx:id="story1TooltipLabel" alignment="CENTER" prefHeight="18.0" prefWidth="16.0" text="?" textFill="#ffffff" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
                <font>
                   <Font name="Urbane Heavy" size="30.0" />
                </font>
@@ -83,7 +83,7 @@
                <padding>
                   <Insets right="40.0" top="-88.0" />
                </padding></Label>
-            <Label fx:id="story2TooltipLabel" alignment="TOP_RIGHT" contentDisplay="RIGHT" prefHeight="25.0" prefWidth="12.0" text="?" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+            <Label styleClass="textShadow" fx:id="story2TooltipLabel" alignment="TOP_RIGHT" contentDisplay="RIGHT" prefHeight="25.0" prefWidth="12.0" text="?" textFill="#ffffff" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
                <font>
                   <Font name="Urbane Heavy" size="30.0" />
                </font>
