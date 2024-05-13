@@ -66,6 +66,10 @@ public class LibraryController {
         title2.setFont(urbaneBoldSize26);
         title2.setTextFill(Color.web("#222222"));
 
+        Font urbaneBoldSize30 = Font.loadFont(getClass().getResource("/fonts/Urbane-Bold.ttf").toExternalForm(), 30);
+        story1TooltipLabel.setFont(urbaneBoldSize30);
+        story1TooltipLabel.setTextFill(Color.web("#ffffff"));
+
         Animations.buttonAnimation(story2Button);
         Animations.buttonAnimation(startSpil1);
 
