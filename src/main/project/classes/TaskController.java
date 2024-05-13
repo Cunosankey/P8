@@ -217,6 +217,13 @@ public class TaskController implements Initializable {
     }
 
 
+    public void setTask(Task task) {
+        TaskDescription taskDescription = task.getTaskDescription();
+
+        // Set the task description in the TaskDescriptionManager
+        TaskDescriptionManager.getInstance().setTaskDescription(taskDescription);
+
+
     // Method to go back to the previous scene
     public void backButton(ActionEvent event) throws IOException {
         Parent newSceneParent = FXMLLoader.load(getClass().getResource("/scenes/Story1-1.fxml"));
