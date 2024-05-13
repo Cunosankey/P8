@@ -9,6 +9,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
@@ -28,6 +30,8 @@ public class TaskController implements Initializable {
 
     @FXML
     private Label titleLabel;
+
+    Font urbaneBold;
 
     @FXML
     private TextFlow descriptionTextFlow;
@@ -111,6 +115,11 @@ public class TaskController implements Initializable {
         Animations.buttonAnimation(taskAfslut);
         Animations.buttonAnimation(taskTilbage);
         Animations.buttonAnimation(playAudioButton);
+
+        // Load Font
+        urbaneBold = Font.loadFont(getClass().getResource("/fonts/Urbane-Bold.ttf").toExternalForm(), 43);
+        titleLabel.setFont(urbaneBold);
+        titleLabel.setTextFill(Color.web("#222222"));
     }
 
     // Method to set the title and description of the task

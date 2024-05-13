@@ -60,6 +60,10 @@ h2 {
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 30, 0, 0, 10);
 }
 
+.text-area .text {
+    -fx-line-spacing: 10px;
+}
+
 .buttonTask {
     -fx-background-color: #dbdbdb;
     -fx-min-height: 65px;
