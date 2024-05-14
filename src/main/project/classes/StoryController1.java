@@ -106,7 +106,7 @@ public class StoryController1 {
 
     public void backHandle(ActionEvent event) throws IOException {
         Animations.buttonAnimation(story1Back);
-
+        AudioController.stopAudio();
         AudioController.stopAudio();
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
