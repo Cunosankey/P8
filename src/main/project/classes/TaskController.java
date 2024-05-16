@@ -145,7 +145,7 @@ public class TaskController implements Initializable {
 
     // Method to change element in characterGesture arraylist
     // Static to keep track of current gesture index
-    private static int currentGestureIndex = 0;
+    private int currentGestureIndex = 0;
 
     @FXML
     private ImageView characterGestureImage;
@@ -183,7 +183,7 @@ public class TaskController implements Initializable {
         characterGestureImage.setImage(image);
     }
 
-    private static int currentFacialExpressionIndex = 0;
+    private int currentFacialExpressionIndex = 0;
 
     @FXML
     private ImageView characterFacialExpressionImage;
