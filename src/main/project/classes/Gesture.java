@@ -5,7 +5,7 @@ import javax.imageio.ImageIO;
 import java.io.IOException;
 
 public class Gesture {
-    public BufferedImage GestureImage;
+    private BufferedImage GestureImage;
     private String gestureID;
     private String gestureImagePath;
 
