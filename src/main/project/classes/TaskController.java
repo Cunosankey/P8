@@ -144,7 +144,6 @@ public class TaskController implements Initializable {
     }
 
     // Method to change element in characterGesture arraylist
-    // Static to keep track of current gesture index
     private int currentGestureIndex = 0;
 
     @FXML
