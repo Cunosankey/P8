@@ -9,18 +9,18 @@ public class TaskDescription {
         return title;
     }
 
-    public void setTitle(String title) {
+    public void setTitle(String title) { // Call the constructor of the superclass (TaskDescription) with the title
         this.title = title;
     }
 
-    public String getDescription() {
+    public String getDescription() { // Call the constructor of the superclass (TaskDescription) with the description
         return description;
     }
 
-    public void setDescription(String description) {
+    public void setDescription(String description) { // Call the constructor of the superclass (TaskDescription) with the description
         this.description = description;
     }
-
+    // Method to create a TaskDescription object
     public static TaskDescription createTaskDescription1() {
         TaskDescription taskDescription1 = new TaskDescription();
         taskDescription1.setTitle("Hvordan har\nJeppe det?");

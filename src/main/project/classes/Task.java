@@ -9,8 +9,9 @@ public class Task {
         return taskDescription;
     }
 
+    // Add the TaskDescription object as a parameter to the constructor
     public void setTaskDescription(TaskDescription taskDescription) {
-        this.taskDescription = taskDescription;
+        this.taskDescription = taskDescription; // Call the constructor of the superclass (Task) with the taskDescription
     }
 
 }

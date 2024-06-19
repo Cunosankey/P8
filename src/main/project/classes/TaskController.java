@@ -83,7 +83,7 @@ public class TaskController implements Initializable {
     }
 
     @FXML
-    private void playAudio() {
+    private void playAudio() { // Method to play the audio
         if(!AudioController.isAudioPlaying()) {
             // Create an instance of Audio
             Audio audio = new Audio("audio_files/Task1.mp3");
@@ -96,16 +96,16 @@ public class TaskController implements Initializable {
     }
 
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
+    public void initialize(URL url, ResourceBundle rb) { // Method to initialize the controller
         // Load images as soon as TaskController is initialized
         updateCharacterFacialExpression();
         updateCharacterGesture();
 
+        // Create the Task and TaskDescription
         Task task1 = new Task();
         TaskDescription taskDescription1 = TaskDescription.createTaskDescription1();
         task1.setTaskDescription(taskDescription1);
         setTask(task1);
-
 
         // Create the ProgressManager object
         storyProgress = new StoryProgress(circleContainer, 4);
@@ -150,36 +150,38 @@ public class TaskController implements Initializable {
     private ImageView characterGestureImage;
 
     public void updateCharacterGesture() {
-        List<Gesture> characterGestureList = storyCharacter.getCharacterGesture();
+        List<Gesture> characterGestureList = storyCharacter.getCharacterGesture(); // Get the character's gesture list
 
-        // Increment currentGestureIndex
+        // Increment currentGestureIndex. This is to cycle through the gestures
         currentGestureIndex = (currentGestureIndex + 1) % characterGestureList.size();
 
+        // Get the image path of the current gesture
         String imagePath = characterGestureList.get(currentGestureIndex).getGestureImagePath();
         Image image = new Image(getClass().getResourceAsStream(imagePath));
         if (image.isError()) {
             System.out.println("Error loading image: " + image.getException()); // Print the exception if there is an error loading the image
         }
-        characterGestureImage.setImage(image);
+        characterGestureImage.setImage(image); // Set the image of the character's gesture
     }
 
     // Method to reverse the character gesture
     public void reverseCharacterGesture() {
         List<Gesture> characterGestureList = storyCharacter.getCharacterGesture();
 
-        // Decrement currentGestureIndex
+        // Decrement currentGestureIndex. This is to cycle through the gestures
         if (currentGestureIndex == 0) {
             currentGestureIndex = characterGestureList.size() - 1; // Wrap around to the end of the list
         } else {
             currentGestureIndex--;
         }
 
+        // Get the image path of the current gesture
         String imagePath = characterGestureList.get(currentGestureIndex).getGestureImagePath();
         Image image = new Image(getClass().getResourceAsStream(imagePath));
         if (image.isError()) {
             System.out.println("Error loading image: " + image.getException()); // Print the exception if there is an error loading the image
         }
-        characterGestureImage.setImage(image);
+        characterGestureImage.setImage(image); // Set the image of the character's gesture
     }
 
     private int currentFacialExpressionIndex = 0;
@@ -187,22 +189,22 @@ public class TaskController implements Initializable {
     @FXML
     private ImageView characterFacialExpressionImage;
 
-    // Method to update the character's facial expression
+    // Method to update the character's facial expression. This is to cycle through the gestures
     public void updateCharacterFacialExpression() {
         List<FacialExpression> characterFacialExpressionList = storyCharacter.getCharacterFacialExpression();
 
         // Increment currentFacialExpressionIndex
         currentFacialExpressionIndex = (currentFacialExpressionIndex + 1) % characterFacialExpressionList.size();
-
+        // Get the image path of the current facial expression
         String imagePath = characterFacialExpressionList.get(currentFacialExpressionIndex).getFacialExpressionImagePath();
         Image image = new Image(getClass().getResourceAsStream(imagePath));
         if (image.isError()) {
             System.out.println("Error loading image: " + image.getException()); // Print the exception if there is an error loading the image
         }
-        characterFacialExpressionImage.setImage(image);
+        characterFacialExpressionImage.setImage(image); // Set the image of the character's facial expression
     }
 
-    // Method to reverse the Facial Expression
+    // Method to reverse the Facial Expression. This is to cycle through the gestures
     public void reverseCharacterFacialExpression() {
         List<FacialExpression> characterFacialExpressionList = storyCharacter.getCharacterFacialExpression();
 
@@ -210,15 +212,16 @@ public class TaskController implements Initializable {
         if (currentFacialExpressionIndex == 0) {
             currentFacialExpressionIndex = characterFacialExpressionList.size() - 1; // Wrap around to the end of the list
         } else {
-            currentFacialExpressionIndex--;
+            currentFacialExpressionIndex--; // Decrement the index
         }
 
+        // Get the image path of the current facial expression
         String imagePath = characterFacialExpressionList.get(currentFacialExpressionIndex).getFacialExpressionImagePath();
         Image image = new Image(getClass().getResourceAsStream(imagePath));
         if (image.isError()) {
             System.out.println("Error loading image: " + image.getException()); // Print the exception if there is an error loading the image
         }
-        characterFacialExpressionImage.setImage(image);
+        characterFacialExpressionImage.setImage(image); // Set the image of the character's facial expression
     }
 
 
@@ -251,7 +254,7 @@ public class TaskController implements Initializable {
         }
 
         AudioController.stopAudio();
-
+        // Load the Reflect scene
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/scenes/Reflect.fxml"));
 
         // lambda function that creates a new instance of ReflectController
