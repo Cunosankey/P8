@@ -76,7 +76,7 @@ public class StoryController2 extends StoryController1 {
         }
     }
 
-    // Nyt 22-04
+    // This method is called when the user clicks the "Continue" button
     public void handleButtonAction(ActionEvent event) throws IOException {
         AudioController.stopAudio();
         Node node = (Node) event.getSource();
@@ -86,7 +86,7 @@ public class StoryController2 extends StoryController1 {
         Parent root = fxmlLoader.load();
         scene.setRoot(root);
     }
-
+    // This method is called when the user clicks the "Back" button
     public void backHandle(ActionEvent event) throws IOException {
         AudioController.stopAudio();
         Node node = (Node) event.getSource();
@@ -117,6 +117,8 @@ public class StoryController2 extends StoryController1 {
         storyProgress.createCircles();
         storyProgress.fillCircle("Story2");
     }
+
+    // Why do we put these as protected? This is because we want to be able to access them from the subclasses.
     protected TextArea getStoryDescriptionLabel2() {
         return storyDescriptionLabel2;
     }
@@ -129,18 +131,3 @@ public class StoryController2 extends StoryController1 {
     }
 
 }
-
-
-
-// potentiel måde at skifte scene på uden alt det kode (også godt fordi det er en metode til flere af de samme handlinger)
-/*
-private void changeScene(String fxmlFile) throws IOException {
-    Node node = (Node) event.getSource();
-    Stage stage = (Stage) node.getScene().getWindow();
-    Scene scene = stage.getScene();
-    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlFile));
-    Parent root = fxmlLoader.load();
-    scene.setRoot(root);
-}
- */
-

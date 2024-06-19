@@ -71,7 +71,7 @@ public class LibraryController {
         story1TooltipLabel.setTextFill(Color.web("#ffffff"));
         story2TooltipLabel.setFont(urbaneBoldSize30);
         story2TooltipLabel.setTextFill(Color.web("#ffffff"));
-
+        // Load Animation class
         Animations.buttonAnimation(story2Button);
         Animations.buttonAnimation(startSpil1);
 
@@ -83,8 +83,7 @@ public class LibraryController {
         setupTooltip(story1TooltipLabel, story1Tooltip);
         setupTooltip(story2TooltipLabel, story2Tooltip);
 
-        // Disable the spil2 button
-        
+        // Disable the spil2 button if the first story is not completed
         story2Button.setDisable(!StoryProgress.isStory1Completed());
         Image lockedImage;
         if (StoryProgress.isStory1Completed()) {
@@ -135,7 +134,7 @@ public class LibraryController {
     }
 
 
-
+    // Method called when the "Historie 1" button is clicked
     @FXML
     public void spil(ActionEvent event) throws IOException {
         Parent newSceneParent = FXMLLoader.load(getClass().getResource("/scenes/Story1.fxml"));
@@ -145,6 +144,7 @@ public class LibraryController {
         window.setScene(newScene);
         window.show();
     }
+    // Method called when the "Historie 2" button is clicked. Kinda useless since it does nothing anymore?
     public void spil2(ActionEvent event) throws IOException {
         if (!StoryProgress.isStory1Completed()) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);

@@ -11,8 +11,8 @@ public class FacialExpression {
 
     // Constructor for the class
     public FacialExpression(String facialExpressionID, String imagePath) {
-        this.facialExpressionID = facialExpressionID;
-        this.facialExpressionImagePath = imagePath;
+        this.facialExpressionID = facialExpressionID; // Call the constructor of the superclass (Gesture) with the gestureID
+        this.facialExpressionImagePath = imagePath; // Call the [...]
         try {
             // Try to read the image file from the specified path. This can throw an IOException if the file can't be read for any reason.
             this.FacialExpressionImage = ImageIO.read(getClass().getResource(imagePath));

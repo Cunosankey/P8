@@ -11,7 +11,7 @@ public class Gesture {
 
     // Constructor for the Gesture class
     public Gesture(String gestureID, String imagePath) {
-        this.gestureID = gestureID;
+        this.gestureID = gestureID; // Call the constructor of the superclass (Gesture) with the gestureID
         this.gestureImagePath = imagePath;
         try {
             // Try to read the image file from the specified path. This can throw an IOException if the file can't be read for any reason.

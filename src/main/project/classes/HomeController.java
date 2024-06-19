@@ -31,7 +31,7 @@ public class HomeController {
         titleText.setFont(urbaneBold);
         titleText.setText("Hej og\nvelkommen!");
         titleText.setFill(Color.web("#222222"));
-
+        // Load Animation class
         Animations.buttonAnimation(continueButton);
     }
 

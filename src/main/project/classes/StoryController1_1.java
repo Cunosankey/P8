@@ -27,13 +27,13 @@ public class StoryController1_1 extends StoryController1 {
 
     @Override
     public void initialize() {
-        super.initialize();
+        super.initialize(); // Call the initialize method from the superclass
         if (getStoryDescriptionLabel2() != null) {
-            getTitleLabel().setText(getStories().get(getCurrentStory()).getTitle());
-            getStoryDescriptionLabel2().setText(getStories().get(getCurrentStory()).getStoryDescription2());
+            getTitleLabel().setText(getStories().get(getCurrentStory()).getTitle()); // Set the title of the story
+            getStoryDescriptionLabel2().setText(getStories().get(getCurrentStory()).getStoryDescription2()); // Set the story description
         }
 
-        Animations.buttonAnimation(backStory1_1);
+        Animations.buttonAnimation(backStory1_1); // Load Animation class for the button
         Animations.buttonAnimation(toTask);
         Animations.buttonAnimation(playAudioButton);
         storyProgress.resetCircles();
@@ -42,16 +42,19 @@ public class StoryController1_1 extends StoryController1 {
     }
 
     public void loadingIndicator() {
-        toTask.setText("Loading...");
+        toTask.setText("Loading..."); // Set the text of the button to "Loading..."
     }
 
-    public boolean isStory1_1() {
+    public boolean isStory1_1() { // This method checks if the current story is the first part of the first story
         return true;
     }
 
+    // This method is called when the user clicks the "To Task" button
     public void toTask(ActionEvent event) throws IOException {
         loadingIndicator();
+        // Stop the audio
         AudioController.stopAudio();
+        // Set the first story as completed
         StoryProgress.setStory1Completed(true);
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/scenes/Task.fxml"));
         Parent newSceneParent = loader.load();
@@ -70,7 +73,7 @@ public class StoryController1_1 extends StoryController1 {
         window.setScene(newScene);
         window.show();
     }
-
+    // This method is called when the user clicks the "Back" button
     public void backAgain(ActionEvent event) throws IOException {
         AudioController.stopAudio();
         Parent newSceneParent = FXMLLoader.load(getClass().getResource("/scenes/Story1.fxml"));
@@ -79,7 +82,7 @@ public class StoryController1_1 extends StoryController1 {
         window.setScene(newScene);
         window.show();
     }
-
+    // This method is called when the user clicks the "Back" button back to the Library
     public void Story1_1ToLibrary(ActionEvent event) throws IOException {
         AudioController.stopAudio();
         Node node = (Node) event.getSource(); // Get the source of the event (the button)
@@ -96,7 +99,7 @@ public class StoryController1_1 extends StoryController1 {
     }
 
     @FXML
-    private void playAudio() {
+    private void playAudio() { // This method is called when the user clicks the "Play Audio" button
         if (!AudioController.isAudioPlaying()){
         // Create an instance of Audio
         Audio audio = new Audio("audio_files/Story1-part2.mp3");

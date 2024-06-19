@@ -50,8 +50,9 @@ public class ReflectController implements Initializable {
 
     public StoryProgress storyProgress;
 
+    // Constructor for the ReflectController class
     public ReflectController(StoryCharacter storyCharacter, int facialExpressionIndex, int gestureIndex) {
-        this.storyCharacter = storyCharacter;
+        this.storyCharacter = storyCharacter; // Call the constructor of the superclass to set the storyCharacter
         this.facialExpressionIndex = facialExpressionIndex;
         this.gestureIndex = gestureIndex;
     }
@@ -64,22 +65,27 @@ public class ReflectController implements Initializable {
         titleText.setText("Tid til at\nreflektere!");
         titleText.setFill(Color.web("#222222"));
 
+    // Load the facial expression and gesture images from the character's list
     List<FacialExpression> characterFacialExpressionList = storyCharacter.getCharacterFacialExpression();
     String imagePath = characterFacialExpressionList.get(facialExpressionIndex).getFacialExpressionImagePath();
     Image image = new Image(getClass().getResource(imagePath).toString());
+    // Set the image of the facial expression
     facialExpressionImage.setImage(image);
 
+    // Load the gesture image from the character's gesture list
     List<Gesture> characterGestureList = storyCharacter.getCharacterGesture();
     String gestureImagePath = characterGestureList.get(gestureIndex).getGestureImagePath();
     Image currentGestureImage = new Image(getClass().getResource(gestureImagePath).toString());
+    // Set the image of the gesture
     gestureImage.setImage(currentGestureImage);
 
-    // Create the ProgressManager object
+    // Create a new StoryProgress object to track the progress of the story
     storyProgress = new StoryProgress(circleContainer, 4);
     storyProgress.resetCircles();
     storyProgress.createCircles();
     storyProgress.fillCircle("Reflect");
 
+    // Load Animation class
     Animations.buttonAnimation(completeTask);
     Animations.buttonAnimation(tryAgain);
 

@@ -22,7 +22,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
-public class StoryController1 {
+public class StoryController1 { // This class is responsible for the first story in the application.
     @FXML
     private Label titleLabel;
     @FXML
@@ -92,9 +92,10 @@ public class StoryController1 {
         }
     }
 
-    // Nyt 22-04
+    // This method is called when the "Continue" button is clicked.
     public void handleButtonAction(ActionEvent event) throws IOException {
         Animations.buttonAnimation(story1ContinueButton);
+        // Stop the audio when the continue button is clicked
         AudioController.stopAudio();
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
@@ -103,9 +104,10 @@ public class StoryController1 {
         Parent root = fxmlLoader.load();
         scene.setRoot(root);
     }
-
+    // This method is called when the "Back" button is clicked.
     public void backHandle(ActionEvent event) throws IOException {
         Animations.buttonAnimation(story1Back);
+        // Stop the audio when the back button is clicked
         AudioController.stopAudio();
         AudioController.stopAudio();
         Node node = (Node) event.getSource();
